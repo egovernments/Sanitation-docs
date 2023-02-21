@@ -1,6 +1,6 @@
 # Roadmap
 
-The DISHHA roadmap below offers a snapshot of our upcoming tools and features.
+The DIGIT Sanitation roadmap below offers a snapshot of our upcoming tools and features.
 
 {% embed url="https://miro.com/app/board/uXjVPGgkZ9c=/" %}
 

@@ -2,7 +2,7 @@
 description: Details for registering new vendors
 ---
 
-# FSM Vendor Registry v1.2.1
+# FSM Vendor Registry
 
 ## Overview <a href="#overview" id="overview"></a>
 

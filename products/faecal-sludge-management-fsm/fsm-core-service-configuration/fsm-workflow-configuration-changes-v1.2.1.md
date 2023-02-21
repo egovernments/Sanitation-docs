@@ -1,4 +1,4 @@
-# FSM Workflow Configuration Changes v1.2.1
+# FSM Workflow Configuration Changes
 
 ## **FSM Vehicle Trip Update Business Service Request**
 

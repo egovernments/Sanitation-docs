@@ -2,7 +2,7 @@
 description: Details for setting up FSM calculator sevice
 ---
 
-# FSM Calculator v1.1
+# FSM Calculator
 
 ## Overview <a href="#overview" id="overview"></a>
 

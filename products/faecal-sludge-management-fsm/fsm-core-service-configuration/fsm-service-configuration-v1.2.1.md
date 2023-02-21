@@ -1662,7 +1662,7 @@ For post new Business service FSM\_POST\_PAY\_SERVICE is created. Create busines
 
 ```
 
-[Workflow configuration changes FSM 1.2.1](fsm-workflow-configuration-changes.md)
+[Workflow configuration changes FSM 1.2.1](fsm-workflow-configuration-changes-v1.2.1.md)
 
 ### Localisation Setup <a href="#localization-setup" id="localization-setup"></a>
 
@@ -1724,7 +1724,7 @@ Using `/localization/messages/v1/_upsert` , add localisation (templates) for not
 
 ```
 
-[FSM 1.2.1 localisation changes](fsm-localisation-changes.md)
+[FSM 1.2.1 localisation changes](fsm-localisation-changes-v1.2.1.md)
 
 ### Actions & Role Action Mapping <a href="#actions-and-role-action-mapping" id="actions-and-role-action-mapping"></a>
 

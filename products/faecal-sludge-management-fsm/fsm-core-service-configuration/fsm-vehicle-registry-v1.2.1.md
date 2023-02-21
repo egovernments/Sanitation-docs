@@ -2,7 +2,7 @@
 description: Configuration and setup details on registering vehicles in FSM module
 ---
 
-# FSM Vehicle Registry v1.2.1
+# FSM Vehicle Registry
 
 ## Overview <a href="#overview" id="overview"></a>
 
