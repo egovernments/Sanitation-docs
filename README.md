@@ -3,32 +3,24 @@ cover: .gitbook/assets/Sanitation Banner GIT.jpeg
 coverY: 0
 ---
 
-# Introduction to DIGIT Sanitation
-
-## Vision&#x20;
-
-Zero deaths, disease, and environmental contamination resulting from poor sanitation.&#x20;
+# Introducing DIGIT Sanitation
 
 ## Mission
 
-The sanitation mission at eGov aims to make its vision a reality for every citizen across India. Our aim is to ensure zero untreated waste in 1000 habitats in 1000 days by catalysing an open digital ecosystem.
+The sanitation mission at eGov aims to make its vision - zero deaths, disease, and environmental contamination resulting from poor sanitation - a reality for every citizen across India. DIGIT Sanitation aims to ensure zero untreated waste in 1,000 habitats in 1,000 days by catalysing open digital ecosystems.&#x20;
 
 ## Overview
 
-We believe that at the heart of the problems in sanitation are systems that fail to deliver, and hence systems must be progressively reformed. To move habitats towards zero untreated waste, the Digital Infrastructure for Sustainable and Healthy Habitats (DISHHA) will leverage the capabilities built by the Digital Infrastructure for Governance, Impact & Transformation (DIGIT) and ensure traceability of waste by enabling the ecosystem with:
+We believe that at the heart of the problems in sanitation are systems that fail to deliver, and hence systems must be progressively reformed. To move habitats towards zero untreated waste, we will leverage the capabilities built by the Digital Infrastructure for Governance, Impact & Transformation (DIGIT) and ensure traceability of waste by enabling the ecosystem with:
 
 * Digital standards for sanitation&#x20;
 * Chain of custody&#x20;
 * Actionable data&#x20;
 * Code for innovation
 
-The platform is drawn from the principles of societal platforms that allow us to imagine a space where sanitation has shared resources, curated and evolving knowledge, and solutions that speak to the needs of the community. The problems of sanitation are systemic, and cannot be solved without the cooperation, and collaboration of all stakeholders. Drawing from our learnings in the urban mission, we are talking about the triple helix model in the sense of partnerships between different stakeholders (_samaaj/civil society_, _sarkaar/government_, and _bazaar/industry or market_) that generates innovation through this synergy. Given our experience in building public digital infrastructure at scale, we believe we are best placed to create the foundation of this infrastructure and catalyse the ecosystem to solve the most pressing issues.
+DIGIT Sanitation is drawn from the principles of societal platforms that allow us to imagine a space where sanitation has shared resources, curated and evolving knowledge, and solutions that speak to the needs of the community. The problems of sanitation are systemic, and cannot be solved without the cooperation, and collaboration of all stakeholders. Drawing from our learnings in the urban mission, we are talking about the triple helix model in the sense of partnerships between different stakeholders (_samaaj/civil society_, _sarkaar/government_, and _bazaar/industry or market_) that generates innovation through this synergy. Given our experience in building public digital infrastructure at scale, we believe we are best placed to create the foundation of this infrastructure and catalyse the ecosystem to solve the most pressing issues.
 
-As a first step, drawing commonalities in the waste value chain from waste generation to reuse/ disposal, we have chosen Faecal Sludge Management (FSM) as our first solution area in sanitation.
-
-## Goals
-
-The mission will look at the pillars of sanitation and the impact across the pillars:&#x20;
+As a first step, drawing commonalities in the waste value chain from waste generation to reuse/ disposal, we have chosen Faecal Sludge Management (FSM) as our first solution area in DIGIT Sanitation. It will look at the pillars of sanitation and the impact across the pillars:&#x20;
 
 | Pillars of Sanitation         | Impact                                                                                                    |
 | ----------------------------- | --------------------------------------------------------------------------------------------------------- |
@@ -37,7 +29,7 @@ The mission will look at the pillars of sanitation and the impact across the pil
 | Financial sustainability      | <p>Financial sustainability</p><p>Operations across the value chain are viable and sustainable.</p>       |
 | Worker safety and dignity     | Sanitation workers have safe and dignified working conditions such that there are zero deaths on the job. |
 
-### Goal-oriented outcomes&#x20;
+### Need for DIGIT Sanitation&#x20;
 
 We have identified the following pivotal problems in the FSM value chain:&#x20;
 
@@ -47,7 +39,9 @@ We have identified the following pivotal problems in the FSM value chain:&#x20;
 * India is not poised to convert waste to value, yet.&#x20;
 * Stakeholder behaviour is misaligned with safe sanitation practices.&#x20;
 
-While addressing these problems, the sanitation mission will focus on driving the following outcomes:
+## Objectives
+
+While addressing these problems, DIGIT Sanitation will focus on driving the following outcomes:
 
 **Innovation and implementation at scale with speed for the ecosystem** ​
 

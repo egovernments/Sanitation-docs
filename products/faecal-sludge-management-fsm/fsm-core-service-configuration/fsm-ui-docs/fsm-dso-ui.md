@@ -77,7 +77,7 @@ The config can be found at CompleteApplication.js
 
 ## Upload Pit Photo Button  <a href="#upload-pit-photo-button" id="upload-pit-photo-button"></a>
 
-UploadPitPhoto.js molecule is available within the __ molecules folder in react-components.
+UploadPitPhoto.js molecule is available within the molecules folder in react-components.
 
 **File Path:** _frontend/micro-ui/web/micro-ui-internals/packages/react-components/src/molecules/UploadPitPhoto.js_
 
@@ -150,4 +150,3 @@ ScheduleDso.js is the file responsible for the schedule window pop up.&#x20;
 
 **File path:** _**frontend/micro-ui/web/micro-ui-internals/packages/modules/fsm/src/pages/employee/ApplicationDetails/config/ScheduleDso.js**_
 
-_****_

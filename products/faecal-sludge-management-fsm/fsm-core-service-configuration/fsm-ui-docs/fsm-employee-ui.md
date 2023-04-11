@@ -30,7 +30,7 @@ The code snippet for extracting the provider info for each status:
 
 An employee/DSO can view the photo uploaded by the employee/DSO in complete request action.
 
-![](<../../../../.gitbook/assets/Screenshot 2022-08-08 at 3.56.07 PM.png>)
+![](<../../../../.gitbook/assets/Screenshot 2022-08-08 at 3.56.07 PM (1).png>)
 
 #### Technical Implementation Details: <a href="#technical-implementation-details-.1" id="technical-implementation-details-.1"></a>
 
