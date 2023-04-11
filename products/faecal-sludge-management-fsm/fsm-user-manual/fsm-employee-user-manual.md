@@ -20,7 +20,7 @@ Log in as employee FSM Creator role.&#x20;
 
 Click on the **Inbox** to view the list of applications created by the signed-in user.‌ Click on **New Desludging Application** option.
 
-![](<../../../.gitbook/assets/Screenshot 2022-08-02 at 10.44.02 AM (1).png>)
+![](<../../../.gitbook/assets/Screenshot 2022-08-02 at 10.44.02 AM.png>)
 
 Select the relevant **Application Channel** to indicate the channel that the employee is using to create a new service request. The applicant may use the telephone to raise requests or the local office counter.
 

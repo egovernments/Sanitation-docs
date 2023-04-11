@@ -16,7 +16,7 @@ TLTimelineInFSM.js file is the common component and used for rendering the stepp
 
 The code snippets for defining the steps present in FSM application under case “APPLY”:
 
-![](<../../../../.gitbook/assets/Screenshot 2022-08-09 at 9.56.12 AM (1).png>)
+![](<../../../../.gitbook/assets/Screenshot 2022-08-09 at 9.56.12 AM.png>)
 
 The code snippets to render the stepper information in each screen using Timeline component:
 

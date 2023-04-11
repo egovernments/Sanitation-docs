@@ -50,7 +50,7 @@ Select the applicable **Property Sub Type.**
 
 ![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 2.13.23 PM.png>)
 
-&#x20;**** Enable the **Location** finder to allow GPS to track the current location, or, move the pin to the location manually. Alternatively, you can also enter the location in the search bar.&#x20;
+&#x20;Enable the **Location** finder to allow GPS to track the current location, or, move the pin to the location manually. Alternatively, you can also enter the location in the search bar.&#x20;
 
 ![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 2.17.11 PM.png>)
 

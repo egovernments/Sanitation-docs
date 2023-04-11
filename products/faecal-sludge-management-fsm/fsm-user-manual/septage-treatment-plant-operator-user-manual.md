@@ -11,9 +11,9 @@ SeTPO can‌:
 
 Log in to the system with the SeTPO credentials.
 
-![](<../../../.gitbook/assets/image (42).png>)
+![](<../../../.gitbook/assets/image (37).png>)
 
-Clicking on the **Home** button **** takes you to the FSTP Operators home page where you can **Add Vehicle Log** where user can make a log every-time a vehicle enters the Treatment Plant, **View Reports** where vehicle log reports can be seen and user **Inbox** provides a summary list of all pending logs of requests from the FSM module.
+Clicking on the **Home** button takes you to the FSTP Operators home page where you can **Add Vehicle Log** where user can make a log every-time a vehicle enters the Treatment Plant, **View Reports** where vehicle log reports can be seen and user **Inbox** provides a summary list of all pending logs of requests from the FSM module.
 
 ![](<../../../.gitbook/assets/Screenshot 2022-08-02 at 11.47.06 AM.png>)
 
@@ -49,11 +49,11 @@ Log in to the system with the SeTPO credentials.
 
 ![](<../../../.gitbook/assets/Screenshot 2022-08-02 at 3.05.35 PM.png>)
 
-Clicking on the **Home** button **** takes you to the FSTP Operators home page.
+Clicking on the **Home** button takes you to the FSTP Operators home page.
 
 ![](<../../../.gitbook/assets/Screenshot 2022-08-02 at 3.06.56 PM.png>)
 
-On the home page, you can **Add Vehicle Log.** This is where **** a **** user can make a log every-time a vehicle enters the Treatment Plant, **View Reports** where vehicle log reports can be seen. The user **Inbox** provides a summary list of all pending logs of requests from the FSM module.
+On the home page, you can **Add Vehicle Log.** This is where a user can make a log every-time a vehicle enters the Treatment Plant, **View Reports** where vehicle log reports can be seen. The user **Inbox** provides a summary list of all pending logs of requests from the FSM module.
 
 ![](<../../../.gitbook/assets/Screenshot 2022-08-02 at 3.09.51 PM.png>)
 
