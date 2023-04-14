@@ -7,7 +7,7 @@ coverY: 0
 
 ## Mission
 
-The sanitation mission at eGov aims to make its vision - zero deaths, disease, and environmental contamination resulting from poor sanitation - a reality for every citizen across India. DIGIT Sanitation aims to ensure zero untreated waste in 1,000 habitats in 1,000 days by catalysing open digital ecosystems.&#x20;
+The sanitation mission at eGov aims to make its vision - zero deaths, disease, and environmental contamination resulting from poor sanitation - a reality for every citizen across the Global South. DIGIT Sanitation aims to ensure zero untreated waste in 1,000 habitats in 1,000 days by catalyzing open digital ecosystems.
 
 ## Overview
 
