@@ -4032,8 +4032,7 @@ data/pg/ACCESSCONTROL-ROLEACTIONS/roleactions.json
 
 **Infra Ops Configuration**
 
-Configurations that we can manage through values.yml fsm-calculator in infraops repo as follows\
-values.yml for fms-calculator can be found[ here](https://github.com/egovernments/eGov-infraOps/blob/master/helm/charts/municipal-services/fsm/values.yaml)
+Configurations that we can manage through values.yml fsm-calculator in infraops repo as follows:
 
 |                                                                               |                                         |                                                |
 | ----------------------------------------------------------------------------- | --------------------------------------- | ---------------------------------------------- |
