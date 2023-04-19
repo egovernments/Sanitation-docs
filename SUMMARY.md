@@ -4,6 +4,7 @@
   * [Who can use DIGIT Sanitation?](mission/who-can-use-digit-sanitation/README.md)
     * [Field Research](mission/who-can-use-digit-sanitation/field-research.md)
 * [Platform](platform/README.md)
+  * [Features](platform/features.md)
   * [Release Notes](platform/release-notes/README.md)
     * [MDMS Configuration & Service Build Updates](platform/release-notes/mdms-configuration-and-service-build-updates.md)
     * [Localisation Changes](platform/release-notes/localisation-changes.md)
