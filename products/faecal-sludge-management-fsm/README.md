@@ -6,55 +6,25 @@ description: Online solution to desludging operations management
 
 ## About FSM
 
-The FSM module is a web-based system with application processing, user registrations, seamless workflows, Management Information System and Decision Support System capabilities. Business Intelligence, Document Management Systems and Handheld Devices are some of the trending technologies that are envisioned in the implementation of DIGIT-FSM to make a marked difference in the functioning of ULB towards sanitation services.
+Our mission is to build a digital tool that enables urban local body employees to deliver desludging services (emptying septic tanks) to citizens. The linear nature of feacal sludge value chains presents a clear framework for comprehending the optimal flow of sludge, but these value chains consist of diverse stakeholders and business models. The absence of coordination among value chain stakeholders and the lack of transparency to enforce standardised practices at each stage of the value chain lead to subpar sanitation outcomes. Furthermore, conflicts between stakeholders and the feasibility challenges of existing and emerging business models diminish the efficiency of the waste value chain.
 
-## Key Features
+The Faecal Sludge and Septage Management (FSSM) application has been able to provide data and visibility to track service requests and understand the service delivery value chain, paving the way for process enhancements in FSSM.
 
-* Role-based configurable workflows for approval and rejection process.
-* Masters configurations for the employees, desludging operators, city boundary details, users, user role, department designations and city details.
-* Notification component
-* Online application submission by Citizen, ULB Official
-* Payment of fee
-* Schedule the desludging operation
-* Updating the vehicle entry in the FSTP/STP plant
-* Reporting and Dashboards
+The product will provide the following benefits:
 
-## Section Overview
+1. Reduce time taken for service delivery.
+2. Establish a chain of custody of waste from the point of collection to disposal.
+3. Digital record keeping of service deliveries.
+4. Support data interoperability with other sanitation systems in the state.
+5. Improve sustainability by providing visibility and control to the government.
 
-This section contains all docs and information required to understand the FSM module, its key features, functional scope, and configuration details. Click on the links below to learn more about deploying, configuring, customising, and using the FSM module.
+### Benefits to Value-Chain Stakeholders
 
-* Functional Specifications
-* FSM Roadmap
-* FSM User Manual
-* Product Brochure
-* FSM Workflows
-* Master Data Configuration Template
-* FSM Service Configuration
-* Implementation Handbook
-* Demo Script
-
-{% hint style="warning" %}
-**Navigation Tips**
-
-* Click on the embedded links within the content to browse topic details
-* Use the Contents links available on the right side of the screen to move to a specific heading
-* Find the list of Related Docs links at the bottom of each page to browse through additional product details
-{% endhint %}
-
-## Contact Us
-
-Reach out to us through any of the below-mentioned contact channels for any assistance or additional information on FSM module deployment.
-
-{% hint style="danger" %}
-\#147/J, 1st floor, 10th Cross,\
-12th Main, 3rd Block,\
-Koramangala, Bangalore 560034
-
-* [Find us on map](https://goo.gl/maps/pYCFMhHWW7r)
-* \+91 80 4125 5708
-* contact@digit.org
-{% endhint %}
-
-
-
-> [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/)_All content on this page by_ [_eGov Foundation_](https://egov.org.in/) _is licensed under a_ [_Creative Commons Attribution 4.0 International License_](http://creativecommons.org/licenses/by/4.0/)_._
+|                                                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Citizen                                          | <p></p><ul><li>The citizen is able to have multi-channel access to safe and trackable service delivery. This leads to accountable and transparent services, and seamless grievance redressal. </li><li>They can receive push notifications with reminders for when their septic tank is due for desludging or with information on how to accurately segregate solid waste — to create behavioral nudges that contribute to healthier habitats.</li><li>Overall improvements in waste management and reduction in illegal dumping will mean that everyone lives in a cleaner and healthier neighbourhood, leading to public health gains (for example, a reduction in water-borne diseases).</li></ul>     |
+| Sanitation worker                                | <p></p><ul><li>The sanitation workers are skilled in safe sanitation practices, standards and tools. </li><li>Monitored service delivery will lead to optimisation of performance and create safe working conditions with transparency, ensuring compliance in safety practices.</li><li>Enumeration of sanitation workers will enable delivery of targeted benefits and welfare schemes for workers and their families (for example,  health checkups, insurance, social security, scholarships for children, etc.).</li></ul>                                                                                                                                                                           |
+| ULB Employee                                     | <p></p><ul><li>The ULB employee is able to create a single back-end registry for all incoming service requests. They are able to collect and maintain relevant citizen information to deliver efficient services.</li><li>The ULB employee is able to do remote tracking of value chain stakeholder — waste-transporters can be tracked in real-time to ensure that there is no illegal dumping of collected waste. They are able to ensure that quality of waste treatment meets the standards by validating automated records without being at the waste treatment plant.</li></ul>                                                                                                                     |
+| Waste management vendors/Desludging Operators    | <p></p><ul><li>Waste management vendors are able to assign tools and services that best suit the citizen who has raised the request by referring to the relevant information that would affect service delivery, such as property information. The ability to do this would make the process time and cost-effective.</li><li> Increasing the viability of waste management services will enable more private players to enter the fray, limit illegal dumping and eradicate opportunities for illegal manual scavenging.</li></ul>                                                                                                                                                                       |
+| Feacal Sludge/Co-treatment plant/Centre operator | <p></p><ul><li>The plant operator will be able to validate that there is no discrepancy in volume between the waste collected at the households and disposed off at the plant, ensuring that no waste drops off the value chain without treatment.</li><li>Adhere to the schedule for treatment quality, and record treatment quality results.</li><li>Adhere to the schedule for maintenance, and ensure that the plant is up and running efficiently.</li><li>Treatment plants can be plugged into waste-to-value markets, making it easier for buyers of processed and tested waste to discover and buy from them, thereby contributing to the financial sustainability of treatment plants.</li></ul> |
+| Administrators                                   | <p></p><ul><li>Govern the entire waste value chain via dashboards.</li><li>Viewthe  capacity available for transport and treatment at the state and ULB levels, and its utilisation via dashboards.</li><li>View compliance of SLAs and citizen satisfaction levels for services.</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                               |
