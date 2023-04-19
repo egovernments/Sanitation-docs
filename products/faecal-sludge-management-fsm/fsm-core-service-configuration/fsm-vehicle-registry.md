@@ -6,7 +6,7 @@ description: Configuration and setup details on registering vehicles in FSM modu
 
 ## Overview <a href="#overview" id="overview"></a>
 
-Vehicle registry is a system that enables urban local body (ULB) employees to create and search vehicle entities, schedule vehicle trips for FSM application and track vehicle trips. This document contains the details about the new enhancements made to the vehicle service as part of[ FSM v1.2.1](https://digit-discuss.atlassian.net/wiki/spaces/DD/pages/2193981453) release and how to set up the vehicle and describe the functionalities provided.
+Vehicle registry is a system that enables urban local body (ULB) employees to create and search vehicle entities, schedule vehicle trips for FSM application and track vehicle trips. This document contains the details about the new enhancements made to the vehicle service and how to set up the vehicle and describes the functionalities provided.
 
 ## Pre-requisites <a href="#pre-requisites" id="pre-requisites"></a>
 
@@ -28,9 +28,15 @@ Before you proceed with the configuration, make sure the following prerequisites
 
 ## Key Functionalities
 
-1. Vehicle tab.
-2. Option to add/remove/update vehicles individually.
-3. Admin can enable or disable a vehicle.
+* DSO or ULB can create multiple vehicle trips based on the number of trips entered while submitting the FSM application.
+* FSTPO can decline the vehicle trip with appropriate reason.
+* Owner attribute has been added to the vehicle.
+* FSTPO Vehicle Log Inbox Enhancements to include Application No search filter so that FSTPO can view all the vehicle trips associated with the application.
+* FSPTO vehicle log API upgraded to show trip numbers in case of multi-trip application.
+* Introduced Vehicle Tab.
+* Option to add/remove/update vehicles individually.
+* Admin can enable or disable the vehicle.
+* Functionality to add/remove vehicles to vendors.
 
 ## Deployment Details
 
@@ -173,7 +179,7 @@ Add master data in MDMS service with module name as vehicle and restart egov-mdm
 }
 ```
 
-**FSTPORejectionReason (Vehicle decline reason codes)**
+**FSTPO Rejection Reason (Vehicle decline reason codes)**
 
 ```
 {
@@ -211,7 +217,7 @@ Add master data in MDMS service with module name as vehicle and restart egov-mdm
 
 **Business Service/Workflow Configuration**
 
-1\. Search the FSM\_VEHICLE\_TRIP workflow by the given search API.
+1. Search the FSM\_VEHICLE\_TRIP workflow by the given search API.
 
 &#x20;/egov-workflow-v2/egov-wf/businessservice/\_search? tenantId=pb.amritsar\&businessServices=FSM\_VEHICLE\_TRIP
 
@@ -633,8 +639,9 @@ Add master data in MDMS service with module name as vehicle and restart egov-mdm
 Configurations that we can manage through values.yml vehicle in infraops repo are listed below. \
 values.yml for the vehicle can be found.
 
-| id-gen host, to generate the application number                                | EGOV\_IDGEN\_HOST                                 | egov-idgen from egov-service-host                            |
+| Description                                                                    | name in values.yml                                | Current Value                                                |
 | ------------------------------------------------------------------------------ | ------------------------------------------------- | ------------------------------------------------------------ |
+| id-gen host, to generate the application number                                | EGOV\_IDGEN\_HOST                                 | egov-idgen from egov-service-host                            |
 | mdms service host                                                              | EGOV\_MDMS\_HOST                                  | egov-mdms-service from egov-service-host                     |
 | workflow v2 service host                                                       | WORKFLOW\_CONTEXT\_PATH                           | egov-workflow-v2 from egov-service-host                      |
 | user service host, to get the locale data                                      | EGOV\_USER\_HOST                                  | egov-user from egov-service-host                             |
@@ -783,8 +790,11 @@ Integrated with the application through REST API to create, and search vehicles.
 
 ### API List <a href="#api-list" id="api-list"></a>
 
-| vehicle/v1/\_create            | [https://www.getpostman.com/collections/6d99bb40022396f848b2](https://www.getpostman.com/collections/6d99bb40022396f848b2)                                                                                                                                     |
+&#x20;
+
+| Title                          | Link                                                                                                                                                                                                                                                           |
 | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| vehicle/v1/\_create            | [https://www.getpostman.com/collections/6d99bb40022396f848b2](https://www.getpostman.com/collections/6d99bb40022396f848b2)                                                                                                                                     |
 | vehicle/v1/\_search            | [https://www.getpostman.com/collections/6d99bb40022396f848b2](https://www.getpostman.com/collections/6d99bb40022396f848b2)                                                                                                                                     |
 | /vehicle/v1/\_plainsearch      | [https://www.getpostman.com/collections/6d99bb40022396f848b2](https://www.getpostman.com/collections/6d99bb40022396f848b2)                                                                                                                                     |
 | /vehicle/trip/v1/\_create      | [https://www.getpostman.com/collections/4d425d97a5db5ced11b6](https://www.getpostman.com/collections/4d425d97a5db5ced11b6)                                                                                                                                     |
@@ -792,10 +802,3 @@ Integrated with the application through REST API to create, and search vehicles.
 | vehicle/trip/v1/\_search       | [https://www.getpostman.com/collections/6d99bb40022396f848b2](https://www.getpostman.com/collections/6d99bb40022396f848b2)                                                                                                                                     |
 | /vehicle/trip/v1/\_plainsearch | [https://www.getpostman.com/collections/6d99bb40022396f848b2](https://www.getpostman.com/collections/6d99bb40022396f848b2)                                                                                                                                     |
 | vehicle/v1/\_update            | [https://api.postman.com/collections/23418568-a15793e6-edeb-4393-a6b8-38fd90deca6f?access\_key=PMAT-01GMQPGY7NKF54DP47PEJH6NZG](https://api.postman.com/collections/23418568-a15793e6-edeb-4393-a6b8-38fd90deca6f?access\_key=PMAT-01GMQPGY7NKF54DP47PEJH6NZG) |
-
-&#x20;
-
-\
-
-
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/)All content on this page by [eGov Foundation ](https://egov.org.in/)is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
