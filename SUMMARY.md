@@ -28,6 +28,7 @@
     * [On AWS](platform/getting-started/on-aws.md)
 * [Products](products/README.md)
   * [Faecal Sludge Management (FSM)](products/faecal-sludge-management-fsm/README.md)
+    * [Product Features](products/faecal-sludge-management-fsm/product-features.md)
     * [FSM Core Service Configuration](products/faecal-sludge-management-fsm/fsm-core-service-configuration/README.md)
       * [FSM Implementation Configuration](products/faecal-sludge-management-fsm/fsm-core-service-configuration/fsm-implementation-configuration.md)
       * [FSM Calculator](products/faecal-sludge-management-fsm/fsm-core-service-configuration/fsm-calculator.md)
