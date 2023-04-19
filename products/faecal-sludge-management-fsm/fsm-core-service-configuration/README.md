@@ -6,7 +6,7 @@ description: Learn how to setup and configure FSM service
 
 ### Overview <a href="#overview" id="overview"></a>
 
-Faecal Sludge Management (FSM) is a system that enables a citizen to raise a request for septic tank cleaning with there ULB’s directly or by reaching out to the ULB counter. The Citizen can track the application, make a payment for the charges and rate the service. This document contains the details about how to set up the FSM services and describes the functionalities it provides.
+Faecal sludge management (FSM) is a system that enables citizens to raise a request for septic tank cleaning with their urban local bodies (ULBs) directly or reaching out to the ULB counter. Citizens can track the application, make a payment for the charges and rate the service. This document contains details on how to set up FSM and describes the functionalities it provides. The document contains the details about the feature enhancements being released as part of FSM v1.3.
 
 ### Pre-requisites <a href="#pre-requisites" id="pre-requisites"></a>
 
@@ -21,7 +21,7 @@ Before you proceed with the configuration, make sure the following pre-requisite
   * egov-user
   * egov-workflow-v2
   * egov-perister
-  * egov-localization
+  * egov-localisation
   * egov-notification-sms
   * egov-mdms
   * egov-idgen
@@ -34,25 +34,92 @@ Before you proceed with the configuration, make sure the following pre-requisite
 
 ### Key Functionalities <a href="#key-functionalities" id="key-functionalities"></a>
 
-* A Citizen can file, track and rate the application for cleaning septic tank
-* ULB Employee can file an application for cleaning septic tank on behalf of Citizen
-* ULB Employee can assign DSO to the given application with a possible service date
+* Citizens can file, track and rate the application for cleaning septic tank
+* ULB Employee can file application for cleaning septic tank on behalf of Citizen
+* ULB Employee can assign DSO to the given application with possible service date
 * DSO can accept or reject the application
 * DSO or ULB Employee can Complete the FSM Application after cleaning the septic tank
 * FSM Admin in ULB can cancel the application at any stage before completing the application
 * ULB Employee or Admin can view the audit log of the given application
+* Capture citizen gender information if not present or pre-populate the gender information when Citizen is creating FSM application.
+* Add citizen's choice for payment
+* Introducing Pre pay and Post pay service
+* Post Pay service : Workflow changes (Desludging Application and Vehicle Trip)
+* Post Pay service: Employee Flow Enhancements
+* Add payment selection for DSO
+* Post Pay service: Number of trips is made editable and price calculation will be now based on number of trips entered by the DSO. &#x20;
+* Capture DSO and FSTPO gender
+* Show citizen gender on FSM DSS
+* Select vehicle capacity instead of vehicle make.
+* Citizen Notifications | Payment Options | Timeline Enhancements
+* FSTPO Vehicle Log Inbox Enhancements
+* FSTPO can decline the vehicle trip
+* Add owner attribute for vehicle
+* Add ULB contact details in FSM application flow
+* DSO can edit pit and property usage details
+* Show vehicle trip status in employee inbox along with Desludging application
+* Unrestricted assignment of service requests to a single vehicle&#x20;
+* Vehicle logging at FSTP decoupled from FSM module
+* Photo and attachment view in the application of the ULB employee UI
+* Dashboard enhancement
+* Advance Pay service: Employee Flow Enhancements
+* Introduce two new workflow in the system.
+
+&#x20;     \- FSM\_ADVANCE\_PAY\_SERVICE and FSM\_ZERO\_PAY\_SERVICE .
+
+* Advance Pay service: Number of trips is made editable(increase or decrease based on the requirement) and price calculation will be now based on number of trips entered by the DSO or ULB. &#x20;
+* Allowed to pay part payment while creating the application.
+* ULB and DSO are allowed to decrease the number of trips if not required and if full payment is not done.
+* ULB and DSO are allowed to increase or decrease the number of  trips n number of times.
+* With the updated number of trips, an updated bill will be generated .
+* Delink the payment from dso in progress state .
+* Zero Pay service: Employee Flow Enhancements
+* Zero Pay service: System now skip the collection and will not generate the demand for zero price application.
+* Demand Generation Process: Generating demand on every time when the trip is update.
+* Demand Generation Process: Added validation not to complete the application from ulb side before completing the all payment.
+* Enhancement of FSM Receipt
 
 ### Deployment Details <a href="#deployment-details" id="deployment-details"></a>
 
-1. Deploy the latest version of FSM
-2. Add fsm-persister.yml file in config folder in git and add that path in persister . _(The file path is to be added in environment yaml file in param called_ persist-yml-path _)_
-3. If an index is to be created add the indexer config path in indexer service. (_The file path is to be added in environment yaml file in param called_ egov-indexer-yaml-repo-path)
+1. Deploy the latest version of fsm
+2. Add fsm-persister.yml file in config folder in git and add that path in persister . (The file path is to be added in environment yaml file in param called persist-yml-path ) and restart the egov-persister service.
+3. If index are to be created add the indexer config path in indexer service. (The file path is to be added in environment yaml file in param called egov-indexer-yaml-repo-path) and restart egov-indexer service.
 
 ### Configuration Details <a href="#configuration-details" id="configuration-details"></a>
 
+Make changes in config accordingly and restart the pdf-services.
+
+1 . pdf-service/format-config/fsm-receipt.json
+
+[#SM-1265 FSM V1.2: ULB collecting advance Receipt Page · egovernments/configs@57259f7](https://github.com/egovernments/configs/commit/57259f78f5e8974a6e5039c8030d44f5a0589de7)
+
+[#SM-1265 pdf  Receipt table alignment · egovernments/configs@1e0625e](https://github.com/egovernments/configs/commit/1e0625e3cdfe06a7a58281e26f5d0bf8a62fecfb)
+
+[https://github.com/egovernments/configs/commit/1b3c14bfcf74ec23e30aed1910dfe0d016439543](https://github.com/egovernments/configs/commit/1b3c14bfcf74ec23e30aed1910dfe0d016439543)
+
+[https://github.com/egovernments/configs/commit/f6f7f513799dfcae80817fe1f1866d0084291006](https://github.com/egovernments/configs/commit/f6f7f513799dfcae80817fe1f1866d0084291006)
+
+2 . pdf-service/data-config/fsm-receipt.json
+
+[#SM-1265 FSM V1.2: ULB collecting advance Receipt Page · egovernments/configs@ed9220a](https://github.com/egovernments/configs/commit/ed9220ab82d8732e4c50f3b9a4bfb17ec0756cd9)
+
+[https://github.com/egovernments/configs/commit/2a221ad39756c2ca4476c0669c2f4f79c3ce958e](https://github.com/egovernments/configs/commit/2a221ad39756c2ca4476c0669c2f4f79c3ce958e)
+
+[https://github.com/egovernments/configs/commit/a07318256f21240df71f87af21acd3dc56fb1118](https://github.com/egovernments/configs/commit/a07318256f21240df71f87af21acd3dc56fb1118)
+
+[https://github.com/egovernments/configs/commit/e307007a6e9f69f32134caac7d3b571411dfa840](https://github.com/egovernments/configs/commit/e307007a6e9f69f32134caac7d3b571411dfa840)
+
+egov-persister/fsm-persister.yaml
+
+[#807 updating advance amount column · egovernments/configs@413c9d1](https://github.com/egovernments/configs/commit/413c9d158e2afcd312a2d59cd04cae7315566f5a)
+
+[https://github.com/egovernments/configs/commit/89ab16cc3c58d161183a58e85d4d9fdbe32a67f5](https://github.com/egovernments/configs/commit/89ab16cc3c58d161183a58e85d4d9fdbe32a67f5)
+
+[https://github.com/egovernments/configs/commit/4c3acfe57d9ef6770a814d9e3d8bd88493e5c4bb](https://github.com/egovernments/configs/commit/4c3acfe57d9ef6770a814d9e3d8bd88493e5c4bb)
+
 #### MDMS Configuration <a href="#mdms-configuration-hardbreak" id="mdms-configuration-hardbreak"></a>
 
-Add master data in MDMS service with the module name as FSM. Following is some sample master data for Application Channel (Source).
+Add master data in MDMS service with module name as FSM and restart the egov-mdms-service  Following is some sample master data for Application Channel (Source).
 
 ```
 {
@@ -108,6 +175,24 @@ Checklist (Checklist to be answered by a citizen while rating)
 				"HAND_GLOVES",
 				"NOSE_MASK"
 			]
+		},
+		{
+			"code": "NUMBER_OF_TRIPS",
+			"active": true,
+			"type": "DROP_DOWN",
+			"required": false,
+			"options": [
+				"1",
+				"2",
+				"3",
+				"4",
+				"5",
+				"6",
+				"7",
+				"8",
+				"9",
+				"10"
+			]
 		}
 	]
 }
@@ -122,7 +207,7 @@ Config (Configuration at the application level)
     "Config": [
         {
             "code":"noOfTrips",
-            "override":false,
+            "override":true,
             "default":1,
             "active":true,
             "description":"override:true indicates, noOfTrips poperty is allowed to override in FSM."
@@ -178,7 +263,7 @@ FSTP Plant Info (FSTP information for each city)
             "PlusCode":"JQ2R+7G Khapar Kheri, Punjab",
             "PlantOperationalTimings":"10.00am-08.00pm",
             "PlantOperationalCapacityKLD":"50",
-            "ULBS":"ppb.jalandhar,pb.amritsar"
+            "ULBS":"pb.jalandhar,pb.amritsar,pb.nayagaon"
         },
         {
             "PlantCode": "MOH002",
@@ -189,7 +274,7 @@ FSTP Plant Info (FSTP information for each city)
             "PlusCode":"MPFQ+V2 Sahibzada Ajit Singh Nagar, Punjab",
             "PlantOperationalTimings":"10.00am-06.00pm",
             "PlantOperationalCapacityKLD":"100",
-            "ULBS":"pb.mohali"
+            "ULBS":"pb.mohali,pb.phagwara,pb.nawanshahr,pb.derabassi"
         }
     ]
 }
@@ -589,11 +674,89 @@ Slum (Slums mapped to the locality of the city)
 }
 ```
 
+PaymentType (Payment preference type)
+
+```
+{
+    "tenantId": "pb",
+    "moduleName": "FSM",
+    "PaymentType": [
+        {
+            "name": "Pay Now",
+            "code": "PRE_PAY",
+            "active": true
+        },
+        {
+            "name": "Pay on Service",
+            "code": "POST_PAY",
+            "active": true
+        }
+    ]
+}
+```
+
+data/pg/FSM/ReceivedPaymentType.json
+
+[https://github.com/egovernments/egov-mdms-data/commit/4c028a70ccb715df9574d86dc99d11d93057d30e](https://github.com/egovernments/egov-mdms-data/commit/4c028a70ccb715df9574d86dc99d11d93057d30e)
+
+[https://github.com/egovernments/egov-mdms-data/commit/5a190371c2305131eac40b87b41c7b3f0eef092c](https://github.com/egovernments/egov-mdms-data/commit/5a190371c2305131eac40b87b41c7b3f0eef092c)
+
+data/pg/FSM/CommonFieldsConfig.json
+
+[https://github.com/egovernments/egov-mdms-data/commit/4fac292e055665e5fbe4bfeaa7991c574a2289dc](https://github.com/egovernments/egov-mdms-data/commit/4fac292e055665e5fbe4bfeaa7991c574a2289dc)
+
+FSM Persister YML
+
+Integrate following below changes in fsm-persister.yml [https://github.com/egovernments/configs/commit/634a4fdd842ec69bdf735e8c985e36499661512f](https://github.com/egovernments/configs/commit/634a4fdd842ec69bdf735e8c985e36499661512f)
+
+data/pb/BillingService/BusinessService.json
+
+[Update BusinessService.json · egovernments/egov-mdms-data@96cd829](https://github.com/egovernments/egov-mdms-data/commit/96cd829846e3cca0b0143b73748d57b268a8bef1)&#x20;
+
+data/pb/DIGIT-UI/RoleStatusMapping.json
+
+[#SM-528 updating the status role for fsm collector · egovernments/egov-mdms-data@0d4b0c7](https://github.com/egovernments/egov-mdms-data/commit/0d4b0c7e6c1102c17f8fbc1d0fa31cb655687502)
+
+data/pb/BillingService/BusinessService.json
+
+[#SM-1435 added minAmountpayable in fsm · egovernments/egov-mdms-data@13e867b](https://github.com/egovernments/egov-mdms-data/commit/13e867bfdcca5c357d09024ba7da3ec8894a875e)
+
+data/pb/amritsar/FSM/ZeroPricing.json
+
+[https://github.com/egovernments/egov-mdms-data/commit/bccf684bd1343b3d280c1b87b1f03dcf62c96159](https://github.com/egovernments/egov-mdms-data/commit/bccf684bd1343b3d280c1b87b1f03dcf62c96159)
+
+[https://github.com/egovernments/egov-mdms-data/commit/7f3e6a02fc62bfdd9ee38dce2da9572ca9885866](https://github.com/egovernments/egov-mdms-data/commit/7f3e6a02fc62bfdd9ee38dce2da9572ca9885866)
+
+data/pb/ACCESSCONTROL-ACTIONS-TEST/actions-test.json
+
+[https://github.com/egovernments/egov-mdms-data/commit/06a1bcaca5693a6037cce52eecd53083dd6bd26f](https://github.com/egovernments/egov-mdms-data/commit/06a1bcaca5693a6037cce52eecd53083dd6bd26f)Dashboard Analytics Configuration
+
+Following are the changes that need to be integrate in dashboard-analytics and restart the “dashboard-analytics” service
+
+egov-dss-dashboards/dashboard-analytics/ChartApiConfig.json
+
+[https://github.com/egovernments/configs/commit/2ae2feecd343d17b908820b86664cee38293a719](https://github.com/egovernments/configs/commit/2ae2feecd343d17b908820b86664cee38293a719)
+
+[https://github.com/egovernments/configs/commit/18e547df409b625b0934e4dc7251590c5f834f83](https://github.com/egovernments/configs/commit/18e547df409b625b0934e4dc7251590c5f834f83)
+
+[https://github.com/egovernments/configs/commit/f05d41d983a9ec5381183d3f26497dc2295ad169](https://github.com/egovernments/configs/commit/f05d41d983a9ec5381183d3f26497dc2295ad169)
+
+[https://github.com/egovernments/configs/commit/47c3592252b4236b9a785adf6dd7d0b4dd66e482](https://github.com/egovernments/configs/commit/47c3592252b4236b9a785adf6dd7d0b4dd66e482)
+
+[https://github.com/egovernments/configs/commit/5b716c195766a573fb542e41d3ca94b54b6aa248](https://github.com/egovernments/configs/commit/5b716c195766a573fb542e41d3ca94b54b6aa248)
+
+egov-dss-dashboards/dashboard-analytics/MasterDashboardConfig.json
+
+[https://github.com/egovernments/configs/commit/c1c4b2ed5e5eb1b153c2648c3307f006566a5a6b](https://github.com/egovernments/configs/commit/c1c4b2ed5e5eb1b153c2648c3307f006566a5a6b)
+
+egov-indexer/egov-vehicle.yaml
+
+[https://github.com/egovernments/configs/commit/3d9faae0f42550a4e15dcad69630846ba0482de8](https://github.com/egovernments/configs/commit/3d9faae0f42550a4e15dcad69630846ba0482de8)\
+
+
 #### Business Service / Workflow Configuration
 
-Create businessService (workflow configuration) using the \_\_/businessservice/\_create.
-
-Following is the product configuration for FSM:
+Create businessService (workflow configuration) using the /businessservice/\_create. Following is the product configuration for FSM:
 
 ```
 {
@@ -738,14 +901,6 @@ Following is the product configuration for FSM:
                     "actions": [
                         {
                             "tenantId": "pb",
-                            "action": "SENDBACK",
-                            "nextState": "PENDING_APPL_FEE_PAYMENT",
-                            "roles": [
-                                "FSM_ADMIN"
-                            ]
-                        },
-                        {
-                            "tenantId": "pb",
                             "action": "CANCEL",
                             "nextState": "CANCELED",
                             "roles": [
@@ -848,6 +1003,15 @@ Following is the product configuration for FSM:
                             "roles": [
                                 "FSM_ADMIN"
                             ]
+                        },
+                        {
+                            "tenantId": "pb",
+                            "currentState": "DSO_INPROGRESS",
+                            "action": "REASSING",
+                            "nextState": "PENDING_DSO_APPROVAL",
+                            "roles": [
+                                "FSM_EDITOR_EMP"
+                            ]
                         }
                     ]
                 },
@@ -886,6 +1050,15 @@ Following is the product configuration for FSM:
                             "nextState": "CANCELED",
                             "roles": [
                                 "FSM_ADMIN"
+                            ]
+                        },
+                        {
+                            "tenantId": "pb",
+                            "currentState": "PENDING_DSO_APPROVAL",
+                            "action": "REASSING",
+                            "nextState": "PENDING_DSO_APPROVAL",
+                            "roles": [
+                                "FSM_EDITOR_EMP"
                             ]
                         }
                     ]
@@ -934,7 +1107,7 @@ Following is the product configuration for FSM:
                         {
                             "tenantId": "pb",
                             "currentState": "CITIZEN_FEEDBACK_PENDING",
-                            "action": "SUBMIT_FEEDBACK",
+                            "action": "RATE",
                             "nextState": "COMPLETED",
                             "roles": [
                                 "CITIZEN"
@@ -948,7 +1121,610 @@ Following is the product configuration for FSM:
 }
 ```
 
-#### Localization Setup <a href="#localization-setup" id="localization-setup"></a>
+For post new Business service FSM\_POST\_PAY\_SERVICE has been created .Create businessService (workflow configuration) using the /businessservice/\_create. Following is the product configuration for FSM\_POST\_PAY\_SERVICE:
+
+```
+{
+  "BusinessServices": [
+        {
+            "tenantId": "pb",
+            "businessService": "FSM_POST_PAY_SERVICE",
+            "business": "fsm",
+            "businessServiceSla": 172800000,
+            "states": [
+                {
+                    "tenantId": "pb",
+                    "sla": null,
+                    "state": null,
+                    "applicationStatus": null,
+                    "docUploadRequired": false,
+                    "isStartState": true,
+                    "isTerminateState": false,
+                    "isStateUpdatable": true,
+                    "actions": [
+                        {
+                            "tenantId": "pb",
+							"currentState": null,
+                            "action": "APPLY",
+                            "nextState": "ASSIGN_DSO",
+                            "roles": [
+                                "FSM_CREATOR_EMP"
+                            ]
+                        },
+                        {
+                            "tenantId": "pb",
+							"currentState": null,
+                            "action": "CREATE",
+                            "nextState": "CREATED",
+                            "roles": [
+                                "CITIZEN"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "tenantId": "pb",
+                    "sla": null,
+                    "state": "CREATED",
+                    "applicationStatus": "CREATED",
+                    "docUploadRequired": false,
+                    "isStartState": false,
+                    "isTerminateState": false,
+                    "isStateUpdatable": true,
+                    "actions": [
+                        {
+                            "tenantId": "pb",
+							"currentState": "CREATED",
+                            "action": "REJECT",
+                            "nextState": "REJECTED",
+                            "roles": [
+                                "FSM_ADMIN"
+                            ]
+                        },
+                        {
+                            "tenantId": "pb",
+							"currentState": "CREATED",
+                            "action": "SUBMIT",
+                            "nextState": "ASSIGN_DSO",
+                            "roles": [
+                                "FSM_EDITOR_EMP"
+                            ]
+                        }
+                    ]
+                },
+                
+                {
+                    "tenantId": "pb",
+                    "sla": null,
+                    "state": "ASSIGN_DSO",
+                    "applicationStatus": "ASSIGN_DSO",
+                    "docUploadRequired": false,
+                    "isStartState": false,
+                    "isTerminateState": false,
+                    "isStateUpdatable": true,
+                    "actions": [
+                        {
+                            "tenantId": "pb",
+							"currentState": "ASSIGN_DSO",
+                            "action": "CANCEL",
+                            "nextState": "CANCELED",
+                            "roles": [
+                                "FSM_ADMIN"
+                            ]
+                        },
+                        {
+                            "tenantId": "pb",
+							"currentState": "ASSIGN_DSO",
+                            "action": "ASSIGN",
+                            "nextState": "PENDING_DSO_APPROVAL",
+                            "roles": [
+                                "FSM_EDITOR_EMP"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "tenantId": "pb",
+                    "sla": null,
+                    "state": "PENDING_DSO_APPROVAL",
+                    "applicationStatus": "PENDING_DSO_APPROVAL",
+                    "docUploadRequired": false,
+                    "isStartState": false,
+                    "isTerminateState": false,
+                    "isStateUpdatable": true,
+                    "actions": [
+                       	{
+                            "tenantId": "pb",
+                            "currentState": "PENDING_DSO_APPROVAL",
+                            "action": "DSO_ACCEPT",
+                            "nextState": "DSO_INPROGRESS",
+                            "roles": [
+                                 "FSM_DSO",
+                                 "FSM_EDITOR_EMP"
+                            ]
+                        },
+						{
+                            "tenantId": "pb",
+                            "currentState": "PENDING_DSO_APPROVAL",
+                            "action": "CANCEL",
+                            "nextState": "CANCELED",
+                            "roles": [
+                                "FSM_ADMIN"
+                            ]
+                        },
+						{
+                            "tenantId": "pb",
+                            "currentState": "PENDING_DSO_APPROVAL",
+                            "action": "REASSING",
+                            "nextState": "PENDING_DSO_APPROVAL",
+                            "roles": [
+                                "FSM_EDITOR_EMP"
+                            ]
+                        },
+						{
+                            "tenantId": "pb",
+                            "currentState": "PENDING_DSO_APPROVAL",
+                            "action": "DSO_REJECT",
+                            "nextState": "DSO_REJECTED",
+                            "roles": [
+                                 "FSM_DSO",
+                                 "FSM_EDITOR_EMP"
+                            ]
+                        }
+                    ]
+                },
+				 {
+                    "tenantId": "pb",
+                    "sla": null,
+                    "state": "DSO_REJECTED",
+                    "applicationStatus": "DSO_REJECTED",
+                    "docUploadRequired": false,
+                    "isStartState": false,
+                    "isTerminateState": false,
+                    "isStateUpdatable": true,
+                    "actions": [
+                        {
+                            "tenantId": "pb",
+                            "currentState": "DSO_REJECTED",
+                            "action": "CANCEL",
+                            "nextState": "CANCELED",
+                            "roles": [
+                                "FSM_ADMIN"
+                            ],
+							"active": true
+                        },
+                        {
+                            "tenantId": "pb",
+                            "currentState": "DSO_REJECTED",
+                            "action": "REASSING",
+                            "nextState": "PENDING_DSO_APPROVAL",
+                            "roles": [
+                                "FSM_EDITOR_EMP"
+                            ],
+							 "active": true
+                        },
+                        {
+                            "tenantId": "pb",
+                            "currentState": "DSO_REJECTED",
+                            "action": "SENDBACK",
+                            "nextState": "PENDING_DSO_APPROVAL",
+                            "roles": [
+                                "FSM_ADMIN"
+                            ],
+							"active": true
+                        }
+                    ]
+                },
+                {
+                    "tenantId": "pb",
+                    "sla": null,
+                    "state": "DSO_INPROGRESS",
+                    "applicationStatus": "DSO_INPROGRESS",
+                    "docUploadRequired": false,
+                    "isStartState": false,
+                    "isTerminateState": false,
+                    "isStateUpdatable": true,
+                    "actions": [
+                        {
+                            "tenantId": "pb",
+                            "currentState": "DSO_INPROGRESS",
+                            "action": "SENDBACK",
+                            "nextState": "PENDING_DSO_APPROVAL",
+                            "roles": [
+                                "FSM_ADMIN"
+                            ]
+                        },
+                        {
+                            "tenantId": "pb",
+                            "currentState": "DSO_INPROGRESS",
+                            "action": "DECLINE",
+                            "nextState": "ASSIGN_DSO",
+                            "roles": [
+                                "FSM_DSO",
+                                "FSM_EDITOR_EMP"
+                            ]
+                        },
+                       
+                        {
+                            "tenantId": "pb",
+                            "currentState": "DSO_INPROGRESS",
+                            "action": "CANCEL",
+                            "nextState": "CANCELED",
+                            "roles": [
+                                "FSM_ADMIN"
+                            ]
+                        },
+                        {
+                            "tenantId": "pb",
+                            "currentState": "DSO_INPROGRESS",
+                            "action": "REASSING",
+                            "nextState": "PENDING_DSO_APPROVAL",
+                            "roles": [
+                                "FSM_EDITOR_EMP"
+                            ]
+                        },
+						{
+                            "tenantId": "pb",
+                            "currentState": "DSO_INPROGRESS",
+                            "action": "SCHEDULE",
+                            "nextState": "PENDING_APPL_FEE_PAYMENT",
+                            "roles": [
+                                "FSM_EDITOR_EMP",
+								"FSM_DSO"
+							]
+                        }
+                    ]
+                },
+				{
+                    "tenantId": "pb",
+                    "sla": null,
+                    "state": "PENDING_APPL_FEE_PAYMENT",
+                    "applicationStatus": "PENDING_APPL_FEE_PAYMENT",
+                    "docUploadRequired": false,
+                    "isStartState": false,
+                    "isTerminateState": false,
+                    "isStateUpdatable": true,
+                    "actions": [
+                        {
+                            "tenantId": "pb",
+                            "currentState": "PENDING_APPL_FEE_PAYMENT",
+                            "action": "CANCEL",
+                            "nextState": "CANCELED",
+                            "roles": [
+                                "FSM_ADMIN"
+                            ],
+                            "active": true
+                        },
+                        {
+                            "tenantId": "pb",
+                            "currentState": "PENDING_APPL_FEE_PAYMENT",
+                            "action": "SENDBACK",
+                            "nextState": "DSO_INPROGRESS",
+                            "roles": [
+                                "FSM_ADMIN"
+                            ],
+                            "active": true
+                        },
+                        {
+                            "tenantId": "pb",
+                            "currentState": "PENDING_APPL_FEE_PAYMENT",
+                            "action": "PAY",
+                            "nextState": "DISPOSAL_IN_PROGRESS",
+                            "roles": [
+                                "CITIZEN",
+                                "FSM_COLLECTOR"
+                            ],
+                            "active": true
+                        }
+                    ]
+                },
+				{
+                    "tenantId": "pb",
+                    "sla": null,
+                    "state": "DISPOSAL_IN_PROGRESS",
+                    "applicationStatus": "DISPOSAL_IN_PROGRESS",
+                    "docUploadRequired": false,
+                    "isStartState": false,
+                    "isTerminateState": false,
+                    "isStateUpdatable": true,
+                    "actions": [
+                        {
+                            "tenantId": "pb",
+                            "currentState": "DISPOSAL_IN_PROGRESS",
+                            "action": "CANCEL",
+                            "nextState": "CANCELED",
+                            "roles": [
+                                "FSM_ADMIN"
+                            ],
+                            "active": true
+                        },
+                        {
+                            "tenantId": "pb",
+                            "currentState": "DISPOSAL_IN_PROGRESS",
+                            "action": "COMPLETED",
+                            "nextState": "CITIZEN_FEEDBACK_PENDING",
+                            "roles": [
+                                "FSM_DSO",
+                                "FSM_EDITOR_EMP"
+                            ],
+                            "active": true
+                        }
+                       
+                    ]
+                },
+				{
+                    "tenantId": "pb",
+                    "sla": null,
+                    "state": "CITIZEN_FEEDBACK_PENDING",
+                    "applicationStatus": "CITIZEN_FEEDBACK_PENDING",
+                    "docUploadRequired": false,
+                    "isStartState": false,
+                    "isTerminateState": false,
+                    "isStateUpdatable": false,
+                    "actions": [
+                        {
+                            "tenantId": "pb",
+                            "currentState": "CITIZEN_FEEDBACK_PENDING",
+                            "action": "RATE",
+                            "nextState": "COMPLETED",
+                            "roles": [
+                                "CITIZEN"
+                            ],
+						    "active": true
+                        }
+                    ]
+                },
+                {
+                    "tenantId": "pb",
+                    "sla": null,
+                    "state": "COMPLETED",
+                    "applicationStatus": "COMPLETED",
+                    "docUploadRequired": false,
+                    "isStartState": false,
+                    "isTerminateState": true,
+                    "isStateUpdatable": false,
+					"actions": null
+                },
+                {
+                    "tenantId": "pb",
+					"sla": null,
+                    "state": "REJECTED",
+                    "applicationStatus": "REJECTED",
+                    "docUploadRequired": false,
+                    "isStartState": false,
+                    "isTerminateState": true,
+                    "isStateUpdatable": false,
+                    "actions": null
+                },
+                {
+                    "tenantId": "pb",
+                    "sla": null,
+                    "state": "CANCELED",
+                    "applicationStatus": "CANCELED",
+                    "docUploadRequired": false,
+                    "isStartState": false,
+                    "isTerminateState": true,
+                    "isStateUpdatable": false,
+                    "actions": null
+                }
+                
+            ]
+        }
+    ],
+	 "RequestInfo": {
+    "apiId": "Rainmaker",
+    "authToken": "e37d7087-6436-492f-ad5b-692a515cba58",
+    "userInfo": {
+      "id": 24226,
+      "uuid": "11b0e02b-0145-4de2-bc42-c97b96264807",
+      "userName": "amr001",
+      "name": "leela",
+      "mobileNumber": "9814424443",
+      "emailId": "leela@llgmail.com",
+      "locale": null,
+      "type": "EMPLOYEE",
+      "roles": [
+        {
+          "name": "NoC counter employee",
+          "code": "NOC_CEMP",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "Grievance Routing Officer",
+          "code": "GRO",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "WS Document Verifier",
+          "code": "WS_DOC_VERIFIER",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "autoescalation emp",
+          "code": "AUTO_ESCALATE",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "FSM Employee Report Viewer",
+          "code": "FSM_REPORT_VIEWER",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "PGR Last Mile Employee",
+          "code": "PGR_LME",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "TL Field Inspector",
+          "code": "TL_FIELD_INSPECTOR",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "BPA Field Inspector",
+          "code": "BPA_FIELD_INSPECTOR",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "TL Approver",
+          "code": "TL_APPROVER",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "BPA Services Approver",
+          "code": "BPA_APPROVER",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "Fire Noc Department Approver",
+          "code": "FIRE_NOC_APPROVER",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "Field Employee",
+          "code": "FEMP",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "Counter Employee",
+          "code": "CEMP",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "WS Counter Employee",
+          "code": "WS_CEMP",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "BPAREG Approver",
+          "code": "BPAREG_APPROVER",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "WS Field Inspector",
+          "code": "WS_FIELD_INSPECTOR",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "Collection Operator",
+          "code": "COLL_OPERATOR",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "TL doc verifier",
+          "code": "TL_DOC_VERIFIER",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "CSC Collection Operator",
+          "code": "CSC_COLL_OPERATOR",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "Employee",
+          "code": "EMPLOYEE",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "TL Counter Employee",
+          "code": "TL_CEMP",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "FSM Desluding Operator",
+          "code": "FSM_DSO",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "TL Creator",
+          "code": "TL_CREATOR",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "BPAREG doc verifier",
+          "code": "BPAREG_DOC_VERIFIER",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "Customer Support Representative",
+          "code": "CSR",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "NoC counter Approver",
+          "code": "NOC_APPROVER",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "HRMS Admin",
+          "code": "HRMS_ADMIN",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "Universal Collection Employee",
+          "code": "UC_EMP",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "WS Approver",
+          "code": "WS_APPROVER",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "BPA Services verifier",
+          "code": "BPA_VERIFIER",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "PT Counter Approver",
+          "code": "PT_APPROVER",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "NoC Field Inpector",
+          "code": "NOC_FIELD_INSPECTOR",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "Grievance Officer",
+          "code": "GO",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "Super User",
+          "code": "SUPERUSER",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "NOC Department Approver",
+          "code": "NOC_DEPT_APPROVER",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "WS Clerk",
+          "code": "WS_CLERK",
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "name": "NoC Doc Verifier",
+          "code": "NOC_DOC_VERIFIER",
+          "tenantId": "pb.amritsar"
+        }
+      ],
+      "active": true,
+      "tenantId": "pb.amritsar",
+      "permanentCity": null
+    },
+    "msgId": "1646071179143|en_IN"
+  }
+}
+
+```
+
+
+
+#### &#x20;<a href="#localization-setup" id="localization-setup"></a>
+
+#### Localisation Setup <a href="#localization-setup" id="localization-setup"></a>
 
 Using /localization/messages/v1/\_upsert , add localisation (templates) for notification messages to be sent.
 
