@@ -8,7 +8,7 @@ description: Details for setting up FSM calculator sevice
 
 FSM calculator is a system that enables the FSM admin to create billing slabs for the FSM application(s) with different combinations of property type, slum, tank and capacity.
 
-It generates the demand after calculating the charges for the given application using the billing slab already configured. This document contains the details on how to setup the FSM calculator service, describes the functionalities it provides, and  details the enhancements made to the FSM calculator service.
+It generates the demand after calculating the charges for the given application using the billing slab already configured. This document contains the details on how to set up the FSM calculator service, describes the functionalities it provides, and  details the enhancements made to the FSM calculator service.
 
 ## Pre-requisites
 
@@ -30,12 +30,19 @@ Before you proceed with the configuration, make sure the following pre-requisite
 
 ## Key Functionalities <a href="#key-functionalities" id="key-functionalities"></a>
 
+* FSM Admin an Employee of ULB with FSM Admin role can create, update billing slab(s)
+* ULB Employee with FSM\_CREATOR and FSM\_EDITOR can search billing slab(s)
+* ULB Employee Citizen can file, track and rate the application for cleaning septic tank
+* ULB Employee can get the estimate for FSM Application
+* FSM service internally call fsm-calculator to generate a demand
+* Vehicle type check has been removed from calculator service and bill amount is calculated based on the number of trips entered while submitting the FSM application.
 * Bill amount is calculated based on the number of trips entered while updating the number of trips on the FSM application.
 * Added validation for advance payment with the configuration.
 * Added validation for max total advance payment.
 * Added cancellation charges for canceling the application .
 * Validation before completing the request with the payment.
 * Minimum part payment is configural, that is, it should be fixed or it should be percentage calculation. The calculation should be done based on the MDMS configuration value.
+* Minimum cancellation fee is configural, that is, it should be fixed or percentage calculation. The calculation should be done based on the MDMS configuration value.
 
 ## Deployment Details <a href="#deployment-details" id="deployment-details"></a>
 
@@ -328,7 +335,8 @@ The FSM-calculator will be integrated with the FSM application. The FSM applicat
 4. ULB employee can update billing slab calling fsm-calculator/v1/billingSlab/\_update
 5. ULB Employee can search billing slab calling fsm-calculator/v1/billingSlab/\_search
 6. FSM application to call fsm-calculator/v1/\_cancellationFee to calculate cancellation charge based on the configuration data, that is, either it will be fixed or it will be a percentage.
-7. FSM application to call fsm-calculator/v1/\_advanceBalanceCalculate to calculate advance charge based on the configuration data, that is, either it will be fixed or a percentage.
+
+FSM application to call fsm-calculator/v1/\_advanceBalanceCalculate to calculate advance charge based on the configuration data, that is, either it will be fixed or a percentage.
 
 ## Interaction Diagram <a href="#interaction-diagram" id="interaction-diagram"></a>
 
@@ -351,6 +359,8 @@ TBD
 
 ### API List <a href="#api-list" id="api-list"></a>
 
+####
+
 | Title                                       | Link                                                                                                                                                                                                                                                           |
 | ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | fsm-calulator/v1/\_calculate                | [https://www.getpostman.com/collections/8b9eb951a810486f41a4](https://www.getpostman.com/collections/8b9eb951a810486f41a4)                                                                                                                                     |
@@ -362,8 +372,3 @@ TBD
 | fsm-calculator/v1/\_advancebalancecalculate | [https://api.postman.com/collections/23418568-77e3f5fb-dd9d-4f05-92e7-b15dcbeecffe?access\_key=PMAT-01GN93ZP6B68E0T5TZ62GR02W0](https://api.postman.com/collections/23418568-77e3f5fb-dd9d-4f05-92e7-b15dcbeecffe?access\_key=PMAT-01GN93ZP6B68E0T5TZ62GR02W0) |
 
 &#x20;
-
-\
-
-
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/)All content on this page by [eGov Foundation ](https://egov.org.in/)is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).

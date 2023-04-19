@@ -27,7 +27,6 @@
 * [Products](products/README.md)
   * [Faecal Sludge Management (FSM)](products/faecal-sludge-management-fsm/README.md)
     * [FSM Core Service Configuration](products/faecal-sludge-management-fsm/fsm-core-service-configuration/README.md)
-      * [FSM Service Configuration](products/faecal-sludge-management-fsm/fsm-core-service-configuration/fsm-service-configuration.md)
       * [FSM Implementation Configuration](products/faecal-sludge-management-fsm/fsm-core-service-configuration/fsm-implementation-configuration.md)
       * [FSM Calculator](products/faecal-sludge-management-fsm/fsm-core-service-configuration/fsm-calculator.md)
       * [FSM Vendor Registry](products/faecal-sludge-management-fsm/fsm-core-service-configuration/fsm-vendor-registry.md)
