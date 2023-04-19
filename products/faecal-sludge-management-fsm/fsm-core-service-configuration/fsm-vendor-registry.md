@@ -28,14 +28,18 @@ Before you proceed with the configuration, make sure the following pre-requisite
 
 ## Key Functionalities <a href="#key-functionalities" id="key-functionalities"></a>
 
-1. Vendor tab
-2. Option to add/remove/update the vendor individually.
-3. Users can add a vehicle and a driver.
-4. Search for the list of all vehicles not associated with any vendors.&#x20;
-5. Users can enable or disable the vendor.
-6. Driver tab
-7. Option to add/remove/update driver individually.
-8. Users should be able to create/update/enable/disable a driver from driver screen.
+* Added payment payment preference and agency attributes for DSO
+* Added gender attribute in the create and update APIs for Vendor
+* Updated the Vendor search API to add vehicleCapacity in the search parameter to search all vendors matching the vehicle capacity specified in the search parameter.
+* Introduced Vendor Tab.
+* Option to add/remove/update Vendor individually.
+* Users can add vehicles and drivers.
+* search for the list of all vehicles not associated with any vendors.&#x20;
+* Users can enable or disable the vendor.
+* Introduced Driver Tab.
+* Option to add/remove/update driver individually.
+* Users should be able to create/update/enable/disable a  driver from the driver screen.
+* Functionality to add/remove directly from driver to vendor.
 
 ## Deployment Details <a href="#deployment-details" id="deployment-details"></a>
 
@@ -333,14 +337,14 @@ Configurations that we can manage through values.yml vehicle in infra-ops repo a
 values.yml for the vehicle is available below.\
 
 
-| Description                                               | Name in values.yml                 | Current value                            |
+| Description                                               | name in values.yml                 | Current Value                            |
 | --------------------------------------------------------- | ---------------------------------- | ---------------------------------------- |
 | Kafka Consumer Group                                      | SPRING\_KAFKA\_CONSUMER\_GROUP\_ID | egov-vendor-services                     |
 | kafka topic to which service push data to save new Vendor | PERSISTER\_SAVE\_VENDOR\_TOPIC     | save-vendor-application                  |
 | mdms service host                                         | EGOV\_MDMS\_HOST                   | egov-mdms-service from egov-service-host |
-| Vehicle service host                                      | EGOV\_VEHICLE\_HOST                | vehicle from egov-service-host           |
+| Vehicle Service host                                      | EGOV\_VEHICLE\_HOST                | vehicle from egov-service-host           |
 | User service host                                         | EGOV\_USER\_HOST                   | egov-user-service from egov-service-host |
-| Location service host                                     | EGOV\_LOCATION\_HOST               | egov-location from egov-service-host     |
+| Location Service Host                                     | EGOV\_LOCATION\_HOST               | egov-location from egov-service-host     |
 
 **Configurations sample in Values.yml**
 
@@ -474,8 +478,8 @@ Any system or DIGIT module can be integrated with the vendor service. It helps t
 
 ### Steps to Integration <a href="#steps-to-integration" id="steps-to-integration"></a>
 
-* FSM to call `vendor/v1/_search` to fetch the DSOs.
-* FSM can call `vendor/v1/_search` to fetch the DSOs and the respective vehicles and drivers.
+* FSM to call vendor/v1/\_search to fetch the DSOs.
+* FSM can call vendor/v1/\_search to fetch the DSO’s and the respective vehicles and drivers.
 
 ### Interaction Diagrams <a href="#interaction-diagram" id="interaction-diagram"></a>
 
@@ -506,21 +510,14 @@ Any system or DIGIT module can be integrated with the vendor service. It helps t
 
 ### API List <a href="#api-list" id="api-list"></a>
 
-| /vendor/v1/\_create        | [https://api.postman.com/collections/23418568-17e45900-5801-462d-a6b1-2cf108b37c8d?access\_key=PMAT-01GMQRX9YME11ZQKFV30QW4AP0](https://api.postman.com/collections/23418568-17e45900-5801-462d-a6b1-2cf108b37c8d?access\_key=PMAT-01GMQRX9YME11ZQKFV30QW4AP0) |
+
+
+| Title                      | Link                                                                                                                                                                                                                                                           |
 | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| /vendor/v1/\_create        | [https://api.postman.com/collections/23418568-17e45900-5801-462d-a6b1-2cf108b37c8d?access\_key=PMAT-01GMQRX9YME11ZQKFV30QW4AP0](https://api.postman.com/collections/23418568-17e45900-5801-462d-a6b1-2cf108b37c8d?access\_key=PMAT-01GMQRX9YME11ZQKFV30QW4AP0) |
 | /vendor/v1/\_search        | [https://api.postman.com/collections/23418568-17e45900-5801-462d-a6b1-2cf108b37c8d?access\_key=PMAT-01GMQRX9YME11ZQKFV30QW4AP0](https://api.postman.com/collections/23418568-17e45900-5801-462d-a6b1-2cf108b37c8d?access\_key=PMAT-01GMQRX9YME11ZQKFV30QW4AP0) |
 | /vendor/v1/\_plainsearch   | [https://www.getpostman.com/collections/c79e98843bcdcc873d09](https://www.getpostman.com/collections/c79e98843bcdcc873d09)                                                                                                                                     |
 | /vendor/v1/\_update        | [https://api.postman.com/collections/23418568-17e45900-5801-462d-a6b1-2cf108b37c8d?access\_key=PMAT-01GMQRX9YME11ZQKFV30QW4AP0](https://api.postman.com/collections/23418568-17e45900-5801-462d-a6b1-2cf108b37c8d?access\_key=PMAT-01GMQRX9YME11ZQKFV30QW4AP0) |
 | /vendor/driver/v1/\_create | [https://api.postman.com/collections/23418568-17e45900-5801-462d-a6b1-2cf108b37c8d?access\_key=PMAT-01GMQRX9YME11ZQKFV30QW4AP0](https://api.postman.com/collections/23418568-17e45900-5801-462d-a6b1-2cf108b37c8d?access\_key=PMAT-01GMQRX9YME11ZQKFV30QW4AP0) |
 | /vendor/driver/v1/\_update | [https://api.postman.com/collections/23418568-17e45900-5801-462d-a6b1-2cf108b37c8d?access\_key=PMAT-01GMQRX9YME11ZQKFV30QW4AP0](https://api.postman.com/collections/23418568-17e45900-5801-462d-a6b1-2cf108b37c8d?access\_key=PMAT-01GMQRX9YME11ZQKFV30QW4AP0) |
 | /vendor/driver/v1/\_search | [https://api.postman.com/collections/23418568-17e45900-5801-462d-a6b1-2cf108b37c8d?access\_key=PMAT-01GMQRX9YME11ZQKFV30QW4AP0](https://api.postman.com/collections/23418568-17e45900-5801-462d-a6b1-2cf108b37c8d?access\_key=PMAT-01GMQRX9YME11ZQKFV30QW4AP0) |
-
-\
-
-
-\
-
-
-
-
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/)All content on this page by [eGov Foundation ](https://egov.org.in/)is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
