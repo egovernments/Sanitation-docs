@@ -1720,34 +1720,1728 @@ For post new Business service FSM\_POST\_PAY\_SERVICE has been created .Create b
 
 ```
 
+In system the FSM\_POST\_PAY\_SERVICE and FSM (i.e above two Business service) are removed and we introduced below new Business service for advance payment application and zero price application.
 
+For Advance new Business service FSM\_ADVANCE\_PAY\_SERVICE has been created.
 
-#### &#x20;<a href="#localization-setup" id="localization-setup"></a>
+Create businessService (workflow configuration) using the  /businessservice/\_create. Following is the product configuration for FSM\_ADVANCE\_PAY\_SERVICE:
+
+```
+{
+
+    "BusinessServices": [
+
+        {
+
+            "tenantId": "pb",
+
+            "businessService": "FSM_ADVANCE_PAY_SERVICE",
+
+            "business": "fsm",
+
+            "businessServiceSla": 172800000,
+
+            "states": [
+
+                {
+
+                    "tenantId": "pb",
+
+                    "sla": null,
+
+                    "state": null,
+
+                    "applicationStatus": null,
+
+                    "docUploadRequired": false,
+
+                    "isStartState": true,
+
+                    "isTerminateState": false,
+
+                    "isStateUpdatable": true,
+
+                    "actions": [
+
+                        {
+
+                            "tenantId": "pb",
+
+                            "action": "APPLY",
+
+                            "nextState": "PENDING_APPL_FEE_PAYMENT",
+
+                            "roles": [
+
+                                "FSM_CREATOR_EMP"
+
+                            ]
+
+                        },
+
+                        {
+
+                            "tenantId": "pb",
+
+                            "action": "CREATE",
+
+                            "nextState": "CREATED",
+
+                            "roles": [
+
+                                "CITIZEN"
+
+                            ]
+
+                        }
+
+                    ]
+
+                },
+
+                {
+
+                    "tenantId": "pb",
+
+                    "sla": null,
+
+                    "state": "CREATED",
+
+                    "applicationStatus": "CREATED",
+
+                    "docUploadRequired": false,
+
+                    "isStartState": false,
+
+                    "isTerminateState": false,
+
+                    "isStateUpdatable": true,
+
+                    "actions": [
+
+                        {
+
+                            "tenantId": "pb",
+
+                            "action": "REJECT",
+
+                            "nextState": "REJECTED",
+
+                            "roles": [
+
+                                "FSM_ADMIN"
+
+                            ]
+
+                        },
+
+                        {
+
+                            "tenantId": "pb",
+
+                            "action": "SUBMIT",
+
+                            "nextState": "PENDING_APPL_FEE_PAYMENT",
+
+                            "roles": [
+
+                                "FSM_EDITOR_EMP"
+
+                            ]
+
+                        }
+
+                    ]
+
+                },
+
+                {
+
+                    "tenantId": "pb",
+
+                    "sla": null,
+
+                    "state": "PENDING_APPL_FEE_PAYMENT",
+
+                    "applicationStatus": "PENDING_APPL_FEE_PAYMENT",
+
+                    "docUploadRequired": false,
+
+                    "isStartState": false,
+
+                    "isTerminateState": false,
+
+                    "isStateUpdatable": true,
+
+                    "actions": [
+
+                        {
+
+                            "tenantId": "pb",
+
+                            "action": "REJECT",
+
+                            "nextState": "REJECTED",
+
+                            "roles": [
+
+                                "FSM_ADMIN"
+
+                            ]
+
+                        },
+
+                        {
+
+                            "tenantId": "pb",
+
+                            "action": "SENDBACK",
+
+                            "nextState": "CREATED",
+
+                            "roles": [
+
+                                "FSM_ADMIN"
+
+                            ]
+
+                        },
+
+                        {
+
+                            "tenantId": "pb",
+
+                            "action": "PAY",
+
+                            "nextState": "ASSING_DSO",
+
+                            "roles": [
+
+                                "CITIZEN",
+
+                                "FSM_COLLECTOR"
+
+                            ]
+
+                        }
+
+                    ]
+
+                },
+
+                {
+
+                    "tenantId": "pb",
+
+                    "sla": null,
+
+                    "state": "ASSING_DSO",
+
+                    "applicationStatus": "ASSING_DSO",
+
+                    "docUploadRequired": false,
+
+                    "isStartState": false,
+
+                    "isTerminateState": false,
+
+                    "isStateUpdatable": true,
+
+                    "actions": [
+
+                        {
+
+                            "tenantId": "pb",
+
+                            "action": "CANCEL",
+
+                            "nextState": "CANCELED",
+
+                            "roles": [
+
+                                "FSM_ADMIN"
+
+                            ]
+
+                        },
+
+                        {
+
+                            "tenantId": "pb",
+
+                            "action": "ASSIGN",
+
+                            "nextState": "PENDING_DSO_APPROVAL",
+
+                            "roles": [
+
+                                "FSM_EDITOR_EMP"
+
+                            ]
+
+                        }
+
+                    ]
+
+                },
+
+                {
+
+                    "tenantId": "pb",
+
+                    "sla": null,
+
+                    "state": "DSO_REJECTED",
+
+                    "applicationStatus": "DSO_REJECTED",
+
+                    "docUploadRequired": false,
+
+                    "isStartState": false,
+
+                    "isTerminateState": false,
+
+                    "isStateUpdatable": true,
+
+                    "actions": [
+
+                        {
+
+                            "tenantId": "pb",
+
+                            "currentState": "DSO_REJECTED",
+
+                            "action": "CANCEL",
+
+                            "nextState": "CANCELED",
+
+                            "roles": [
+
+                                "FSM_ADMIN"
+
+                            ]
+
+                        },
+
+                        {
+
+                            "tenantId": "pb",
+
+                            "currentState": "DSO_REJECTED",
+
+                            "action": "REASSING",
+
+                            "nextState": "PENDING_DSO_APPROVAL",
+
+                            "roles": [
+
+                                "FSM_EDITOR_EMP"
+
+                            ]
+
+                        },
+
+                        {
+
+                            "tenantId": "pb",
+
+                            "currentState": "DSO_REJECTED",
+
+                            "action": "SENDBACK",
+
+                            "nextState": "PENDING_DSO_APPROVAL",
+
+                            "roles": [
+
+                                "FSM_ADMIN"
+
+                            ]
+
+                        }
+
+                    ]
+
+                },
+
+                {
+
+                    "tenantId": "pb",
+
+                    "sla": null,
+
+                    "state": "DSO_INPROGRESS",
+
+                    "applicationStatus": "DSO_INPROGRESS",
+
+                    "docUploadRequired": false,
+
+                    "isStartState": false,
+
+                    "isTerminateState": false,
+
+                    "isStateUpdatable": true,
+
+                    "actions": [
+
+                        {
+
+                            "tenantId": "pb",
+
+                            "currentState": "DSO_INPROGRESS",
+
+                            "action": "SENDBACK",
+
+                            "nextState": "PENDING_DSO_APPROVAL",
+
+                            "roles": [
+
+                                "FSM_ADMIN"
+
+                            ]
+
+                        },
+
+                        {
+
+                            "tenantId": "pb",
+
+                            "currentState": "DSO_INPROGRESS",
+
+                            "action": "COMPLETED",
+
+                            "nextState": "CITIZEN_FEEDBACK_PENDING",
+
+                            "roles": [
+
+                                "FSM_DSO",
+
+                                "FSM_EDITOR_EMP"
+
+                            ]
+
+                        },
+
+                        {
+
+                            "tenantId": "pb",
+
+                            "currentState": "DSO_INPROGRESS",
+
+                            "action": "CANCEL",
+
+                            "nextState": "CANCELED",
+
+                            "roles": [
+
+                                "FSM_ADMIN"
+
+                            ]
+
+                        },
+
+                        {
+
+                            "tenantId": "pb",
+
+                            "currentState": "DSO_INPROGRESS",
+
+                            "action": "UPDATE",
+
+                            "nextState": "DSO_INPROGRESS",
+
+                            "roles": [
+
+                                "FSM_DSO",
+
+                                "FSM_EDITOR_EMP"
+
+                            ]
+
+                        },
+
+                        {
+
+                            "tenantId": "pb",
+
+                            "action": "PAY",
+
+                            "nextState": "DSO_INPROGRESS",
+
+                            "roles": [
+
+                                "CITIZEN",
+
+                                "FSM_COLLECTOR"
+
+                            ]
+
+                        },
+
+                        {
+
+                            "tenantId": "pb",
+
+                            "currentState": "DSO_INPROGRESS",
+
+                            "action": "REASSING",
+
+                            "nextState": "PENDING_DSO_APPROVAL",
+
+                            "roles": [
+
+                                "FSM_EDITOR_EMP"
+
+                            ]
+
+                        }
+
+                    ]
+
+                },
+
+                {
+
+                    "tenantId": "pb",
+
+                    "sla": null,
+
+                    "state": "PENDING_DSO_APPROVAL",
+
+                    "applicationStatus": "PENDING_DSO_APPROVAL",
+
+                    "docUploadRequired": false,
+
+                    "isStartState": false,
+
+                    "isTerminateState": false,
+
+                    "isStateUpdatable": true,
+
+                    "actions": [
+
+                        {
+
+                            "tenantId": "pb",
+
+                            "currentState": "PENDING_DSO_APPROVAL",
+
+                            "action": "DSO_REJECT",
+
+                            "nextState": "DSO_REJECTED",
+
+                            "roles": [
+
+                                "FSM_DSO",
+
+                                "FSM_EDITOR_EMP"
+
+                            ]
+
+                        },
+
+                        {
+
+                            "tenantId": "pb",
+
+                            "currentState": "PENDING_DSO_APPROVAL",
+
+                            "action": "DSO_ACCEPT",
+
+                            "nextState": "DSO_INPROGRESS",
+
+                            "roles": [
+
+                                "FSM_DSO",
+
+                                "FSM_EDITOR_EMP"
+
+                            ]
+
+                        },
+
+                        {
+
+                            "tenantId": "pb",
+
+                            "currentState": "PENDING_DSO_APPROVAL",
+
+                            "action": "CANCEL",
+
+                            "nextState": "CANCELED",
+
+                            "roles": [
+
+                                "FSM_ADMIN"
+
+                            ]
+
+                        },
+
+                        {
+
+                            "tenantId": "pb",
+
+                            "currentState": "PENDING_DSO_APPROVAL",
+
+                            "action": "REASSING",
+
+                            "nextState": "PENDING_DSO_APPROVAL",
+
+                            "roles": [
+
+                                "FSM_EDITOR_EMP"
+
+                            ]
+
+                        }
+
+                    ]
+
+                },
+
+                {
+
+                    "tenantId": "pb",
+
+                    "sla": null,
+
+                    "state": "COMPLETED",
+
+                    "applicationStatus": "COMPLETED",
+
+                    "docUploadRequired": false,
+
+                    "isStartState": false,
+
+                    "isTerminateState": true,
+
+                    "isStateUpdatable": false
+
+                },
+
+                {
+
+                    "sla": null,
+
+                    "state": "REJECTED",
+
+                    "applicationStatus": "REJECTED",
+
+                    "docUploadRequired": false,
+
+                    "isStartState": false,
+
+                    "isTerminateState": true,
+
+                    "isStateUpdatable": false,
+
+                    "actions": null
+
+                },
+
+                {
+
+                    "tenantId": "pb",
+
+                    "sla": null,
+
+                    "state": "CANCELED",
+
+                    "applicationStatus": "CANCELED",
+
+                    "docUploadRequired": false,
+
+                    "isStartState": false,
+
+                    "isTerminateState": true,
+
+                    "isStateUpdatable": false,
+
+                    "actions": null
+
+                },
+
+                {
+
+                    "tenantId": "pb",
+
+                    "sla": null,
+
+                    "state": "CITIZEN_FEEDBACK_PENDING",
+
+                    "applicationStatus": "CITIZEN_FEEDBACK_PENDING",
+
+                    "docUploadRequired": false,
+
+                    "isStartState": false,
+
+                    "isTerminateState": false,
+
+                    "isStateUpdatable": false,
+
+                    "actions": [
+
+                        {
+
+                            "tenantId": "pb",
+
+                            "currentState": "CITIZEN_FEEDBACK_PENDING",
+
+                            "action": "RATE",
+
+                            "nextState": "COMPLETED",
+
+                            "roles": [
+
+                                "CITIZEN"
+
+                            ]
+
+                        }
+
+                    ]
+
+                }
+
+            ]
+
+        }
+
+    ],
+
+    "RequestInfo": {
+
+        "apiId": "Rainmaker",
+
+        "action": "",
+
+        "did": 1,
+
+        "key": "",
+
+        "msgId": "20170310130900|en_IN",
+
+        "requesterId": "",
+
+        "ts": 1513579888683,
+
+        "ver": ".01",
+
+        "authToken": "c6aa4196-0e1b-4634-802b-b85fa13ae6ce",
+
+        "userInfo": {
+
+            "id": 30074,
+
+            "uuid": "5130f2e3-efc1-401a-94fb-b9e60d9fa17d",
+
+            "userName": "XYZ",
+
+            "name": "XYZ",
+
+            "mobileNumber": "8897970021",
+
+            "emailId": null,
+
+            "locale": null,
+
+            "type": "EMPLOYEE",
+
+            "roles": [
+
+                {
+
+                    "name": "FSM Employee Application Viewer",
+
+                    "code": "FSM_VIEW_EMP",
+
+                    "tenantId": "pb.amritsar"
+
+                },
+
+                {
+
+                    "name": "Employee",
+
+                    "code": "EMPLOYEE",
+
+                    "tenantId": "pb.amritsar"
+
+                },
+
+                {
+
+                    "name": "National Dashboard Administrator",
+
+                    "code": "NATADMIN",
+
+                    "tenantId": "pb.amritsar"
+
+                },
+
+                {
+
+                    "name": "TL Field Inspector",
+
+                    "code": "TL_FIELD_INSPECTOR",
+
+                    "tenantId": "pb.amritsar"
+
+                },
+
+                {
+
+                    "name": "ptcollection emp",
+
+                    "code": "PT_COLLECTION_EMP",
+
+                    "tenantId": "pb.amritsar"
+
+                },
+
+                {
+
+                    "name": "EMPLOYEE ADMIN",
+
+                    "code": "EMPLOYEE ADMIN",
+
+                    "tenantId": "pb.amritsar"
+
+                },
+
+                {
+
+                    "name": "HRMS Admin",
+
+                    "code": "HRMS_ADMIN",
+
+                    "tenantId": "pb.amritsar"
+
+                },
+
+                {
+
+                    "name": "Universal Collection Employee",
+
+                    "code": "UC_EMP",
+
+                    "tenantId": "pb.amritsar"
+
+                },
+
+                {
+
+                    "name": "State Administrator",
+
+                    "code": "STADMIN",
+
+                    "tenantId": "pb.amritsar"
+
+                },
+
+                {
+
+                    "name": "Super User",
+
+                    "code": "SUPERUSER",
+
+                    "tenantId": "pb.amritsar"
+
+                },
+
+                {
+
+                    "name": "FSM Employee Application Creator",
+
+                    "code": "FSM_CREATOR_EMP",
+
+                    "tenantId": "pb.amritsar"
+
+                },
+
+                {
+
+                    "name": "FSM Employee Dashboard Viewer",
+
+                    "code": "FSM_DASHBOARD_VIEWER",
+
+                    "tenantId": "pb.amritsar"
+
+                },
+
+                {
+
+                    "name": "Anonymous User",
+
+                    "code": "ANONYMOUS",
+
+                    "tenantId": "pb.amritsar"
+
+                }
+
+            ],
+
+            "active": true,
+
+            "tenantId": "pb.amritsar",
+
+            "permanentCity": null
+
+        }
+
+    }
+
+}
+```
+
+For Advance Zero new Business service PAY\_LATER\_SERVICE has been created&#x20;
+
+Create businessService (workflow configuration) using the  /businessservice/\_create. Following is the product configuration for PAY\_LATER\_SERVICE:
+
+```
+{
+    "BusinessServices":[
+        {
+            "tenantId": "pb",
+            "businessService": "PAY_LATER_SERVICE",
+            "business": "fsm",
+            "businessServiceSla": 172800000,
+            "states": [
+                {
+                    "tenantId": "pb",
+                    "sla": null,
+                    "state": null,
+                    "applicationStatus": null,
+                    "docUploadRequired": false,
+                    "isStartState": true,
+                    "isTerminateState": false,
+                    "isStateUpdatable": true,
+                    "actions": [
+                        {
+                            "tenantId": "pb",
+                            "currentState": null,
+                            "action": "APPLY",
+                            "nextState": "ASSING_DSO",
+                            "roles": [
+                                "FSM_CREATOR_EMP"
+                            ]
+                        },
+                        {
+                            "tenantId": "pb",
+                            "currentState": null,
+                            "action": "CREATE",
+                            "nextState": "CREATED",
+                            "roles": [
+                                "CITIZEN"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "tenantId": "pb",
+                    "sla": null,
+                    "state": "CREATED",
+                    "applicationStatus": "CREATED",
+                    "docUploadRequired": false,
+                    "isStartState": false,
+                    "isTerminateState": false,
+                    "isStateUpdatable": true,
+                    "actions": [
+                        {
+                            "tenantId": "pb",
+                            "currentState": "CREATED",
+                            "action": "REJECT",
+                            "nextState": "REJECTED",
+                            "roles": [
+                                "FSM_ADMIN"
+                            ]
+                        },
+                        {
+                            "tenantId": "pb",
+                            "currentState": "CREATED",
+                            "action": "SUBMIT",
+                            "nextState": "ASSING_DSO",
+                            "roles": [
+                                "FSM_EDITOR_EMP"
+                            ]
+                        }
+                    ]
+                },
+                
+                {
+                    "tenantId": "pb",
+                    "sla": null,
+                    "state": "ASSING_DSO",
+                    "applicationStatus": "ASSING_DSO",
+                    "docUploadRequired": false,
+                    "isStartState": false,
+                    "isTerminateState": false,
+                    "isStateUpdatable": true,
+                    "actions": [
+                        {
+                            "tenantId": "pb",
+                            "currentState": "ASSING_DSO",
+                            "action": "CANCEL",
+                            "nextState": "CANCELED",
+                            "roles": [
+                                "FSM_ADMIN"
+                            ]
+                        },
+                        {
+                            "tenantId": "pb",
+                            "currentState": "ASSING_DSO",
+                            "action": "ASSIGN",
+                            "nextState": "PENDING_DSO_APPROVAL",
+                            "roles": [
+                                "FSM_EDITOR_EMP"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "tenantId": "pb",
+                    "sla": null,
+                    "state": "PENDING_DSO_APPROVAL",
+                    "applicationStatus": "PENDING_DSO_APPROVAL",
+                    "docUploadRequired": false,
+                    "isStartState": false,
+                    "isTerminateState": false,
+                    "isStateUpdatable": true,
+                    "actions": [
+                        {
+                            "tenantId": "pb",
+                            "currentState": "PENDING_DSO_APPROVAL",
+                            "action": "DSO_ACCEPT",
+                            "nextState": "DSO_INPROGRESS",
+                            "roles": [
+                                 "FSM_DSO",
+                                 "FSM_EDITOR_EMP"
+                            ]
+                        },
+                        {
+                            "tenantId": "pb",
+                            "currentState": "PENDING_DSO_APPROVAL",
+                            "action": "CANCEL",
+                            "nextState": "CANCELED",
+                            "roles": [
+                                "FSM_ADMIN"
+                            ]
+                        },
+                        {
+                            "tenantId": "pb",
+                            "currentState": "PENDING_DSO_APPROVAL",
+                            "action": "REASSING",
+                            "nextState": "PENDING_DSO_APPROVAL",
+                            "roles": [
+                                "FSM_EDITOR_EMP"
+                            ]
+                        },
+                        {
+                            "tenantId": "pb",
+                            "currentState": "PENDING_DSO_APPROVAL",
+                            "action": "DSO_REJECT",
+                            "nextState": "DSO_REJECTED",
+                            "roles": [
+                                 "FSM_DSO",
+                                 "FSM_EDITOR_EMP"
+                            ]
+                        }
+                    ]
+                },
+                 {
+                    "tenantId": "pb",
+                    "sla": null,
+                    "state": "DSO_REJECTED",
+                    "applicationStatus": "DSO_REJECTED",
+                    "docUploadRequired": false,
+                    "isStartState": false,
+                    "isTerminateState": false,
+                    "isStateUpdatable": true,
+                    "actions": [
+                        {
+                            "tenantId": "pb",
+                            "currentState": "DSO_REJECTED",
+                            "action": "CANCEL",
+                            "nextState": "CANCELED",
+                            "roles": [
+                                "FSM_ADMIN"
+                            ],
+                            "active": true
+                        },
+                        {
+                            "tenantId": "pb",
+                            "currentState": "DSO_REJECTED",
+                            "action": "REASSING",
+                            "nextState": "PENDING_DSO_APPROVAL",
+                            "roles": [
+                                "FSM_EDITOR_EMP"
+                            ],
+                             "active": true
+                        },
+                        {
+                            "tenantId": "pb",
+                            "currentState": "DSO_REJECTED",
+                            "action": "SENDBACK",
+                            "nextState": "PENDING_DSO_APPROVAL",
+                            "roles": [
+                                "FSM_ADMIN"
+                            ],
+                            "active": true
+                        }
+                    ]
+                },
+                {
+                    "tenantId": "pb",
+                    "sla": null,
+                    "state": "DSO_INPROGRESS",
+                    "applicationStatus": "DSO_INPROGRESS",
+                    "docUploadRequired": false,
+                    "isStartState": false,
+                    "isTerminateState": false,
+                    "isStateUpdatable": true,
+                    "actions": [
+                        {
+                            "tenantId": "pb",
+                            "currentState": "DSO_INPROGRESS",
+                            "action": "SENDBACK",
+                            "nextState": "PENDING_DSO_APPROVAL",
+                            "roles": [
+                                "FSM_ADMIN"
+                            ]
+                        },
+                        {
+                            "tenantId": "pb",
+                            "currentState": "DSO_INPROGRESS",
+                            "action": "COMPLETED",
+                            "nextState": "CITIZEN_FEEDBACK_PENDING",
+                            "roles": [
+                                "FSM_DSO",
+                                "FSM_EDITOR_EMP"
+                            ]
+                        },
+                       
+                        {
+                            "tenantId": "pb",
+                            "currentState": "DSO_INPROGRESS",
+                            "action": "CANCEL",
+                            "nextState": "CANCELED",
+                            "roles": [
+                                "FSM_ADMIN"
+                            ]
+                        },
+                        {
+                            "tenantId": "pb",
+                            "currentState": "DSO_INPROGRESS",
+                            "action": "REASSING",
+                            "nextState": "PENDING_DSO_APPROVAL",
+                            "roles": [
+                                "FSM_EDITOR_EMP"
+                            ]
+                        },
+                        {
+                            "tenantId": "pb",
+                            "currentState": "DSO_INPROGRESS",
+                            "action": "UPDATE",
+                            "nextState": "DSO_INPROGRESS",
+                            "roles": [
+                                "FSM_DSO",
+                                "FSM_EDITOR_EMP"
+                            ]
+                        },
+                        {
+                            "tenantId": "pb",
+                            "action": "PAY",
+                            "nextState": "DSO_INPROGRESS",
+                            "roles": [
+                                "CITIZEN",
+                                "FSM_COLLECTOR"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "tenantId": "pb",
+                    "sla": null,
+                    "state": "CITIZEN_FEEDBACK_PENDING",
+                    "applicationStatus": "CITIZEN_FEEDBACK_PENDING",
+                    "docUploadRequired": false,
+                    "isStartState": false,
+                    "isTerminateState": false,
+                    "isStateUpdatable": false,
+                    "actions": [
+                        {
+                            "tenantId": "pb",
+                            "currentState": "CITIZEN_FEEDBACK_PENDING",
+                            "action": "RATE",
+                            "nextState": "COMPLETED",
+                            "roles": [
+                                "CITIZEN"
+                            ],
+                            "active": true
+                        }
+                    ]
+                },
+                {
+                    "tenantId": "pb",
+                    "sla": null,
+                    "state": "COMPLETED",
+                    "applicationStatus": "COMPLETED",
+                    "docUploadRequired": false,
+                    "isStartState": false,
+                    "isTerminateState": true,
+                    "isStateUpdatable": false,
+                    "actions": null
+                },
+                {
+                    "tenantId": "pb",
+                    "sla": null,
+                    "state": "REJECTED",
+                    "applicationStatus": "REJECTED",
+                    "docUploadRequired": false,
+                    "isStartState": false,
+                    "isTerminateState": true,
+                    "isStateUpdatable": false,
+                    "actions": null
+                },
+                {
+                    "tenantId": "pb",
+                    "sla": null,
+                    "state": "CANCELED",
+                    "applicationStatus": "CANCELED",
+                    "docUploadRequired": false,
+                    "isStartState": false,
+                    "isTerminateState": true,
+                    "isStateUpdatable": false,
+                    "actions": null
+                }
+                
+            ]
+        }
+    ],
+    "RequestInfo": {
+        "apiId": "Rainmaker",
+        "action": "",
+        "did": 1,
+        "key": "",
+        "msgId": "20170310130900|en_IN",
+        "requesterId": "",
+        "ts": 1513579888683,
+        "ver": ".01",
+        "authToken": "3d828f89-c249-4d4a-9098-8230e6040bf5",
+        "userInfo": {
+            "id": 30074,
+            "uuid": "5130f2e3-efc1-401a-94fb-b9e60d9fa17d",
+            "userName": "XYZ",
+            "name": "XYZ",
+            "mobileNumber": "8897970021",
+            "emailId": null,
+            "locale": null,
+            "type": "EMPLOYEE",
+            "roles": [
+                {
+                    "name": "FSM Employee Application Viewer",
+                    "code": "FSM_VIEW_EMP",
+                    "tenantId": "pb.amritsar"
+                },
+                {
+                    "name": "Employee",
+                    "code": "EMPLOYEE",
+                    "tenantId": "pb.amritsar"
+                },
+                {
+                    "name": "National Dashboard Administrator",
+                    "code": "NATADMIN",
+                    "tenantId": "pb.amritsar"
+                },
+                {
+                    "name": "TL Field Inspector",
+                    "code": "TL_FIELD_INSPECTOR",
+                    "tenantId": "pb.amritsar"
+                },
+                {
+                    "name": "ptcollection emp",
+                    "code": "PT_COLLECTION_EMP",
+                    "tenantId": "pb.amritsar"
+                },
+                {
+                    "name": "EMPLOYEE ADMIN",
+                    "code": "EMPLOYEE ADMIN",
+                    "tenantId": "pb.amritsar"
+                },
+                {
+                    "name": "HRMS Admin",
+                    "code": "HRMS_ADMIN",
+                    "tenantId": "pb.amritsar"
+                },
+                {
+                    "name": "Universal Collection Employee",
+                    "code": "UC_EMP",
+                    "tenantId": "pb.amritsar"
+                },
+                {
+                    "name": "State Administrator",
+                    "code": "STADMIN",
+                    "tenantId": "pb.amritsar"
+                },
+                {
+                    "name": "Super User",
+                    "code": "SUPERUSER",
+                    "tenantId": "pb.amritsar"
+                },
+                {
+                    "name": "FSM Employee Application Creator",
+                    "code": "FSM_CREATOR_EMP",
+                    "tenantId": "pb.amritsar"
+                },
+                {
+                    "name": "FSM Employee Dashboard Viewer",
+                    "code": "FSM_DASHBOARD_VIEWER",
+                    "tenantId": "pb.amritsar"
+                },
+                {
+                    "name": "Anonymous User",
+                    "code": "ANONYMOUS",
+                    "tenantId": "pb.amritsar"
+                }
+            ],
+            "active": true,
+            "tenantId": "pb.amritsar",
+            "permanentCity": null
+        }
+    }
+}
+```
+
+For Zero Price Application new Business service FSM\_ZERO\_PAY\_SERVICE has been created&#x20;
+
+Create businessService (workflow configuration) using the  /businessservice/\_create. Following is the product configuration for FSM\_ZERO\_PAY\_SERVICE:
+
+```
+{
+    "BusinessServices": [
+        {
+            "tenantId": "pb",
+            "businessService": "FSM_ZERO_PAY_SERVICE",
+            "business": "fsm",
+            "businessServiceSla": 172800000,
+            "states": [
+                {
+                    "tenantId": "pb",
+                    "sla": null,
+                    "state": null,
+                    "applicationStatus": null,
+                    "docUploadRequired": false,
+                    "isStartState": true,
+                    "isTerminateState": false,
+                    "isStateUpdatable": true,
+                    "actions": [
+                        {
+                            "tenantId": "pb",
+							"currentState": null,
+                            "action": "APPLY",
+                            "nextState": "ASSING_DSO",
+                            "roles": [
+                                "FSM_CREATOR_EMP"
+                            ]
+                        },
+                        {
+                            "tenantId": "pb",
+							"currentState": null,
+                            "action": "CREATE",
+                            "nextState": "CREATED",
+                            "roles": [
+                                "CITIZEN"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "tenantId": "pb",
+                    "sla": null,
+                    "state": "CREATED",
+                    "applicationStatus": "CREATED",
+                    "docUploadRequired": false,
+                    "isStartState": false,
+                    "isTerminateState": false,
+                    "isStateUpdatable": true,
+                    "actions": [
+                        {
+                            "tenantId": "pb",
+							"currentState": "CREATED",
+                            "action": "REJECT",
+                            "nextState": "REJECTED",
+                            "roles": [
+                                "FSM_ADMIN"
+                            ]
+                        },
+                        {
+                            "tenantId": "pb",
+							"currentState": "CREATED",
+                            "action": "SUBMIT",
+                            "nextState": "ASSING_DSO",
+                            "roles": [
+                                "FSM_EDITOR_EMP"
+                            ]
+                        }
+                    ]
+                },
+                
+                {
+                    "tenantId": "pb",
+                    "sla": null,
+                    "state": "ASSING_DSO",
+                    "applicationStatus": "ASSING_DSO",
+                    "docUploadRequired": false,
+                    "isStartState": false,
+                    "isTerminateState": false,
+                    "isStateUpdatable": true,
+                    "actions": [
+                        {
+                            "tenantId": "pb",
+							"currentState": "ASSING_DSO",
+                            "action": "CANCEL",
+                            "nextState": "CANCELED",
+                            "roles": [
+                                "FSM_ADMIN"
+                            ]
+                        },
+                        {
+                            "tenantId": "pb",
+							"currentState": "ASSING_DSO",
+                            "action": "ASSIGN",
+                            "nextState": "PENDING_DSO_APPROVAL",
+                            "roles": [
+                                "FSM_EDITOR_EMP"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "tenantId": "pb",
+                    "sla": null,
+                    "state": "PENDING_DSO_APPROVAL",
+                    "applicationStatus": "PENDING_DSO_APPROVAL",
+                    "docUploadRequired": false,
+                    "isStartState": false,
+                    "isTerminateState": false,
+                    "isStateUpdatable": true,
+                    "actions": [
+                       	{
+                            "tenantId": "pb",
+                            "currentState": "PENDING_DSO_APPROVAL",
+                            "action": "DSO_ACCEPT",
+                            "nextState": "DSO_INPROGRESS",
+                            "roles": [
+                                 "FSM_DSO",
+                                 "FSM_EDITOR_EMP"
+                            ]
+                        },
+						{
+                            "tenantId": "pb",
+                            "currentState": "PENDING_DSO_APPROVAL",
+                            "action": "CANCEL",
+                            "nextState": "CANCELED",
+                            "roles": [
+                                "FSM_ADMIN"
+                            ]
+                        },
+						{
+                            "tenantId": "pb",
+                            "currentState": "PENDING_DSO_APPROVAL",
+                            "action": "REASSING",
+                            "nextState": "PENDING_DSO_APPROVAL",
+                            "roles": [
+                                "FSM_EDITOR_EMP"
+                            ]
+                        },
+						{
+                            "tenantId": "pb",
+                            "currentState": "PENDING_DSO_APPROVAL",
+                            "action": "DSO_REJECT",
+                            "nextState": "DSO_REJECTED",
+                            "roles": [
+                                 "FSM_DSO",
+                                 "FSM_EDITOR_EMP"
+                            ]
+                        }
+                    ]
+                },
+				 {
+                    "tenantId": "pb",
+                    "sla": null,
+                    "state": "DSO_REJECTED",
+                    "applicationStatus": "DSO_REJECTED",
+                    "docUploadRequired": false,
+                    "isStartState": false,
+                    "isTerminateState": false,
+                    "isStateUpdatable": true,
+                    "actions": [
+                        {
+                            "tenantId": "pb",
+                            "currentState": "DSO_REJECTED",
+                            "action": "CANCEL",
+                            "nextState": "CANCELED",
+                            "roles": [
+                                "FSM_ADMIN"
+                            ],
+							"active": true
+                        },
+                        {
+                            "tenantId": "pb",
+                            "currentState": "DSO_REJECTED",
+                            "action": "REASSING",
+                            "nextState": "PENDING_DSO_APPROVAL",
+                            "roles": [
+                                "FSM_EDITOR_EMP"
+                            ],
+							 "active": true
+                        },
+                        {
+                            "tenantId": "pb",
+                            "currentState": "DSO_REJECTED",
+                            "action": "SENDBACK",
+                            "nextState": "PENDING_DSO_APPROVAL",
+                            "roles": [
+                                "FSM_ADMIN"
+                            ],
+							"active": true
+                        }
+                    ]
+                },
+                 {
+                    "tenantId": "pb",
+                    "sla": null,
+                    "state": "DSO_INPROGRESS",
+                    "applicationStatus": "DSO_INPROGRESS",
+                    "docUploadRequired": false,
+                    "isStartState": false,
+                    "isTerminateState": false,
+                    "isStateUpdatable": true,
+                    "actions": [
+                        {
+                            "tenantId": "pb",
+                            "currentState": "DSO_INPROGRESS",
+                            "action": "SENDBACK",
+                            "nextState": "PENDING_DSO_APPROVAL",
+                            "roles": [
+                                "FSM_ADMIN"
+                            ]
+                        },
+						{
+                            "tenantId": "pb",
+                            "currentState": "DSO_INPROGRESS",
+                            "action": "COMPLETED",
+                            "nextState": "CITIZEN_FEEDBACK_PENDING",
+                            "roles": [
+                                "FSM_DSO",
+                                "FSM_EDITOR_EMP"
+                            ]
+                        },
+                        {
+                            "tenantId": "pb",
+                            "currentState": "DSO_INPROGRESS",
+                            "action": "CANCEL",
+                            "nextState": "CANCELED",
+                            "roles": [
+                                "FSM_ADMIN"
+                            ]
+                        },
+                        {
+                            "tenantId": "pb",
+                            "currentState": "DSO_INPROGRESS",
+                            "action": "REASSING",
+                            "nextState": "PENDING_DSO_APPROVAL",
+                            "roles": [
+                                "FSM_EDITOR_EMP"
+                            ]
+                        },
+						{
+                            "tenantId": "pb",
+                            "currentState": "DSO_INPROGRESS",
+                            "action": "UPDATE",
+                            "nextState": "DSO_INPROGRESS",
+                            "roles": [
+                                "FSM_DSO",
+                                "FSM_EDITOR_EMP"
+                            ]
+                        }
+                    ]
+                },
+				{
+                    "tenantId": "pb",
+                    "sla": null,
+                    "state": "CITIZEN_FEEDBACK_PENDING",
+                    "applicationStatus": "CITIZEN_FEEDBACK_PENDING",
+                    "docUploadRequired": false,
+                    "isStartState": false,
+                    "isTerminateState": false,
+                    "isStateUpdatable": false,
+                    "actions": [
+                        {
+                            "tenantId": "pb",
+                            "currentState": "CITIZEN_FEEDBACK_PENDING",
+                            "action": "RATE",
+                            "nextState": "COMPLETED",
+                            "roles": [
+                                "CITIZEN"
+                            ],
+						    "active": true
+                        }
+                    ]
+                },
+                {
+                    "tenantId": "pb",
+                    "sla": null,
+                    "state": "COMPLETED",
+                    "applicationStatus": "COMPLETED",
+                    "docUploadRequired": false,
+                    "isStartState": false,
+                    "isTerminateState": true,
+                    "isStateUpdatable": false,
+					"actions": null
+                },
+                {
+                    "tenantId": "pb",
+					"sla": null,
+                    "state": "REJECTED",
+                    "applicationStatus": "REJECTED",
+                    "docUploadRequired": false,
+                    "isStartState": false,
+                    "isTerminateState": true,
+                    "isStateUpdatable": false,
+                    "actions": null
+                },
+                {
+                    "tenantId": "pb",
+                    "sla": null,
+                    "state": "CANCELED",
+                    "applicationStatus": "CANCELED",
+                    "docUploadRequired": false,
+                    "isStartState": false,
+                    "isTerminateState": true,
+                    "isStateUpdatable": false,
+                    "actions": null
+                }
+                
+            ]
+        }
+    ],
+    "RequestInfo": {
+        "apiId": "Rainmaker",
+        "action": "",
+        "did": 1,
+        "key": "",
+        "msgId": "20170310130900|en_IN",
+        "requesterId": "",
+        "ts": 1513579888683,
+        "ver": ".01",
+        "authToken": "3d828f89-c249-4d4a-9098-8230e6040bf5",
+        "userInfo": {
+            "id": 30074,
+            "uuid": "5130f2e3-efc1-401a-94fb-b9e60d9fa17d",
+            "userName": "XYZ",
+            "name": "XYZ",
+            "mobileNumber": "8897970021",
+            "emailId": null,
+            "locale": null,
+            "type": "EMPLOYEE",
+            "roles": [
+                {
+                    "name": "FSM Employee Application Viewer",
+                    "code": "FSM_VIEW_EMP",
+                    "tenantId": "pb.amritsar"
+                },
+                {
+                    "name": "Employee",
+                    "code": "EMPLOYEE",
+                    "tenantId": "pb.amritsar"
+                },
+                {
+                    "name": "National Dashboard Administrator",
+                    "code": "NATADMIN",
+                    "tenantId": "pb.amritsar"
+                },
+                {
+                    "name": "TL Field Inspector",
+                    "code": "TL_FIELD_INSPECTOR",
+                    "tenantId": "pb.amritsar"
+                },
+                {
+                    "name": "ptcollection emp",
+                    "code": "PT_COLLECTION_EMP",
+                    "tenantId": "pb.amritsar"
+                },
+                {
+                    "name": "EMPLOYEE ADMIN",
+                    "code": "EMPLOYEE ADMIN",
+                    "tenantId": "pb.amritsar"
+                },
+                {
+                    "name": "HRMS Admin",
+                    "code": "HRMS_ADMIN",
+                    "tenantId": "pb.amritsar"
+                },
+                {
+                    "name": "Universal Collection Employee",
+                    "code": "UC_EMP",
+                    "tenantId": "pb.amritsar"
+                },
+                {
+                    "name": "State Administrator",
+                    "code": "STADMIN",
+                    "tenantId": "pb.amritsar"
+                },
+                {
+                    "name": "Super User",
+                    "code": "SUPERUSER",
+                    "tenantId": "pb.amritsar"
+                },
+                {
+                    "name": "FSM Employee Application Creator",
+                    "code": "FSM_CREATOR_EMP",
+                    "tenantId": "pb.amritsar"
+                },
+                {
+                    "name": "FSM Employee Dashboard Viewer",
+                    "code": "FSM_DASHBOARD_VIEWER",
+                    "tenantId": "pb.amritsar"
+                },
+                {
+                    "name": "Anonymous User",
+                    "code": "ANONYMOUS",
+                    "tenantId": "pb.amritsar"
+                }
+            ],
+            "active": true,
+            "tenantId": "pb.amritsar",
+            "permanentCity": null
+        }
+    }
+}
+```
 
 #### Localisation Setup <a href="#localization-setup" id="localization-setup"></a>
 
-Using /localization/messages/v1/\_upsert , add localisation (templates) for notification messages to be sent.
-
-Following are the product notification templates
+Using /localization/messages/v1/\_upsert , add localisation (templates) for notification messages to be sent. Following are the product notification templates:
 
 ```
 {
   "messages":[
-         {
+          {
             "code": "FSM_SMS_CREATED_CREATE",
-            "message": "Dear Applicant,Your application for cleaning septic tank/pit is created with application reference no.<2>.You will be notified to make an application fee shortly.Request is expected to be completed within 24hrs of making the payment.",
+            "message": "Dear Applicant,Your application for cleaning septic tank/pit is created with application reference no.<2>.You will be notified to make an application fee shortly.Request is expected to be completed within <SLA_HOURS>hrs of making the payment.",
             "module": "rainmaker-common",
             "locale": "en_IN"
         },
           {
             "code": "FSM_SMS_PENDING_APPL_FEE_PAYMENT_SUBMIT",
-            "message": "Dear Applicant, Please pay the application fee Rs.<AMOUNT_TO_BE_PAID>/- for cleaning the septic tank/pit with request number <2>.Click this link <PAY_LINK> to make the payment.Request is expected to be completed within 24hrs of making the payment.",
+            "message": "Dear Applicant, Please pay the application fee Rs.<AMOUNT_TO_BE_PAID>/- for cleaning the septic tank/pit with request number <2>.Click this link <PAY_LINK> to make the payment.Request is expected to be completed within <SLA_HOURS>hrs of making the payment.",
             "module": "rainmaker-common",
             "locale": "en_IN"
         },
         {
             "code": "FSM_SMS_PENDING_APPL_FEE_PAYMENT_APPLY",
-            "message": "Dear Applicant, Your application for cleaning septic tank /pit is created with application number <2>.Please click this link <PAY_LINK> to pay the application fee for processing the application.Request is expected to be completed within 24hrs of making the payment.",
+            "message": "Dear Applicant, Your application for cleaning septic tank /pit is created with application number <2>.Please click this link <PAY_LINK> to pay the application fee for processing the application.Request is expected to be completed within <SLA_HOURS>hrs of making the payment.",
             "module": "rainmaker-common",
             "locale": "en_IN"
         },
@@ -1770,7 +3464,7 @@ Following are the product notification templates
             "locale": "en_IN"
         },
         {
-            "code": "FSM_SMS_REJECTED_REJECT",
+            "code": "FSM_SMS_DSO_REJECTED_DSO_REJECT",
             "message": "Dear Applicant, Your request for cleaning the septic tank/pit is rejected with the reason <FSM_DSO_REJECT_REASON> . Please use this link <NEW_FSM_LINK> to create a new request if needed.",
             "module": "rainmaker-common",
             "locale": "en_IN"
@@ -1785,9 +3479,48 @@ Following are the product notification templates
 }
 ```
 
+```
+{
+            "code": "PDF_STATIC_LABEL_CONSOLIDATED_RECEIPT_NO_OF_TRIP",
+            "message":"No. Of Trips",
+            "locale": "en_IN",
+            "module": "rainmaker-common"
+        },
+         {
+            "code": "PDF_STATIC_LABEL_CONSOLIDATED_RECEIPT_AMOUNT_PER_TRIP",
+            "message":"Amount Per Trip",
+            "locale": "en_IN",
+            "module": "rainmaker-common"
+        },
+        {
+            "code": "PDF_STATIC_LABEL_CONSOLIDATED_RECEIPT_TOTAL_AMOUNT_DUE",
+            "message":"Total Amount Due",
+            "locale": "en_IN",
+            "module": "rainmaker-common"
+        },
+        {
+            "code": "PDF_STATIC_LABEL_CONSOLIDATED_RECEIPT_BALANCE_AMOUNT_PAID",
+            "message":"Balance Amount Paid",
+            "locale": "en_IN",
+            "module": "rainmaker-common"
+        },
+        {
+            "code": "PDF_STATIC_LABEL_CONSOLIDATED_RECEIPT_ADVANCE_AMOUNT_PAID",
+            "message":"Advance Amount Paid",
+            "locale": "en_IN",
+            "module": "rainmaker-common"
+        },
+        {
+            "code": "PDF_STATIC_LABEL_CONSOLIDATED_RECEIPT_TOTAL_AMOUNT",
+            "message":"Total Amount",
+            "locale": "en_IN",
+            "module": "rainmaker-common"
+        }
+```
+
 #### Actions & Role Action Mapping <a href="#actions-and-role-action-mapping" id="actions-and-role-action-mapping"></a>
 
-Add Role-Action mapping for the APIs in MDMS. Following are the required entries. They should be mapped to both CITIZEN and appropriate employee roles.
+Add Role-Action mapping for the API’s in MDMS. Following are the required entries. They should be mapped to both CITIZEN and appropriate employee roles.
 
 **Action Configuration**
 
@@ -1848,8 +3581,75 @@ Add Role-Action mapping for the APIs in MDMS. Following are the required entries
       "serviceCode": "",
       "code": "null",
       "path": ""
-    },  
+    }, 
+    {
+      "id": {{PLACEHOLDER6}},
+      "name": "Search FSM Application",
+      "url": "/fsm/v1/_plainsearch",
+      "displayName": "Search  FSM Appliacations",
+      "orderNumber": 1,
+      "enabled": false,
+      "serviceCode": "FSM",
+      "code": "null",
+      "path": ""
+    },
+    {
+      "id": {{PLACEHOLDER7}},
+      "name": "Create FSTP FSTPOperator Mapping",
+      "url": "/fsm/plantmap/v1/_create",
+      "displayName": "Create FSTP FSTPOperator Map",
+      "orderNumber": 0,
+      "enabled": false,
+      "serviceCode": "FSM",
+      "code": "null",
+      "path": ""
+    },
+    {
+      "id": {{PLACEHOLDER8}},
+      "name": "Update FSTP FSTPOperator Mapping",
+      "url": "/fsm/plantmap/v1/_update",
+      "displayName": "Update FSTP FSTPOperator Map",
+      "orderNumber": 0,
+      "enabled": false,
+      "serviceCode": "FSM",
+      "code": "null",
+      "path": ""
+    },
+    {
+      "id": {{PLACEHOLDER9}},
+      "name": "Search FSTP FSTPOperator Mapping",
+      "url": "/fsm/plantmap/v1/_search",
+      "displayName": "Search FSTP FSTPOperator Map",
+      "orderNumber": 0,
+      "enabled": false,
+      "serviceCode": "FSM",
+      "code": "null",
+      "path": ""
+    },
+    {
+      "id": {{PlaceHolder10}},
+      "name": "Inbox Search ofr uI",
+      "url": "/inbox/v1/_search",
+      "displayName": "Inbox Search",
+      "orderNumber": 0,
+      "enabled": false,
+      "serviceCode": "inbox",
+      "code": "null",
+      "path": ""
+    }
 ```
+
+**data/pg/ACCESSCONTROL-ACTIONS-TEST/actions-test.json**
+
+[https://github.com/egovernments/egov-mdms-data/commit/3979963cd0281245c69f015da233a5501fb5f99f](https://github.com/egovernments/egov-mdms-data/commit/3979963cd0281245c69f015da233a5501fb5f99f)
+
+data/pg/ACCESSCONTROL-ACTIONS-TEST/actions-test.json
+
+[https://github.com/egovernments/egov-mdms-data/commit/50b83c118d57f49920c51216a2f6596d81d6ed79](https://github.com/egovernments/egov-mdms-data/commit/50b83c118d57f49920c51216a2f6596d81d6ed79)
+
+data/pg/ACCESSCONTROL-ACTIONS-TEST/actions-test.json
+
+[https://github.com/egovernments/egov-mdms-data/commit/0140a43e110d9677ac69de11d1c1fd1344aa12cd](https://github.com/egovernments/egov-mdms-data/commit/0140a43e110d9677ac69de11d1c1fd1344aa12cd)
 
 **Role Action Mapping**
 
@@ -2046,14 +3846,194 @@ Add Role-Action mapping for the APIs in MDMS. Following are the required entries
     "actionid": "{{PLACEHOLDER5}}",
     "actioncode": "",
     "tenantId": "pb"
-  }
+  },
+  {
+      "rolecode": "FSM_EDITOR_EMP",
+      "actionid": {{PLACEHOLDER6}},
+      "actioncode": "",
+      "tenantId": "pb"
+    },
+    {
+      "rolecode": "FSM_VIEW_EMP",
+      "actionid": {{PLACEHOLDER6}},
+      "actioncode": "",
+      "tenantId": "pb"
+    },
+    {
+      "rolecode": "FSM_ADMIN",
+      "actionid": {{PLACEHOLDER6}},
+      "actioncode": "",
+      "tenantId": "pb"
+    },
+    {
+      "rolecode": "FSM_DSO",
+      "actionid": {{PLACEHOLDER6}},
+      "actioncode": "",
+      "tenantId": "pb"
+    },
+    {
+      "rolecode": "FSM_DRIVER",
+      "actionid": {{PLACEHOLDER6}},
+      "actioncode": "",
+      "tenantId": "pb"
+    },
+    {
+      "rolecode": "FSM_EMP_FSTPO",
+      "actionid": {{PLACEHOLDER6}},
+      "actioncode": "",
+      "tenantId": "pb"
+    },
+    {
+      "rolecode": "FSM_COLLECTOR",
+      "actionid": {{PLACEHOLDER6}},
+      "actioncode": "",
+      "tenantId": "pb"
+    },
+  {
+      "rolecode": "FSM_ADMIN",
+      "actionid": {{PLACEHOLDER7}},
+      "actioncode": "",
+      "tenantId": "pb"
+    },
+     {
+      "rolecode": "FSM_ADMIN",
+      "actionid": {{PLACEHOLDER8}},
+      "actioncode": "",
+      "tenantId": "pb"
+    },
+    {
+      "rolecode": "FSM_EMP_FSTPO",
+      "actionid": {{PLACEHOLDER8}},
+      "actioncode": "",
+      "tenantId": "pb"
+    },
+    {
+      "rolecode": "PT_CEMP",
+      "actionid": {{PLACEHOLDER9}},
+      "actioncode": "",
+      "tenantId": "pb"
+    },
+    {
+      "rolecode": "CITIZEN",
+      "actionid": {{PLACEHOLDER9}},
+      "actioncode": "",
+      "tenantId": "pb"
+    },
+    {
+      "rolecode": "SUPERUSER",
+      "actionid": {{PLACEHOLDER9}},
+      "actioncode": "",
+      "tenantId": "pb"
+    }, 
+        {
+      "rolecode": "FSM_EMP_FSTPO",
+      "actionid": {{PlaceHolder10}},
+      "actioncode": "",
+      "tenantId": "pb"
+    },
+    {
+      "rolecode": "FSM_COLLECTOR",
+      "actionid": {{PlaceHolder10}},
+      "actioncode": "",
+      "tenantId": "pb"
+    },
+    {
+      "rolecode": "FSM_EDITOR_EMP",
+      "actionid": {{PlaceHolder10}},
+      "actioncode": "",
+      "tenantId": "pb"
+    },
+    {
+      "rolecode": "FSM_VIEW_EMP",
+      "actionid": {{PlaceHolder10}},
+      "actioncode": "",
+      "tenantId": "pb"
+    },
+     {
+      "rolecode": "FSM_CREATOR_EMP",
+      "actionid": {{PlaceHolder10}},
+      "actioncode": "",
+      "tenantId": "pb"
+    },
+    {
+      "rolecode": "FSM_ADMIN",
+      "actionid": {{PlaceHolder10}},
+      "actioncode": "",
+      "tenantId": "pb"
+    },
+    {
+      "rolecode": "FSM_DSO",
+      "actionid": {{PlaceHolder10}},
+      "actioncode": "",
+      "tenantId": "pb"
+    },
+    {
+      "rolecode": "PT_CEMP",
+      "actionid": {{PlaceHolder10}},
+      "actioncode": "",
+      "tenantId": "pb"
+    },
+    {
+      "rolecode": "PT_DOC_VERIFIER",
+      "actionid": {{PlaceHolder10}},
+      "actioncode": "",
+      "tenantId": "pb"
+    },
+    {
+      "rolecode": "PT_FIELD_INSPECTOR",
+      "actionid": {{PlaceHolder10}},
+      "actioncode": "",
+      "tenantId": "pb"
+    },
+    {
+      "rolecode": "PT_APPROVER",
+      "actionid": {{PlaceHolder10}},
+      "actioncode": "",
+      "tenantId": "pb"
+    },
+    {
+    "rolecode": "TL_CEMP",
+    "actionid": {{PlaceHolder10}},
+    "actioncode": "",
+    "tenantId": "pb"
+  },
+  {
+    "rolecode": "TL_DOC_VERIFIER",
+    "actionid": {{PlaceHolder10}},
+    "actioncode": "",
+    "tenantId": "pb"
+  },
+  {
+    "rolecode": "TL_FIELD_INSPECTOR",
+    "actionid": {{PlaceHolder10}},
+    "actioncode": "",
+    "tenantId": "pb"
+  },
+  {
+    "rolecode": "TL_APPROVER",
+    "actionid": {{PlaceHolder10}},
+    "actioncode": "",
+    "tenantId": "pb"
+  },
 ]
 ```
+
+data/pg/ACCESSCONTROL-ROLEACTIONS/roleactions.json
+
+[https://github.com/egovernments/egov-mdms-data/commit/4d58943d8ab04aa5d8816821406b6e40017ec722](https://github.com/egovernments/egov-mdms-data/commit/4d58943d8ab04aa5d8816821406b6e40017ec722)
+
+data/pg/ACCESSCONTROL-ROLEACTIONS/roleactions.json
+
+[https://github.com/egovernments/egov-mdms-data/commit/1b5962693ac70b7ac56fd312f4b2febab00f9c93](https://github.com/egovernments/egov-mdms-data/commit/1b5962693ac70b7ac56fd312f4b2febab00f9c93)
+
+&#x20;data/pg/ACCESSCONTROL-ROLEACTIONS/roleactions.json
+
+[https://github.com/egovernments/egov-mdms-data/commit/9f9b1340b42f25bca44fdcfa474a3413cc21ec03](https://github.com/egovernments/egov-mdms-data/commit/9f9b1340b42f25bca44fdcfa474a3413cc21ec03)
 
 **Infra Ops Configuration**
 
 Configurations that we can manage through values.yml fsm-calculator in infraops repo as follows\
-values.yml for fms-calculator can be found [here](https://github.com/egovernments/eGov-infraOps/blob/master/helm/charts/municipal-services/fsm/values.yaml)
+values.yml for fms-calculator can be found[ here](https://github.com/egovernments/eGov-infraOps/blob/master/helm/charts/municipal-services/fsm/values.yaml)
 
 |                                                                               |                                         |                                                |
 | ----------------------------------------------------------------------------- | --------------------------------------- | ---------------------------------------------- |
@@ -2079,7 +4059,7 @@ values.yml for fms-calculator can be found [here](https://github.com/egovernment
 **Sample values.yml**
 
 ```
- - name: EGOV_IDGEN_HOST
+- name: EGOV_IDGEN_HOST
     valueFrom:
       configMapKeyRef:
         name: egov-service-host
@@ -2161,6 +4141,8 @@ values.yml for fms-calculator can be found [here](https://github.com/egovernment
     value: update-fsm-application
   - name: PERSISTER_UPDATE_FSM_WORKFLOW_TOPIC
     value: update-fsm-workflow-application
+
+
 ```
 
 **Users**
@@ -2181,7 +4163,7 @@ values.yml for fms-calculator can be found [here](https://github.com/egovernment
 
 #### Integration Scope <a href="#integration-scope" id="integration-scope"></a>
 
-FSM can be integrated with any ULB or system which wants to track FSM application. The organisations can customise the workflow depending on there product requirements
+FSM can be integrated with any ULB or system which wants to track the FSM application. The organisations can customise the workflow depending on their product requirements.
 
 #### Integration Benefits <a href="#integration-benefits" id="integration-benefits"></a>
 
@@ -2192,74 +4174,77 @@ FSM can be integrated with any ULB or system which wants to track FSM applicatio
 
 1. Citizen/ULB Employee can file Application request using the /fsm/v1/\_create
 2. Organisation or System can search the FSM Applications using /fsm/v1/\_searchendpoint
-3. Once the application is filed the organisation or system can call /fsm/v1/\_update endpoint to move the application further in workflow until it gets resolved
+3. Once the Application is files the organisation or system can call /fsm/v1/\_update endpoint to move the application further in workflow until it get resolved
 
-**Inbox api**
+**Inbox API**
 
-* Introduced new inbox service to get the fsm applications in registered ULB employee inbox, With this ULB employee can track the application or perform the actions based on employee role.
-* ULB employee can also apply the filter to check the particular state or applications or any other filter as required.
+* Introduced new inbox service to get the FSM applications in registered ULB employee inbox, With this ULB employee can track the application or perform the actions based on employee role.
+* ULB employees can also apply the filter to check the particular state or applications or any other filter as required.
 
 **FSM apply as service**
 
-As of now we are providing fsm as adhoc service. In order to avoid multiple times user has to create the fsm request every time, In the system itself after some particular days, we will create same fsm application and if user wants service, he will pay the amount .
+As of now we are providing FSM as an adhoc service.To avoid multiple times, a user has to create the FSM request every time. In the system itself after some days, we will create the same FSM application and if the user wants a service, he/she will pay the amount.
 
 **MDMS changes**
 
 As we mentioned above, we need to define the time parameter, in order to create a periodic application. For that we added the periodic service master where we configure the time limit and whether the schedular is enabled or not. Please find the below configuration and location.
 
-[<img src="https://github.com/fluidicon.png" alt="" data-size="line">egov-mdms-data/PeriodicService.json at DEV · egovernments/egov-mdms-data](https://github.com/egovernments/egov-mdms-data/blob/DEV/data/pb/amritsar/FSM/PeriodicService.json)
+{% embed url="https://github.com/egovernments/egov-mdms-data/blob/DEV/data/pb/amritsar/FSM/PeriodicService.json" %}
 
-`{ "tenantId": "pb.amritsar",`
+```
+{ "tenantId": "pb.amritsar",
+"moduleName": "FSM",
+"PeriodicService":[
+{
+"timeLimit" : 864000000,
+"isSchedularConfiguration":true
+}
+]
+}
 
-`"moduleName": "FSM",`
-
-`"PeriodicService":[`
-
-`{`
-
-`"timeLimit" : 864000000,`
-
-`"isSchedularConfiguration":true`
-
-`}`
-
-`]`
-
-`}`
+```
 
 cronjob will read the cron job’s configured in the cronjobapiconfig.json and based on the schedular time it will call the API which is configured. Please find the below configuration and file location.
 
-[<img src="https://github.com/fluidicon.png" alt="" data-size="line">egov-mdms-data/CronJobAPIConfig.json at DEV · egovernments/egov-mdms-data](https://github.com/egovernments/egov-mdms-data/blob/DEV/data/pb/common-masters/CronJobAPIConfig.json)
+{% embed url="https://github.com/egovernments/egov-mdms-data/blob/DEV/data/pb/common-masters/CronJobAPIConfig.json" %}
 
-`{ "jobName": "daily",`
+```
+{ "jobName": "daily",
+"active": "true",
+"method": "POST",
+"url": "http://fsm.egov:8080/fsm/v1/_schedular",
+"payload": {
+"RequestInfo": "{DEFAULT_REQUESTINFO}" },
+"header": { "Content-Type": "application/json"
+}
 
-`"active": "true",`
+```
 
-`"method": "POST",`
+We are using the fsm/v1/\_schedular api. This api will read the master data for each tenant and based on the time limit configured for that tenant, it will get all eligible aplications and create periodic applications for those fsm applications.
 
-`"url": "http://fsm.egov:8080/fsm/v1/_schedular",`
+data/pb/FSM/AdvancePayment.json
 
-`"payload": {`
+[SM-499 : mdms file for advanceBalance and cancellationfee · egovernments/egov-mdms-data@3b3233e](https://github.com/egovernments/egov-mdms-data/commit/3b3233e8f3e812fb4fe2833fa24d1c6b92078c9f)
 
-`"RequestInfo": "{DEFAULT_REQUESTINFO}" },`
+[Update AdvancePayment.json · egovernments/egov-mdms-data@a864a90](https://github.com/egovernments/egov-mdms-data/commit/a864a90735749d0ec17e6df75fc80b831653551d)
 
-`"header": { "Content-Type": "application/json"`
+[Update CancellationFee.json · egovernments/egov-mdms-data@3a614e5](https://github.com/egovernments/egov-mdms-data/commit/3a614e5273397a25d0d5cdefc95fc75d04f0088f)
 
-`}`
+master-config.json
 
-`}`
-
-&#x20;We are using fsm/v1/\_schedular API. This API reads the master data for each tenant and based on the time limit configured for that tenant, it gets all eligible applications and creates periodic applications for those FSM applications.
+[SM-499 adding advancepayment and cancellationfee · egovernments/egov-mdms-data@c4efb2e](https://github.com/egovernments/egov-mdms-data/commit/c4efb2e890fcc56fbeb969a9162c0d11aad03dec)
 
 **Infra changes**
 
-We added a new chart called mdms-read-cronjob. Please find the below chart location.
+We added a new chart called mdms-read-cronjob. Please find the below chart location:
 
-[<img src="https://github.com/fluidicon.png" alt="" data-size="line">DIGIT-DevOps/deploy-as-code/helm/charts/utilities/mdms-read-cronjob at master · egovernments/DIGIT-DevOps](https://github.com/egovernments/DIGIT-DevOps/tree/master/deploy-as-code/helm/charts/utilities/mdms-read-cronjob)
+[https://github.com/egovernments/DIGIT-DevOps/tree/master/deploy-as-code/helm/charts/utilities/mdms-read-cronjob](https://github.com/egovernments/DIGIT-DevOps/tree/master/deploy-as-code/helm/charts/utilities/mdms-read-cronjob)
 
 ### Interaction Diagram <a href="#interaction-diagram" id="interaction-diagram"></a>
 
-TBD
+#### 1. Advance Amount Workflow
+
+#### 2. Zero Price Application Workflow
 
 ### Reference Docs <a href="#reference-docs" id="reference-docs"></a>
 
@@ -2281,14 +4266,20 @@ TBD
 
 #### API List <a href="#api-list" id="api-list"></a>
 
-|                  |                                                                                                                            |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| **Title**        | **Link**                                                                                                                   |
-| /fsm/v1/\_create | [https://www.getpostman.com/collections/8b9eb951a810486f41a4](https://www.getpostman.com/collections/8b9eb951a810486f41a4) |
-| /fsm/v1/\_update | [https://www.getpostman.com/collections/8b9eb951a810486f41a4](https://www.getpostman.com/collections/8b9eb951a810486f41a4) |
-| /fsm/v1/\_search | [https://www.getpostman.com/collections/8b9eb951a810486f41a4](https://www.getpostman.com/collections/8b9eb951a810486f41a4) |
-| /fsm/v1/\_audit  | [https://www.getpostman.com/collections/8b9eb951a810486f41a4](https://www.getpostman.com/collections/8b9eb951a810486f41a4) |
+| <h4>Title </h4>           | Link                                                                                                                                                                                                                                                           |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| /fsm/v1/\_create          | [https://api.postman.com/collections/23418568-946a158e-9391-44b2-9d2b-48f30ea8cd63?access\_key=PMAT-01GSPRPC338T9RR0GAKTRCRDP8](https://api.postman.com/collections/23418568-946a158e-9391-44b2-9d2b-48f30ea8cd63?access\_key=PMAT-01GSPRPC338T9RR0GAKTRCRDP8) |
+| /fsm/v1/\_update          | [https://api.postman.com/collections/23418568-946a158e-9391-44b2-9d2b-48f30ea8cd63?access\_key=PMAT-01GSPRPC338T9RR0GAKTRCRDP8](https://api.postman.com/collections/23418568-946a158e-9391-44b2-9d2b-48f30ea8cd63?access\_key=PMAT-01GSPRPC338T9RR0GAKTRCRDP8) |
+| /fsm/v1/\_search          | [https://www.getpostman.com/collections/a51486db12539a2aa597](https://www.getpostman.com/collections/a51486db12539a2aa597)                                                                                                                                     |
+| /fsm/v1/\_audit           | [https://www.getpostman.com/collections/a51486db12539a2aa597](https://www.getpostman.com/collections/a51486db12539a2aa597)                                                                                                                                     |
+| /fsm/v1/\_plainsearch     | [https://www.getpostman.com/collections/a51486db12539a2aa597](https://www.getpostman.com/collections/a51486db12539a2aa597)                                                                                                                                     |
+| /fsm/plantmap/v1/\_create | [https://www.getpostman.com/collections/a51486db12539a2aa597](https://www.getpostman.com/collections/a51486db12539a2aa597)                                                                                                                                     |
+| /fsm/plantmap/v1/\_update | [https://www.getpostman.com/collections/a51486db12539a2aa597](https://www.getpostman.com/collections/a51486db12539a2aa597)                                                                                                                                     |
+| /fsm/plantmap/v1/\_search | [https://www.getpostman.com/collections/a51486db12539a2aa597](https://www.getpostman.com/collections/a51486db12539a2aa597)                                                                                                                                     |
+| /inbox/v1/\_search        | [https://www.getpostman.com/collections/a51486db12539a2aa597](https://www.getpostman.com/collections/a51486db12539a2aa597)                                                                                                                                     |
+| /fsm/v1/\_schedular       | [https://www.getpostman.com/collections/a51486db12539a2aa597](https://www.getpostman.com/collections/a51486db12539a2aa597)                                                                                                                                     |
 
+\
 
 
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/)All content on this page by [eGov Foundation ](https://egov.org.in/)is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
