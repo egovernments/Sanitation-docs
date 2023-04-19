@@ -48,6 +48,7 @@
       * [Septage Treatment Plant Operator User Manual](products/faecal-sludge-management-fsm/fsm-user-manual/septage-treatment-plant-operator-user-manual.md)
       * [Manage Vendor, Driver and Vehicle Details](products/faecal-sludge-management-fsm/fsm-user-manual/manage-vendor-driver-and-vehicle-details.md)
     * [FSM UI/UX Audit](products/faecal-sludge-management-fsm/fsm-ui-ux-audit.md)
+    * [Functional Specifications](products/faecal-sludge-management-fsm/functional-specifications.md)
   * [FSM Release Notes](products/fsm-release-notes.md)
   * [Training](products/training.md)
 * [Program](program/README.md)

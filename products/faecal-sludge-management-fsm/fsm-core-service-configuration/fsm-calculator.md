@@ -47,7 +47,9 @@ Before you proceed with the configuration, make sure the following pre-requisite
 ## Deployment Details <a href="#deployment-details" id="deployment-details"></a>
 
 1. Deploy the latest version of FSM.
-2. Add fsm-calculator-persister.yml file in the config folder in GIT, and add that path in persister (the file path is to be added in environment yaml file in param called persist-yml-path).
+2. Add fsm-calculator-persister.yml file in the config folder in GIT, and add that path in persister (the file path is to be added in environment yaml file in param called persist-yml-path):
+
+&#x20;      [https://github.com/egovernments/configs/blob/DEV/egov-persister/fsm-calculator-persister.yaml](https://github.com/egovernments/configs/blob/DEV/egov-persister/fsm-calculator-persister.yaml)
 
 ## Configuration Details <a href="#configuration-details" id="configuration-details"></a>
 
