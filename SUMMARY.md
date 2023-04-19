@@ -22,6 +22,7 @@
     * [Release Checklist](platform/release-notes/release-checklist.md)
   * [Specification](platform/specification.md)
   * [Architecture](platform/architecture.md)
+  * [Installation](platform/installation.md)
   * [Services](platform/services.md)
   * [Setup](platform/getting-started/README.md)
     * [On AWS](platform/getting-started/on-aws.md)
