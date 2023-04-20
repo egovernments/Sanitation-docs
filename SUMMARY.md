@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Introducing DIGIT Sanitation](README.md)
+  * [Roadmap](mission/roadmap.md)
   * [Who can use DIGIT Sanitation?](mission/who-can-use-digit-sanitation/README.md)
     * [Field Research](mission/who-can-use-digit-sanitation/field-research.md)
 * [Platform](platform/README.md)
