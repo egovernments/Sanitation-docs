@@ -7,99 +7,99 @@ coverY: 0
 
 ## Mission
 
-The sanitation mission at eGov aims to make its vision - zero deaths, disease, and environmental contamination resulting from poor sanitation - a reality for every citizen across the Global South. DIGIT Sanitation aims to ensure zero untreated waste in 1,000 habitats in 1,000 days by catalyzing open digital ecosystems.
+Enabling Samaaj, Sarkar & Bazaar partners with a digital platform that would help ensure Zero deaths, disease, and environmental contamination resulting from poor sanitation - a reality for every citizen across the Global South.
+
+DIGIT Sanitation aims to ensure zero untreated waste in 1,000 habitats in 1,000 days by catalysing open digital ecosystems.
 
 ## Overview
 
-We believe that at the heart of the problems in sanitation are systems that fail to deliver, and hence systems must be progressively reformed. To move habitats towards zero untreated waste, we will leverage the capabilities built by the Digital Infrastructure for Governance, Impact & Transformation (DIGIT) and ensure traceability of waste by enabling the ecosystem with:
+DIGIT Sanitation is an open-source web and mobile-enabled platform designed to digitisze operations in the waste management value chain, from collection to treatment, and provides the ability to drive coordination across multiple independent and disconnected stakeholders. This ensures that there is a continued chain of custody of waste throughout.&#x20;
 
-* Digital standards for sanitation&#x20;
-* Chain of custody&#x20;
-* Actionable data&#x20;
-* Code for innovation
+According to a United Nations (UN) report, only 54% of the world population have access to safe sanitation. While there have been tremendous efforts from organisations in achieving SDG6, we believe that at the heart of the problems in sanitation are ineffective systems that fail to deliver. Hence, systems must be progressively reformed. To move habitats towards zero untreated waste, we will leverage the capabilities built by the Digital Infrastructure for Governance, Impact & Transformation (DIGIT), and ensure traceability of waste by enabling the ecosystem with the following features:
 
-DIGIT Sanitation is drawn from the principles of societal platforms that allow us to imagine a space where sanitation has shared resources, curated and evolving knowledge, and solutions that speak to the needs of the community. The problems of sanitation are systemic, and cannot be solved without the cooperation, and collaboration of all stakeholders. Drawing from our learnings in the urban mission, we are talking about the triple helix model in the sense of partnerships between different stakeholders (_samaaj/civil society_, _sarkaar/government_, and _bazaar/industry or market_) that generates innovation through this synergy. Given our experience in building public digital infrastructure at scale, we believe we are best placed to create the foundation of this infrastructure and catalyse the ecosystem to solve the most pressing issues.
-
-As a first step, drawing commonalities in the waste value chain from waste generation to reuse/ disposal, we have chosen Faecal Sludge Management (FSM) as our first solution area in DIGIT Sanitation. It will look at the pillars of sanitation and the impact across the pillars:&#x20;
-
-| Pillars of Sanitation         | Impact                                                                                                    |
-| ----------------------------- | --------------------------------------------------------------------------------------------------------- |
-| Inclusion                     | All citizens have access to safe sanitation.                                                              |
-| Public health and environment | Driving down untreated waste in the value chain to zero.                                                  |
-| Financial sustainability      | <p>Financial sustainability</p><p>Operations across the value chain are viable and sustainable.</p>       |
-| Worker safety and dignity     | Sanitation workers have safe and dignified working conditions such that there are zero deaths on the job. |
+* Chain of custody: We will ensure a seamless and traceable chain of custody for waste. This will enable stakeholders to track waste from its source to its final destination, ensuring accountability and transparency in the waste management process.
+* Actionable data: Our system will provide actionable data on waste management operations, which will enable stakeholders to make informed decisions. This data will be used to optimize waste collection and treatment processes, identify areas for improvement, and drive evidence-based decision-making.
+* Code for innovation: We will foster innovation by providing a digital platform that encourages collaboration among stakeholders. Our system will facilitate the sharing of ideas, best practices, and innovative solutions for sanitation challenges, driving continuous improvement in the waste management ecosystem.
 
 ### Need for DIGIT Sanitation&#x20;
 
-We have identified the following pivotal problems in the FSM value chain:&#x20;
+Current digital efforts across geographies do not take a “whole of system view” and do not solve the cost of coordination and duplication issues. Each country/state also develops its own systems (MIS, apps, dashboards) individually for waste streams. Such siloed, solution-centric approaches and tools create a new set of problems and inefficiencies for countries:
 
-* Absence of well-defined standards for sanitation.&#x20;
-* Broken chain of custody from waste generation to reuse.&#x20;
-* Availability of verifiable and trusted data to all actors.&#x20;
-* India is not poised to convert waste to value, yet.&#x20;
-* Stakeholder behaviour is misaligned with safe sanitation practices.&#x20;
+* Higher costs and time: This is incurred on creating or procuring and maintaining these systems, including the onboarding cost of the same actors in each programme.
+* Data exists in multiple systems: They are not interoperable, leading to duplication, inconsistencies, poor adoption by on-ground workers, and sub-optimal decision-making.
+* Limited reusability and innovation: Data and capabilities are intertwined and ‘locked,’ making it extremely hard for the wider ecosystem to innovate and build upon.
+* Sub-scale: The tools are not able to scale for the national population and across waste streams.
 
-## Objectives
+## Platform Scope
 
-While addressing these problems, DIGIT Sanitation will focus on driving the following outcomes:
+DIGIT Sanitation is built on the principles of societal platforms, envisioning a space where sanitation is supported by shared resources, curated knowledge, and evolving solutions that address the needs of the community. We recognise that the challenges of sanitation are systemic and require the collective efforts of all stakeholders to be effectively addressed. Drawing from our insights gained from our urban mission, we embrace the triple helix model, which emphasises partnerships among different stakeholders including civil society (samaaj), government (sarkaar), and industry/market (bazaar), to generate innovation through synergistic collaboration. Leveraging our experience in building large-scale public digital infrastructure, we are well-positioned to create the foundation for this ecosystem and drive progress in solving the most pressing sanitation issues. We believe that by fostering cooperation and collaboration among all stakeholders, we can create sustainable solutions that meet the needs of communities and contribute to the transformation of the sanitation landscape.
 
-**Innovation and implementation at scale with speed for the ecosystem** ​
+While sanitation requirements and solutions may vary among local governments, there are commonalities in the value chain of sanitation waste streams, such as Feacal Sludge Management, Solid Waste Management, Plastic Waste Management, etc. These value chains typically involve steps such as generation, containment, collection, transport, treatment, and disposal/reuse. These similarities provide an opportunity to abstract and digitize various components of the service value chain, with the potential to encode standards and enable data-driven visibility into sanitation services.
 
-Ecosystem actors leverage the digital infrastructure to develop contextual implementations and rapid innovations to address critical challenges in service delivery and performance management across the value chain. Enabling states to adopt open-source technologies and skip vendor lock-in to ensure the sustainability of operations.&#x20;
+The DIGIT Sanitation platform is specifically designed to allow for contextualisation and reuse of components across different waste streams and geographies. By incorporating standards into the platform and leveraging data registries and reusable building blocks in the technology stack, applications can be developed more efficiently and quickly at the solution layer, resulting in lower costs and faster implementation. This approach enables flexibility and scalability in addressing diverse sanitation needs, while also promoting interoperability and consistency in the digital solutions deployed. By leveraging the DIGIT Sanitation platform, stakeholders can build innovative applications tailored to local contexts, while adhering to standardised components and data structures, leading to more effective and sustainable sanitation services.
 
-#### Easy access to regularised sanitation services&#x20;
+Following is a glimpse of how this would work:
 
-​Coverage of all citizens irrespective of physical ability, economic status, gender, and literacy. Convenient multi-channel and multi-lingual access for predictable and reliable sanitation services and schemes.&#x20;
+<figure><img src=".gitbook/assets/Screenshot 2023-04-20 at 11.12.55 AM.png" alt=""><figcaption></figcaption></figure>
 
-#### Active tracking & management of FSSM operations ​&#x20;
+The above image illustrates the core infrastructure services, and the enabling services that are built/configured for a Feacal Sludge Management (FSM) solution with the following functionality:
 
-Tracking and managing faecal sludge through the lifecycle for planning, optimising usage of physical infrastructure, and improving regulations and processes to enable compliance. This will drive efficiency and transparency.&#x20;
+1. Allowing citizens to request for septic tank desludging services.
+2. Scheduling desludging services for a certain set of property types/localities, etc.
+3. Automated or manual assignment of vendors to perform requests.
+4. Tracking sludge from collection to disposal at a treatment plant using internet of things (IoT).
+5. Notifications to stakeholders at each point in the workflow.
+6. Dashboards and reports.
 
-#### Efficient marketplaces across the sanitation value chain ​
+Now, consider that instead of FSM, a solution needs to be built for Solid Waste Management:
 
-Effective matching of the supply and demand, operational data to inform rationalised pricing, and sustainability by leveraging data and services to refine operations. Data-driven decision-making and policy design ​Access to operational and systemic data in anonymised and aggregated forms for senior decision-makers at all levels of government, as well as for key stakeholders and influencers in the FSM ecosystem.
+<figure><img src=".gitbook/assets/Screenshot 2023-04-20 at 11.13.52 AM.png" alt=""><figcaption></figcaption></figure>
 
-**Data-driven decision-making and policy design** ​
+The same set of infrastructure and enabling services could be used to configure the following functionalities:
 
-Access to operational and systemic data in anonymised and aggregated forms for senior decision-makers at all levels of government, as well as for key stakeholders and influencers in the FSM ecosystem
+1. Scheduling the collection of waste based on different categories.
+2. Automated or manual assignment of vendors to perform requests.
+3. Tracking adherence to the schedule.
+4. Tracking waste movement from pickup to disposal at a treatment facility.
+5. Notifications to stakeholders at each point in the workflow.
+6. Dashboards and reports.
 
-## Approach&#x20;
+Further, only an additional service for segregation monitoring would have to be built.
 
-A multi-pronged approach - which includes both open platforms and non-technology components - is critical for creating a larger systemic transformation. It involves the following:
+To illustrate this further, imagine building a solution for sanitation worker welfare:
 
-* [Create a shared narrative and ecosystem coalitions.](./#create-a-shared-narrative-and-ecosystem-coalitions)
-* [Design and build the foundational national platform.](./#design-and-build-the-foundational-national-platform)
-* [Create an exemplar of transformation to solve at scale. ](./#create-a-scale-speed-exemplar-of-transformation)
-* [Enable a national-scale open ecosystem to create societal impact. ](./#enable-a-national-scale-open-ecosystem-to-create-societal-impact)
-* [Institutionalise and scale adoption and sustainability.](./#institutionalisation-for-scale-adoption-and-sustainability)
+<figure><img src=".gitbook/assets/Screenshot 2023-04-20 at 11.14.52 AM.png" alt=""><figcaption></figcaption></figure>
 
-### Create a shared narrative and ecosystem coalitions&#x20;
+The same set of services can be used here as well, with the addition of a few components.The DIGIT Sanitation platform is built leveraging the  [DIGIT Core Services](https://core.digit.org/platform/core-services), which are customised into the following key building blocks:
 
-We must build a shared narrative with key stakeholders across industry, academia, civil society, and governments on how a shared digital infrastructure can enable transformation and collaborative problem-solving. This goes beyond advocating new forms of digital technology. eGov uses a co-creative approach to develop its offerings across the spectrum of digital infrastructure (platforms), solutions (applications), and state programs (vehicles for delivering real-world impact). We are working in Odisha as the exemplar state to demonstrate our platform.
+1. Service Request Management
 
-### Design and build the foundational national platform&#x20;
+* Define pricing
+* Record service requests
+* Assign and manage service requests
+* Provide subsidies
+* Calculate service fees
+* Track status
+* Collect feedback
 
-* The key areas of work include designing multiple layers of the platform:
+2. Transport Management
 
-1. Core data infrastructure: This forms the base of the stack and comprises data registries, a shared source of truth, and data infrastructure.&#x20;
-2. Core services: This layer houses context-neutral functional services that can be leveraged to build sanitation solutions.&#x20;
-3. Applications layer: It provides context-sensitive solutions required to implement large-scale sanitation programs.
+* Schedule pickup
+* Assign vehicles and drivers
+* Track status
 
-* Development of key building blocks of the platform (principles, standards, and digital artefacts) are fundamental context-invariant components of the shared digital infrastructure.&#x20;
-* Build reference solutions (applications) on the platform for urgent problems.
+3. Billing and Payments
 
-### **Create an exemplar of transformation to solve at scale**&#x20;
+* Generate demand
+* Generate receipts
+* Online payment gateway
 
-This will involve working with one lead state and collaborating with its local ecosystem and market players to build a reference implementation. This will be designed, tracked, and implemented, so that the interplay of faecal sludge management policies, institutions, and technology can be captured effectively and used to illustrate the approach in practice. An exemplar will strengthen the evidence-based recommendations, from concept to actual results. In addition, it will create a pull in the market for commercial players to participate.&#x20;
+4. Notifications&#x20;
 
-### Enable a national-scale open ecosystem to create societal impact&#x20;
+* SMS
+* In app
 
-We will work with commercial enterprises, local players, and entrepreneurs in helping them build local solutions on the FSM platform. We believe engaging with the ecosystem will facilitate open and inclusive systems and make it easiest for stakeholders to participate, coordinate, and communicate. This will also build trust between stakeholders to improve the quality of the interactions and the outcomes achieved, besides championing data-driven decision-making among them supported by data from the platform itself.
+5. Service Delivery Monitoring
 
-### Institutionalisation for @ scale-adoption and sustainability&#x20;
-
-For the long-term sustainability of the initiative, it is important to institutionalise the shared digital infrastructure in a suitable public institution that has the capabilities to make it available on a national scale. We will undertake efforts for this early on.
-
-
-
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/)_All content on this page by_ [_eGov Foundation_](https://egov.org.in/) _is licensed under a_ [_Creative Commons Attribution 4.0 International License_](http://creativecommons.org/licenses/by/4.0/)_._
+* Dashboards
+* Reports
