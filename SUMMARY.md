@@ -60,6 +60,6 @@
 
 ## COMMUNITY
 
-* [Roadmap](community/roadmap.md)
+* [Contribute](community/contribute.md)
 * [Source code](https://github.com/egovernments/DIGIT-OSS/releases/tag/fsm\_v1.2.1)
 * [Issues](https://github.com/egovernments/DIGIT-OSS/issues)

@@ -37,4 +37,6 @@ Sanitation workers are an integral part of the waste management ecosystem. Curre
 * &#x20;Mapping vendors to multiple service categories &#x20;
 * Vendor collecting payments from citizens based on service categories
 
-\
+## Contribute
+
+We are actively seeking contributions from the community in enhancing the product. Check out how you can contribute here.
