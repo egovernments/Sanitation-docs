@@ -2,17 +2,21 @@
 
 ULB officials or employees receive the service requests and are responsible for routing these requests to specific DSOs.
 
-Employees can -
+Employees can:
 
-1. [Create desludging application](fsm-employee-user-manual.md#create-desludging-application)
-2. [Make payment](fsm-employee-user-manual.md#make-payment)
-3. [Update application / Generate demand](fsm-employee-user-manual.md#update-application)
-4. [Assign DSO to an application](fsm-employee-user-manual.md#assign-requests-to-dso)
-5. [Re-assign DSO to an application](fsm-employee-user-manual.md#re-assign-dso)
-6. [Complete or decline request](fsm-employee-user-manual.md#complete-or-decline-request)
-7. [Multiple request assignment to a single vehicle](fsm-employee-user-manual.md#multiple-request-assignment-to-a-single-vehicle)
+* Create desludging application
+* Collect Payment
+* ​Update application/Generate demand​
+* ​Assign DSO to an application​
+* ​Re-assign DSO to an application​
+* ​Complete or decline request​
+* ​Multiple request assignment to a single vehicle​
+* Manage vendor, driver and vehicle details
+*   Provide free services
 
-### Create Desludging Application
+
+
+## Create Desludging Application
 
 Log in as employee FSM Creator role.&#x20;
 
@@ -38,19 +42,17 @@ Enter the **Pincode**, **City**, **Locality/Mohalla**, **Slum Name**, **Street N
 
 ![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 4.45.25 PM.png>)
 
-Select the applicable **Onsite Sanitation Type** from the drop-down list. Enter the **Pit Dimension** or dimensions in meters for the selected sanitation type.&#x20;
+Select the applicable **Onsite Sanitation Type** from the drop-down list. Enter the **Pit Dimension** or dimensions in meters for the selected sanitation type. Select the Vehicle Capacity that will be required to fulfil this request. Enter the required No. of Trips.
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 4.49.08 PM.png>)
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 1.18.04 PM.png" alt=""><figcaption></figcaption></figure>
 
-Select the **Vehicle Type** that will be required to fulfil this request. Enter the required **No. of Trips** and **Amount per Trip** details to calculate the **Total Amount** payable for the service request.
+The amount per trip, total amount and the minimum advance required against the service will be displayed. Enter advance collection amount above minimum advance as per the citizen’s preference. Click on the Submit Application button.
 
-Click on the **Submit Application** button.
-
-![](<../../../.gitbook/assets/Screenshot 2022-08-02 at 10.56.23 AM.png>)
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 1.19.38 PM.png" alt=""><figcaption></figcaption></figure>
 
 The application is submitted and an **Application No.** is generated. Click on the **Download** button on the screen to generate a PDF copy of the application for future reference.
 
-‌The system will trigger notifications to the applicant mobile number with the application number and status updates.
+‌The system will trigger notifications to the applicant mobile number with the application number and the status updates.
 
 ![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 4.53.54 PM.png>)
 
@@ -92,7 +94,7 @@ The **Payment Collected** acknowledgement provides the payment **Receipt No.** C
 
 The receipt gets printed.
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-19 at 9.14.54 AM.png>)
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 1.32.59 PM.png" alt=""><figcaption></figcaption></figure>
 
 ### Assign Requests to DSO
 
