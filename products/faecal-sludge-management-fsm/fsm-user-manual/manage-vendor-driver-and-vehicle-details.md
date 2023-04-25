@@ -57,7 +57,7 @@ A popup will be displayed with a dropdown to select a vehicle. Only vehicles tha
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2023-04-06 at 9.37.18 AM.png" alt=""><figcaption></figcaption></figure>
 
-The added vehicle details will be be displayed. The vehicle can be untagged from the vendor by clicking on the delete button against the vehicle details.&#x20;
+The added vehicle details will be displayed. The vehicle can be untagged from the vendor by clicking on the delete button against the vehicle details.&#x20;
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2023-04-06 at 1.01.39 PM.png" alt=""><figcaption></figcaption></figure>
 
@@ -75,7 +75,7 @@ The added driver details will be be displayed. The driver can be untagged from t
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2023-04-06 at 1.03.52 PM.png" alt=""><figcaption></figcaption></figure>
 
-## Adding a new Vendor
+## Adding a New Vendor
 
 Add a new vendor by clicking on the Add button on the FSM registry landing page and select Vendor.&#x20;
 
@@ -137,7 +137,7 @@ The added vendor details will be be displayed. The vehicle can be untagged from 
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2023-04-06 at 1.17.52 PM.png" alt=""><figcaption></figcaption></figure>
 
-## Adding a new Vehicle
+## Adding a New Vehicle
 
 Add a new vehicle by clicking on the Add button on the FSM registry landing page and select Vehicle.
 
@@ -203,7 +203,7 @@ Method 2: A driver can also be tagged to a vendor from the driver list page. Sel
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2023-04-06 at 1.30.14 PM.png" alt=""><figcaption></figcaption></figure>
 
-## Adding a new Driver
+## Adding a New Driver
 
 Add a new driver by clicking on the Add button on the FSM registry landing page and select Driver.
 
@@ -234,6 +234,3 @@ In such cases:
 3\) Workflow will skip the “Pending for Payment” steps.
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2023-04-06 at 1.33.58 PM.png" alt=""><figcaption></figcaption></figure>
-
-\
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/)All content on this page by [eGov Foundation ](https://egov.org.in/)is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
