@@ -91,59 +91,38 @@ On this page, the following actions can be performed:
 
 ## Apply for Desludging Services
 
-Enter **Mobile Number**, **Name**, and **City** details. Click on the **Continue** button.&#x20;
+**Overview**
 
-Enter the **OTP** received on the given mobile number. Click on **Continue**. The system validates the details and allows the user to log in to the system with the registered mobile number.
+After they login, users are redirected to this screen where multiple actions can be performed related to Faecal Sludge Management services.
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 1.43.23 PM.png>)
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 11.31.04 AM.png" alt=""><figcaption></figcaption></figure>
 
-Enter your registered mobile number and the OTP received on the mobile to log in. Click on **Continue with Whatsapp** to register your service request using the Whatsapp channel.
+**User Actions**
 
-Click on the **Continue** button.
+On this page, the following actions can be performed:
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 1.51.23 PM.png>)
+* Desludging services can be requested by clicking on “Apply for Emptying of Septic Tank/Pit” option on the homepage.
+* Enter the service request details: “No of Trips” and “Vehicle Capacity” required.
 
-Click on the **Apply for Emptying of Septic Tank/Pit** option on the home page.
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 12.21.49 PM.png" alt=""><figcaption></figcaption></figure>
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 1.59.33 PM.png>)
+Select Property type and subtype. The system gives an approximate estimate on the cost of the service basis selection.
 
-**Select Payment Preference** to indicate when to pay. The **Pay on Service** is the default option in case the user chooses to **Skip and Continue**.
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 12.26.43 PM.png" alt=""><figcaption></figcaption></figure>
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 1.59.46 PM.png>)
+Enable the **Location** finder to allow GPS to track the current location, or, move the pin to the location manually. Alternatively, you can also enter the location in the search bar. If unsure, Skip and continue.
 
-&#x20;Select the applicable **Gender**.
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 12.29.03 PM.png" alt=""><figcaption></figcaption></figure>
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 2.03.53 PM.png>)
+The pincode will be auto selected from the pin location. Verify and click on next. If pin location is not selected, enter pincode. If unsure, skip and continue.
 
-Select the relevant **Property Type**.&#x20;
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 12.33.34 PM.png" alt=""><figcaption></figcaption></figure>
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 2.04.17 PM.png>)
+Provide your property address by selecting the ‘City’ and ‘Locality’. Click on ‘Next’ to continue.
 
-The system provides cost estimate details based on the selected property type. Click on **Next**.&#x20;
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 12.35.39 PM.png" alt=""><figcaption></figcaption></figure>
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 2.11.24 PM.png>)
-
-Select the applicable **Property Sub Type.**
-
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 2.13.23 PM.png>)
-
-&#x20;Enable the **Location** finder to allow GPS to track the current location, or, move the pin to the location manually. Alternatively, you can also enter the location in the search bar.&#x20;
-
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 2.17.11 PM.png>)
-
-Click on **Skip and Continue** in case you are unable to provide a GPS location.&#x20;
-
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 2.18.43 PM.png>)
-
-The **Pincode** field gets auto-populated if the location is selected on the map. Else, enter the **Pincode** of the location details manually. Click on **Skip and Continue** in case you are unable to provide the pincode.
-
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 2.21.15 PM.png>)
-
-**City** and **Locality/Mohalla** fields are auto-populated once the **Pincode** is entered. Else, select the **City** and applicable **Locality/Mohalla** from the drop-down list.&#x20;
-
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 2.21.41 PM.png>)
-
-Select **Yes** if your property is located in a notified slum area. Else, select **No**. Click on **Next**to move to the next screen.
+Select 'Yes' if your property is located in a notified slum area. Else, select 'No'.
 
 ![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 2.21.53 PM.png>)
 
@@ -167,6 +146,18 @@ Click on **Next** to move to the summary page.
 
 ![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 2.41.47 PM.png>)
 
+Upload the photo of Pit by clicking on the camera button and then click on next. If you are not able to upload the photo, click on skip and continue.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 12.39.12 PM.png" alt=""><figcaption></figcaption></figure>
+
+Select the applicable Gender.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 12.40.53 PM.png" alt=""><figcaption></figcaption></figure>
+
+View the payment details against the request. The ULB may have configured a minimum advance payment amount. Choose to pay the same or any amount above the minimum advance amount. Clicking on skip and continue will process the application with the minimum advance amount payable at the start of the request.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 12.42.21 PM.png" alt=""><figcaption></figcaption></figure>
+
 Cross verify the filled in details on the **Summary** page. Click on the **Change** button available for the field that requires any edits. Scroll down the page to review the application details.
 
 ![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 2.51.12 PM.png>)
@@ -181,9 +172,13 @@ Click on **Download** to generate a pdf copy of the application.&#x20;
 
 ![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 2.53.52 PM.png>)
 
+The system displays the “Application Submitted” message. The “Application No.” is generated. Click on ‘Download’ to generate a PDF copy of the application.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 12.44.24 PM.png" alt=""><figcaption></figcaption></figure>
+
 The system triggers a notification along with the **Application No.** and details to the registered mobile number. Any subsequent updates and actions on the application also trigger a notification to the applicant.
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 2.55.14 PM.png>)
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 12.47.27 PM.png" alt=""><figcaption></figcaption></figure>
 
 ## Check Application Status & Make Payment
 
@@ -195,9 +190,13 @@ Scroll down the application and click on **Make Payment**.&#x20;
 
 ![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 3.01.07 PM.png>)
 
-Select the applicable **Payment Method** and then click on **Pay**.&#x20;
+Confirm bill details and proceed to pay.
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 3.04.33 PM.png>)
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 12.50.09 PM.png" alt=""><figcaption></figcaption></figure>
+
+Confirm bill details and proceed to pay.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 12.51.50 PM (1).png" alt=""><figcaption></figcaption></figure>
 
 The system displays a payment acknowledgement message along with the **Payment Receipt No.** Click on **Print Receipt** to get a printed receipt.
 
@@ -219,14 +218,6 @@ Enter the ratings by clicking on the number of stars. Answer the questions on th
 
 ![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 3.13.18 PM.png>)
 
-Enter any additional insights in the **Comments** box. Click on **Submit**.&#x20;
-
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 3.15.46 PM.png>)
-
-The feedback is submitted.
+Enter any additional insights in the **Comments** box. Click on **Submit**. The feedback is submitted.
 
 ![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 3.16.42 PM.png>)
-
-
-
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/)All content on this page by [eGov Foundation ](https://egov.org.in/)is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
