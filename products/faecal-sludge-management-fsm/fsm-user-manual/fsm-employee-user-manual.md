@@ -150,7 +150,7 @@ Scroll down the application and click on the **Take Action** button. Click on **
 
 In our previous versions, the FSM application was designed to service requests one after the other i.e., a different application could not be assigned to the vehicle until and unless the vehicle has completed servicing the previous request assigned to it.
 
-We recognised that multiple applications are assigned to the vehicle and the driver optimises the logistics based on other factors that are not captured in the system like distance, type of road etc to service the request and closed them accordingly. So, by moving away from FIFO model to allowing drivers/DSOs to make using human intelligence, we now allow multiple service requests to be assigned to the same vehicle and be closed in randomised order.
+We recognised that multiple applications are assigned to the vehicle and the driver optimises the logistics based on other factors that are not captured in the system like distance, type of road etc to service the request and closed them accordingly. So, by moving away from the FIFO model to allowing drivers/DSOs to making use of human intelligence, we now allow multiple service requests to be assigned to the same vehicle and be closed in randomised order.
 
 ![](<../../../.gitbook/assets/Screenshot 2022-08-02 at 11.22.58 AM.png>)
 
@@ -165,5 +165,3 @@ For example: let’s assume 15 requests were created. Of the 15, 10 requests wer
 After completing the service, the DSO/driver can close each request in the order they completed. The applications need not be closed sequentially.
 
 ![](<../../../.gitbook/assets/Screenshot 2022-08-02 at 11.25.29 AM.png>)
-
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/)All content on this page by [eGov Foundation ](https://egov.org.in/)is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
