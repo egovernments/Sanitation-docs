@@ -328,8 +328,95 @@ Other functionalities:
 | Total request by region                           | Table                               | NA                               | NA               | <p>Fields: </p><p>- Serial number.</p><p>- District</p><p>- # of open requests.</p><p>- # of closed requests.</p><p>- # of total requests.</p><p>- Completion rate (Percentage completion).</p><p>- SLA achieved: Percentage.</p><p>- Total collection.</p> | <p>- Selection to display the number of rows in a table.</p><p>- Option to move to the next and the previous pages, and display the current page number.</p><p>- Search by district name.</p><p>- Show filters applied, if any.</p> | <p><br></p>                                                                                                                                                                                                                                           | Drilldown on district name to ULBs mapped in the district. |
 | Vehicle log report                                | Table                               | NA                               | NA               | <p>Fields: </p><p>- Serial number.</p><p>- ULB.</p><p>- Volume of waste collected.</p><p>- Volume of waste dumped.</p><p>- Capacity utilisation (percentage). - Show comparison to last year.</p>                                                           | <p>- Selection to display the number of rows in a table.</p><p>- Option to move to the next and the previous pages, and display the current page number.</p><p>- Search by district name.</p><p>- Show filters applied, if any.</p> | <p><br></p>                                                                                                                                                                                                                                           | <p><br></p>                                                |
 
-1.
+**Workflow Desludging Application**
 
 \
 
 
+Advance Balance Workflow
+
+\
+\
+
+
+| Application type | Status                     | Roles                                | Action                                               | Next state                 |
+| ---------------- | -------------------------- | ------------------------------------ | ---------------------------------------------------- | -------------------------- |
+| Desludging       | <p><br></p>                | <p>Citizen</p><p>FSM_CREATOR_EMP</p> | Create application                                   | Application created        |
+| Desludging       | Application created        | <p>Citizen</p><p>FSM_CREATOR_EMP</p> | Submit application                                   | Pending for payment        |
+| Desludging       | Pending for DSO assignment | FSM\_EDITOR\_EMP                     | Reject application                                   | Application created        |
+| Desludging       | Pending for payment        | Citizen                              | Pay for the number of trips (may be 0 to full)       | Pending for DSO assignment |
+| Desludging       | Pending for DSO assignment | FSM\_EDITOR\_EMP                     | Assign DSO                                           | Pending for DSO approval   |
+| Desludging       | Pending for DSO assignment | FSM\_EDITOR\_EMP                     | Return application                                   | Application created        |
+| Desludging       | Pending for DSO assignment | FSM\_EDITOR\_EMP                     | Reassign DSO                                         | Pending for DSO approval   |
+| Desludging       | Pending for DSO approval   | <p>DSO</p><p>FSM_EDITOR_EMP</p>      | Assign Vehicle                                       | DSO in progress            |
+| Desludging       | Pending for DSO approval   | <p>DSO</p><p>FSM_EDITOR_EMP</p>      | Reject                                               | Pending for DSO assignment |
+| Desludging       | DSO in progress            | FSM\_EDITOR\_EMP DSO                 | Update the number of trips or schedule trips         | DSO in progress            |
+| Desludging       | DSO in progress            | Citizen                              | Pay (full amount)                                    | DSO in progress            |
+| Desludging       | DSO in progress            | FSM\_EDITOR\_EMP DSO                 | Dispose                                              | DSO in progress            |
+| Desludging       | DSO in progress            | <p>DSO</p><p>FSM_EDITOR_EMP</p>      | Complete request (after collecting the total amount) | Pending citizen feedback   |
+| Desludging       | Pending citizen feedback   | Citizen                              | Citizen provides feedback                            | Request completed          |
+| Application Type | Status                     | Action                               | Roles                                                | Next State                 |
+| VehicleTrip      | <p><br></p>                | Schedules trip                       | FSM\_DSO                                             | SCHEDULED                  |
+| VehicleTrip      | SCHEDULED                  | Ready for disposal                   | <p>FSM_DSO"</p><p>"FSM_EDITOR_EMP</p>                | Waiting for disposal       |
+| VehicleTrip      | Waiting for disposal       | Dispose                              | FSM\_EMP\_FSTPO                                      | DISPOSED                   |
+
+\
+\
+
+
+Pay Later Workflow
+
+\
+\
+
+
+| Application Type | Status                     | Roles                                | Action                                               | Next state                 |
+| ---------------- | -------------------------- | ------------------------------------ | ---------------------------------------------------- | -------------------------- |
+| Desludging       | <p><br></p>                | <p>Citizen</p><p>FSM_CREATOR_EMP</p> | Create application                                   | Application created        |
+| Desludging       | Application created        | <p>Citizen</p><p>FSM_CREATOR_EMP</p> | Submit application                                   | Pending for DSO assignment |
+| Desludging       | Pending for DSO assignment | FSM\_EDITOR\_EMP                     | Reject application                                   | Application created        |
+| Desludging       | Pending for DSO assignment | FSM\_EDITOR\_EMP                     | Assign DSO                                           | Pending for DSO approval   |
+| Desludging       | Pending for DSO assignment | FSM\_EDITOR\_EMP                     | Return application                                   | Application created        |
+| Desludging       | Pending for DSO assignment | FSM\_EDITOR\_EMP                     | Reassign DSO                                         | Pending for DSO approval   |
+| Desludging       | Pending for DSO approval   | <p>DSO</p><p>FSM_EDITOR_EMP</p>      | Assign Vehicle                                       | DSO in progress            |
+| Desludging       | Pending for DSO approval   | <p>DSO</p><p>FSM_EDITOR_EMP</p>      | Reject                                               | Pending for DSO assignment |
+| Desludging       | DSO in progress            | FSM\_EDITOR\_EMP DSO                 | Update the number of trips or schedule trips         | DSO in progress            |
+| Desludging       | DSO in progress            | Citizen                              | Pay (Full Amount)                                    | DSO in progress            |
+| Desludging       | DSO in progress            | FSM\_EDITOR\_EMP DSO                 | Dispose                                              | DSO in progress            |
+| Desludging       | DSO in progress            | <p>DSO</p><p>FSM_EDITOR_EMP</p>      | Complete Request (after collecting the total amount) | Pending citizen Feedback   |
+| Desludging       | Pending citizen feedback   | Citizen                              | Citizen provides feedback                            | Request completed          |
+| Application Type | Status                     | Action                               | Roles                                                | Next state                 |
+| VehicleTrip      | <p><br></p>                | Schedules trip                       | FSM\_DSO                                             | SCHEDULED                  |
+| VehicleTrip      | SCHEDULED                  | Ready for disposal                   | <p>FSM_DSO"</p><p>"FSM_EDITOR_EMP</p>                | Waiting for disposal       |
+| VehicleTrip      | Waiting for disposal       | Dispose                              | FSM\_EMP\_FSTPO                                      | DISPOSED                   |
+
+\
+\
+\
+
+
+Zero Price Workflow
+
+\
+\
+
+
+| Application Type | Status                     | Roles                                | Action                                               | Next State                 |
+| ---------------- | -------------------------- | ------------------------------------ | ---------------------------------------------------- | -------------------------- |
+| Desludging       | -                          | <p>Citizen</p><p>FSM_CREATOR_EMP</p> | Create application                                   | Application created        |
+| Desludging       | Application created        | <p>Citizen</p><p>FSM_CREATOR_EMP</p> | Submit application                                   | Pending for payment        |
+| Desludging       | Pending for DSO assignment | FSM\_EDITOR\_EMP                     | Reject application                                   | Application created        |
+| Desludging       | Pending for DSO assignment | FSM\_EDITOR\_EMP                     | Assign DSO                                           | Pending for DSO approval   |
+| Desludging       | Pending for DSO assignment | FSM\_EDITOR\_EMP                     | Return application                                   | Application created        |
+| Desludging       | Pending for DSO assignment | FSM\_EDITOR\_EMP                     | Reassign DSO                                         | Pending for DSO approval   |
+| Desludging       | Pending for DSO approval   | <p>DSO</p><p>FSM_EDITOR_EMP</p>      | Assign vehicle                                       | DSO in progress            |
+| Desludging       | Pending for DSO approval   | <p>DSO</p><p>FSM_EDITOR_EMP</p>      | Reject                                               | Pending for DSO Assignment |
+| Desludging       | DSO in progress            | FSM\_EDITOR\_EMP DSO                 | update No of trips / schedule trip                   | DSO in Progress            |
+| Desludging       | DSO in progress            | FSM\_EDITOR\_EMP                     | Reassign DSO                                         | Pending for DSO approval   |
+| Desludging       | DSO in progress            | FSM\_EDITOR\_EMP DSO                 | Dispose                                              | DSO in progress            |
+| Desludging       | DSO in progress            | <p>DSO</p><p>FSM_EDITOR_EMP</p>      | Complete request (after collecting the total amount) | Pending citizen feedback   |
+| Desludging       | Pending citizen feedback   | Citizen                              | Citizen provides Feedback                            | Request completed          |
+| Application Type | Status                     | Action                               | Roles                                                | Next state                 |
+| VehicleTrip      | <p><br></p>                | Schedules trip                       | FSM\_DSO                                             | SCHEDULED                  |
+| VehicleTrip      | SCHEDULED                  | Ready for disposal                   | <p>FSM_DSO"</p><p>"FSM_EDITOR_EMP</p>                | Waiting for disposal       |
+| VehicleTrip      | Waiting for Disposal       | Dispose                              | FSM\_EMP\_FSTPO                                      | DISPOSED                   |
