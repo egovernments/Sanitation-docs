@@ -2,7 +2,7 @@
 
 ## Overview
 
-Faecal sludge management (FSM) is a system that enables citizens to raise a request for septic tank cleaning with their urban local bodies (ULBs) directly or for reaching out to a ULB counter. Citizens can track the application, make a payment for the charges and rate the service.&#x20;
+Faecal Sludge Management (FSM) is a system that enables citizens to raise a request for septic tank cleaning with their urban local bodies (ULBs) directly or for reaching out to a ULB counter. Citizens can track the application, make a payment for the charges and rate the service.&#x20;
 
 ### Service Dependencies:
 
