@@ -51,6 +51,7 @@
     * [FSM UI/UX Audit](products/faecal-sludge-management-fsm/fsm-ui-ux-audit.md)
     * [Functional Specifications](products/faecal-sludge-management-fsm/functional-specifications.md)
   * [FSM Release Notes](products/fsm-release-notes.md)
+  * [FSM Functional Specification](products/fsm-functional-specification.md)
   * [FSM Technical Specification](products/fsm-technical-specification/README.md)
     * [Vehicle Technical Specification](products/fsm-technical-specification/vehicle-technical-specification.md)
     * [Vendor Technical Specification](products/fsm-technical-specification/vendor-technical-specification.md)
