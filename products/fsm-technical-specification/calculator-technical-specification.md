@@ -18,4 +18,4 @@ FSM Calculator is a system that enables the FSM aAdmin to create billing slabs f
 
 ## ​Data Model
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 9.48.35 AM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2023-04-25 at 9.48.35 AM.png" alt=""><figcaption></figcaption></figure>

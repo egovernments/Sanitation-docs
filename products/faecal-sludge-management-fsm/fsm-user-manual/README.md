@@ -1,6 +1,6 @@
 # FSM User Manual
 
-The DIGIT-Faecal Sludge Management (FSM) module allows citizens to create applications for desludging, configure multiple trips and pay the fees for the service delivery online. The module makes it easier to operate and manage a desludging service. It eliminates the current manual process by streamlining it and capturing information end-to-end ensuring waste pick up and its disposal at the correct treatment plant. This ensures a better citizen service experience with the Urban Local Body (ULB) while promoting a cleaner/healthier environment.
+The DIGIT-Faecal Sludge Management (FSM) allows citizens to raise service requests for desludging and pay the fees for the service delivery online. For governing bodies and vendors, it makes service delivery easier and captures information end-to-end, ensuring waste pick up and its disposal at the correct treatment plant. Real-time tracking of service delivery, along with the availability of rich transactional data allow decision makers to ensure a better citizen service experience and promote a cleaner/healthier environment.
 
 ## Key Features
 

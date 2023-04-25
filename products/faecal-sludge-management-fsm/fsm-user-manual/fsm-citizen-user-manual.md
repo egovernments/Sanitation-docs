@@ -4,13 +4,90 @@ Citizens represent individuals or communities who are the system end-users. The 
 
 Citizens can do the following:&#x20;
 
+* Language selection
+* Login
 * Apply for desludging services
 * Check application status and vehicle status
 * Download application acknowledgement
-* Choose the pre-payment or post-payment (pay on service) option to apply for services
-* Rate the services provided by the urban local bodies (ULBs)
+* Choose to pay an amount above the minimum advance required and pay the remaining balance post service
 
 ![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 1.33.19 PM.png>)
+
+## Language Selection
+
+**Overview**
+
+When the user opens the application, it asks them to first select the language. The selected language is highlighted in orange colour.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 11.16.10 AM.png" alt=""><figcaption></figcaption></figure>
+
+### User actions
+
+On this page, the following actions can be performed:
+
+* A user can switch the language.
+* A user can click on 'Continue' to navigate to the login screen.
+
+## Login
+
+**Overview**
+
+Users are redirected to this screen once they select the preferred language in the previous screen. Users can choose to either register as a new user or login as an existing user.
+
+**Register a new user**
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 11.18.08 AM.png" alt=""><figcaption></figcaption></figure>
+
+**User Actions**
+
+On this page, the following actions can be performed:
+
+* A person can register as a new user by entering the mobile number, name and the city.
+* A person can login as an existing user by clicking on the login button.
+* A user can choose to continue with Whatsapp to raise a service request.
+* After the user clicks on "Continue", the page navigates to the "Enter OTP" page.
+
+**User actions**
+
+On this page, the following actions can be performed:
+
+* Enter the OTP received on the given mobile number to login.
+* The system will prompt for the selection from a list of available cities. Select the city to complete login.
+
+**Login as an Existing User**&#x20;
+
+**Overview**
+
+This is the page one is redirected to when the user clicks on ‘Login’ to login as an existing user.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 11.20.57 AM.png" alt=""><figcaption></figcaption></figure>
+
+**User Actions**
+
+On this page, the following actions can be performed:
+
+* Enter mobile number to login as an existing user.
+* Navigate to register as a new user.
+* A user can choose to continue with Whatsapp to raise a service request.
+* After the user clicks on ‘Continue’, the page navigates to the “Enter OTP” page.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 11.22.42 AM.png" alt=""><figcaption></figcaption></figure>
+
+**User Actions**
+
+On this page, the following actions can be performed:
+
+* Enter the OTP received on the given mobile number to login.
+* Once the OTP is entered, users are prompted to choose a location. Using this screen, they can select the location for which they would like to request for services.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 11.24.20 AM.png" alt=""><figcaption></figcaption></figure>
+
+**User Actions**
+
+On this page, the following actions can be performed:
+
+* A user can switch the location.
+* A user can click on 'Continue' to navigate to the login screen.
 
 ## Apply for Desludging Services
 
