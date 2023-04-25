@@ -18,8 +18,8 @@ Vehicle Registry is a system that enables urban local body (ULB) employees to cr
 
 ## ​Data Model
 
-<figure><img src="../../.gitbook/assets/Screenshot 2023-04-25 at 9.26.55 AM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 9.26.55 AM.png" alt=""><figcaption></figcaption></figure>
 
 ## Web Sequence Diagram
 
-<figure><img src="../../.gitbook/assets/Screenshot 2023-04-25 at 9.27.08 AM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 9.27.08 AM.png" alt=""><figcaption></figcaption></figure>

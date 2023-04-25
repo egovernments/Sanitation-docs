@@ -28,10 +28,10 @@ Faecal Sludge Management (FSM) is a system that enables citizens to raise a requ
 
 ## Data Model
 
-<figure><img src="../../.gitbook/assets/Screenshot 2023-04-25 at 9.09.51 AM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 9.09.51 AM.png" alt=""><figcaption></figcaption></figure>
 
 ## Web Sequence Diagrams
 
-<figure><img src="../../.gitbook/assets/Screenshot 2023-04-25 at 9.13.04 AM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 9.13.04 AM.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/Screenshot 2023-04-25 at 9.14.15 AM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 9.14.15 AM.png" alt=""><figcaption></figcaption></figure>
