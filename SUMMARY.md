@@ -58,6 +58,7 @@
       * [Calculator Technical Specification](products/fsm-technical-specification/calculator-technical-specification.md)
     * [FSM Release Notes](products/faecal-sludge-management-fsm/fsm-release-notes.md)
     * [Training](products/faecal-sludge-management-fsm/training.md)
+    * [Product Requirement Document (PRD)](products/faecal-sludge-management-fsm/product-requirement-document-prd.md)
 * [Program](program/README.md)
   * [Program Rollout Plan](program/program-rollout-plan.md)
   * [Adoption Metrics](program/adoption-metrics.md)
