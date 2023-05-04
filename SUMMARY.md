@@ -27,6 +27,8 @@
   * [Services](platform/services.md)
   * [Setup](platform/getting-started/README.md)
     * [On AWS](platform/getting-started/on-aws.md)
+  * [Operations Guide](platform/operations-guide.md)
+  * [Development Guide](platform/development-guide.md)
 * [Products](products/README.md)
   * [Faecal Sludge Management (FSM)](products/faecal-sludge-management-fsm/README.md)
     * [Product Features](products/faecal-sludge-management-fsm/product-features.md)
