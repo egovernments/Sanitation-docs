@@ -76,4 +76,61 @@ List of entities:
 
 &#x20;        \- City
 
-&#x20;        \- Gram panchayats\
+&#x20;        \- Gram panchayats
+
+### Create Desludging Application:
+
+#### Selecting Gram Panchayat
+
+| Attribute      | Type  | Mandatory (Y/N) | Comments                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| -------------- | ----- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Gram Panchayat | Array | Y               | <ol><li>Selecting from the list of GPs under each locality in the MDMS data.</li><li>Default value to N/A.</li><li>Give a dropdown to change.</li><li>Selection of any value apart from N/A must:</li><li><p></p><ol><li>Change the auto-fill field to the free text field in the Payment Details section. </li><li>The FSM calculator service should be modified to calculate as per the amount entered in the free text field.</li><li>Demand for advance must be generated based on the previous point.</li></ol></li><li>Add new GPs as and when updated by a state/ULB.</li></ol> |
+
+#### Payment Details- Advance Amount
+
+| Field           | Data Type | Mandatory (Y/N) | Comments                                                          |
+| --------------- | --------- | --------------- | ----------------------------------------------------------------- |
+| Amount per trip | Numeric   | N               | Free text field.                                                  |
+| Total Amount    | Numeric   | N               | Calculated based on the above field and the number of trips.      |
+| Advance Amount  | Numeric   | Y               | Minimum amount <= than the amount entered in the free text field. |
+
+### Update Trips:
+
+#### Payment Details- Balance Amount
+
+| Field                                | Data Type                     | Mandatory (Y/N)         | Comments                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ------------------------------------ | ----------------------------- | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Amount per trip                      | Numeric                       | Y                       | <p>Selection of any value apart from N/A must:</p><ol><li>Provide  the free text field in the Update Trips section to enter the “Amount per Trip”.</li><li>The FSM calculator service should be modified to calculate as per the amount entered in the free text field.</li><li>Demand for the balance amount must be generated based on the previous point.</li></ol>                                                                       |
+| Total amount                         | Numeric                       | Y                       | <ol><li>Field displayed in “Update Trips”.</li><li>Calculated based on the above field and the number of trips.</li><li>Non-editable field.</li></ol>                                                                                                                                                                                                                                                                                        |
+| <p>Balance amount</p><p><br><br></p> | <p>Numeric</p><p><br><br></p> | <p>Y</p><p><br><br></p> | <ol><li>Field displayed in “Update Trips”.</li><li>Non-editable field.</li><li>Difference between the amount paid and the total based on the latest update.</li></ol><p>Example: Amount per trip updated to = Rs 2,000 in the Update Trips Screen.</p><ul><li>Advance paid = Rs 0</li><li>Balance amount = Rs 2000-0 = Rs 2,000 </li></ul><ol start="4"><li>Validation - Maximum amount entered = amount as per above calculation.</li></ol> |
+
+## Success Criteria
+
+The success criteria for U-RC are:
+
+| <p>TRUE NORTH</p><p>Zero untreated waste</p>         | We must ensure that waste is collected and disposed of in the right method, at the right place and at the right time. |
+| ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| <p>SECONDARY</p><p>Inclusive sanitation services</p> | <p><br></p><p>Desludging service requests must be accessible to all citizens.</p>                                     |
+
+### Metrics to track
+
+We will track the metrics below to gather learnings on the impact of these changes on FSM to share it on the FSM dashboards and reports. But more specifically, we will track the metrics to see:&#x20;
+
+* If our hypotheses are correct?&#x20;
+* Is the FSM services more accessible(given criteria above)?&#x20;
+* What are the unanticipated implications?&#x20;
+
+Additionally, we must monitor guardrails to ensure there are no major implications on the ULBs’ ability to handle requests (for example, major changes to the volume of requests and difference in SLAs of service between GP and non-GP).
+
+| Goal/Reason                   | Metric                                                              | Why we are tracking it                                                                                                                     |
+| ----------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Zero untreated waste          | The number of requests received from GPs to # of households per GP. | <ol><li>To understand the gap with respect to the requests and to increase awareness. </li><li>Anticipate the adoption overtime.</li></ol> |
+| Zero untreated waste          | The number of requests received from GPs reconciled at FSTP.        | Due to the distance, chances of open dumping is high. This will help validate/invalidate the assumption.                                   |
+| Inclusive sanitation services | The number of requests received from the GPs.                       | No major changes in ULB employee adoption. However, trends in the number of requests can be noted.                                         |
+
+Guardrails
+
+| Metric                                                                     | Why we are tracking it                                                                                                                |
+| -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| The average SLA of GP per request                                          | To understand the time taken to service GPs. Deep-dive to see root causes in case of large gaps or discrepancies.                     |
+| The average SLA of non-GP per request to the average SLA of GP per request | We need to enable admins to ensure that the citizens in GPs are receiving services in a timely manner, just like the non-GP citizens. |
