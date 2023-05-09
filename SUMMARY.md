@@ -60,6 +60,7 @@
     * [Training](products/faecal-sludge-management-fsm/training.md)
     * [Product Requirement Document (PRD)](products/faecal-sludge-management-fsm/product-requirement-document-prd.md)
 * [Program](program/README.md)
+  * [Functional Customisation](program/functional-customisation.md)
   * [Program Rollout Plan](program/program-rollout-plan.md)
   * [Adoption Metrics](program/adoption-metrics.md)
   * [Implementation Plan](program/implementation-plan.md)
