@@ -21,7 +21,7 @@ According to a United Nations (UN) report, only 54% of the world population have
 * Actionable data: Our system will provide actionable data on waste management operations, which will enable stakeholders to make informed decisions. This data will be used to optimize waste collection and treatment processes, identify areas for improvement, and drive evidence-based decision-making.
 * Code for innovation: We will foster innovation by providing a digital platform that encourages collaboration among stakeholders. Our system will facilitate the sharing of ideas, best practices, and innovative solutions for sanitation challenges, driving continuous improvement in the waste management ecosystem.
 
-### Need for DIGIT Sanitation&#x20;
+### Need for DIGIT Sanitation - Case for Platform&#x20;
 
 Current digital efforts across geographies do not take a “whole of system view” and do not solve the cost of coordination and duplication issues. Each country/state also develops its own systems (MIS, apps, dashboards) individually for waste streams. Such siloed, solution-centric approaches and tools create a new set of problems and inefficiencies for countries:
 
