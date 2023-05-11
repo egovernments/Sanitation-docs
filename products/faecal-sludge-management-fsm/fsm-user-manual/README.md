@@ -8,6 +8,7 @@ The DIGIT-Faecal Sludge Management (FSM) allows citizens to raise service reques
 * Make payment for services
 * Register desludging operators
 * Update vehicle logs
+* Manage vendors, vehicles and drivers
 
 ## User Roles
 

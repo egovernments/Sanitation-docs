@@ -9,9 +9,10 @@ Citizens can do the following:&#x20;
 * Apply for desludging services
 * Check application status and vehicle status
 * Download application acknowledgement
-* Choose to pay an amount above the minimum advance required and pay the remaining balance post service
+* Choose to pay an amount above the minimum advance required and pay the remaining balance post service&#x20;
+* Rate the services provided by the urban local bodies (ULBs)
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 1.33.19 PM.png>)
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-11 at 9.39.27 AM.png" alt=""><figcaption></figcaption></figure>
 
 ## Language Selection
 
@@ -36,7 +37,7 @@ Users are redirected to this screen once they select the preferred language in t
 
 **Register a new user**
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 11.18.08 AM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-11 at 9.56.08 AM.png" alt=""><figcaption></figcaption></figure>
 
 **User Actions**
 
@@ -46,6 +47,8 @@ On this page, the following actions can be performed:
 * A person can login as an existing user by clicking on the login button.
 * A user can choose to continue with Whatsapp to raise a service request.
 * After the user clicks on "Continue", the page navigates to the "Enter OTP" page.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-11 at 9.57.01 AM.png" alt=""><figcaption></figcaption></figure>
 
 **User actions**
 
@@ -60,7 +63,7 @@ On this page, the following actions can be performed:
 
 This is the page one is redirected to when the user clicks on ‘Login’ to login as an existing user.
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 11.20.57 AM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-11 at 9.58.05 AM.png" alt=""><figcaption></figcaption></figure>
 
 **User Actions**
 
@@ -71,7 +74,7 @@ On this page, the following actions can be performed:
 * A user can choose to continue with Whatsapp to raise a service request.
 * After the user clicks on ‘Continue’, the page navigates to the “Enter OTP” page.
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 11.22.42 AM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-11 at 9.58.42 AM.png" alt=""><figcaption></figcaption></figure>
 
 **User Actions**
 
@@ -102,105 +105,240 @@ After they login, users are redirected to this screen where multiple actions can
 On this page, the following actions can be performed:
 
 * Desludging services can be requested by clicking on “Apply for Emptying of Septic Tank/Pit” option on the homepage.
-* Enter the service request details: “No of Trips” and “Vehicle Capacity” required.
+* User is redirected to the Service Request Page.
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 12.21.49 PM.png" alt=""><figcaption></figcaption></figure>
 
-Select Property type and subtype. The system gives an approximate estimate on the cost of the service basis selection.
+#### User Actions
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 12.26.43 PM.png" alt=""><figcaption></figcaption></figure>
+On this page, the following actions can be performed:
 
-Enable the **Location** finder to allow GPS to track the current location, or, move the pin to the location manually. Alternatively, you can also enter the location in the search bar. If unsure, Skip and continue.
+* Enter “No of Trips” required
+* Enter “Vehicle Capacity” required.&#x20;
+* Skip and Continue if the above information is not available.
+
+On clicking on “Next”, the user is redirected to the Choose Property Type page.&#x20;
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-11 at 10.05.15 AM.png" alt=""><figcaption></figcaption></figure>
+
+#### User Actions&#x20;
+
+On this page, the following actions can be performed:
+
+* Selection of Property Type
+* Basis Property Type selected, information regarding tentative cost of desludging service is provided.
+
+On clicking on “Next”, the user is redirected to the Choose Property Subtype page.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-11 at 10.07.01 AM.png" alt=""><figcaption></figcaption></figure>
+
+#### User Actions
+
+On this page, the following actions can be performed:
+
+* Selection of Property Subtype
+
+On clicking on “Next”, the user is redirected to the Pin Property Location page.
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 12.29.03 PM.png" alt=""><figcaption></figcaption></figure>
 
-The pincode will be auto selected from the pin location. Verify and click on next. If pin location is not selected, enter pincode. If unsure, skip and continue.
+#### User Actions
+
+On this page, the following actions can be performed:
+
+* Enable the Location finder to allow GPS to track the current location, or, move the pin to the location manually.&#x20;
+* Search for location using the search bar.&#x20;
+* Skip and Continue if the above information is not available.
+
+If pin location is not selected, the user is redirected to enter Pincode.&#x20;
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 12.33.34 PM.png" alt=""><figcaption></figcaption></figure>
 
-Provide your property address by selecting the ‘City’ and ‘Locality’. Click on ‘Next’ to continue.
+#### User Actions
+
+On this page, the following actions can be performed:
+
+* Entering Pincode.
+* Skip and Continue if the above information is not available.
+
+On clicking on “Next”, the user is redirected to the Provide Property Address page.
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 12.35.39 PM.png" alt=""><figcaption></figcaption></figure>
 
-Select 'Yes' if your property is located in a notified slum area. Else, select 'No'.
+#### User Actions
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 2.21.53 PM.png>)
+On this page, the following actions can be performed:
 
-Select and enter the **Slum Name** from the available drop-down list.&#x20;
+* Selection of City
+* Selection of Locality/Mohalla
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 2.38.09 PM.png>)
+On clicking on “Next”, the user is redirected to mention whether the property is located in a Slum.
 
-Enter the **Street Name** and **Door No.** details.
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-11 at 10.13.14 AM.png" alt=""><figcaption></figcaption></figure>
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 2.38.28 PM.png>)
+#### User Actions
 
-Provide a **Landmark** to enable the service providers to find the location easily.&#x20;
+On this page, the following actions can be performed:
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 2.38.44 PM.png>)
+* Selection of whether property is located in Slum
 
-Select the applicable **Sanitation Type** from the listed options. Click on **Skip and Continue** if you are not sure about the sanitation type.
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-11 at 10.14.36 AM.png" alt=""><figcaption></figcaption></figure>
 
-Enter the key dimensions such as length, breadth, and depth in meters to indicate the **Pit/Septic Tank Size**. Enter the diameter and depth in meters if the sanitation type is a soak pit.
+On clicking on “Next”, the user is redirected to the Provide Name of Slum page. If no is selected, then this page is skipped.
 
-Click on **Next** to move to the summary page.
+#### User Actions
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 2.41.47 PM.png>)
+On this page, the following actions can be performed:
 
-Upload the photo of Pit by clicking on the camera button and then click on next. If you are not able to upload the photo, click on skip and continue.
+* Selection of Slum name from dropdown
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 12.39.12 PM.png" alt=""><figcaption></figcaption></figure>
+On clicking on “Next”, the user is redirected to the Provide property address page.
 
-Select the applicable Gender.
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-11 at 10.16.27 AM.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 12.40.53 PM.png" alt=""><figcaption></figcaption></figure>
+#### User Actions
 
-View the payment details against the request. The ULB may have configured a minimum advance payment amount. Choose to pay the same or any amount above the minimum advance amount. Clicking on skip and continue will process the application with the minimum advance amount payable at the start of the request.
+On this page, the following actions can be performed:
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 12.42.21 PM.png" alt=""><figcaption></figcaption></figure>
+* Enter Street Name
+* Enter Door No.
+* Skip and Continue if above information is not available
 
-Cross verify the filled in details on the **Summary** page. Click on the **Change** button available for the field that requires any edits. Scroll down the page to review the application details.
+On clicking on “Next”, the user is redirected to the Provide Landmark page.
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 2.51.12 PM.png>)
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-11 at 10.18.09 AM.png" alt=""><figcaption></figcaption></figure>
 
-Click on **Submit** once the review is complete and the details are satisfactory.&#x20;
+#### User Actions
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 2.52.28 PM.png>)
+On this page, the following actions can be performed:
 
-The system displays the **Application Submitted** message. The **Application No.** is generated.
+* Enter Landmark
+* Skip and Continue if above information is not available.
 
-Click on **Download** to generate a pdf copy of the application.&#x20;
+On clicking on “Next”, the user is redirected to the Pit/Septic Tank Details page.
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 2.53.52 PM.png>)
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-11 at 10.20.51 AM.png" alt=""><figcaption></figcaption></figure>
 
-The system displays the “Application Submitted” message. The “Application No.” is generated. Click on ‘Download’ to generate a PDF copy of the application.
+#### User Actions
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 12.44.24 PM.png" alt=""><figcaption></figcaption></figure>
+On this page, the following actions can be performed:
+
+* Enter Length of Septic Tank
+* Enter Breadth of Septic Tank
+* Enter Depth of Septic Tank
+* Skip and Continue if the above information is not available.
+
+On clicking on “Next”, the user is redirected to the Upload Pit photo page.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-11 at 10.22.23 AM.png" alt=""><figcaption></figcaption></figure>
+
+#### User Actions
+
+On this page, the following actions can be performed:
+
+* Upload Pit Photo
+* Skip and Continue if the above information is not available.
+
+On clicking on “Next”, the user is redirected to the Select Gender page.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-11 at 10.24.00 AM.png" alt=""><figcaption></figcaption></figure>
+
+#### User Actions
+
+On this page, the following actions can be performed:
+
+* Select Gender
+* Skip and Continue if the above information is not available.
+
+On clicking on “Next”, the user is redirected to the Payment Details page. The page displays Total amount and Minimum amount payable. The advance amount payable field displays the minimum amount payable.&#x20;
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-11 at 11.03.22 AM.png" alt=""><figcaption></figcaption></figure>
+
+#### User Actions
+
+On this page, the following actions can be performed:
+
+* Enter advance amount greater than minimum amount payable and lower than total amount
+* Skip and Continue if the above information is not available
+
+On clicking on “Next”, the user is redirected to the Summary page. The page displays a summary of all the details filled by the user.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-11 at 11.04.59 AM.png" alt=""><figcaption></figcaption></figure>
+
+#### User Actions
+
+On this page, the following actions can be performed:
+
+* Click on Change to change any filled details
+* Click on Submit once the review is complete and the details are satisfactory
+
+On clicking on “Submit”, the user is redirected to the Application Submitted page.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-11 at 11.06.24 AM.png" alt=""><figcaption></figcaption></figure>
+
+#### User Actions
+
+On this page, the following actions can be performed:
+
+* Download application receipt by clicking on download button
+* Go back to the home page.
+
+The system triggers a notification along with the Application No. and details to the registered mobile number. Any subsequent updates and actions on the application also trigger a notification to the applicant.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-11 at 11.07.26 AM.png" alt=""><figcaption></figcaption></figure>
+
+\
+
+
+\
+\
+\
+\
+
+
+
 
 The system triggers a notification along with the **Application No.** and details to the registered mobile number. Any subsequent updates and actions on the application also trigger a notification to the applicant.
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 12.47.27 PM.png" alt=""><figcaption></figcaption></figure>
 
-## Check Application Status & Make Payment
+## Check Application Status&#x20;
 
-Click on **My Applications** on the citizen home page. Click on **View** for the application pending payment.
+From the home page, users can access past application history by clicking on the “My Applications” page.
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 2.59.52 PM.png>)
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-11 at 11.08.39 AM.png" alt=""><figcaption></figcaption></figure>
 
-Scroll down the application and click on **Make Payment**.&#x20;
+#### User Actions
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 3.01.07 PM.png>)
+On this page, the following actions can be performed:
 
-Confirm bill details and proceed to pay.
+* Click on ‘My applications’ to view a list of past applications.
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 12.50.09 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-11 at 11.09.49 AM.png" alt=""><figcaption></figcaption></figure>
 
-Confirm bill details and proceed to pay.
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 12.51.50 PM (1).png" alt=""><figcaption></figcaption></figure>
 
-The system displays a payment acknowledgement message along with the **Payment Receipt No.** Click on **Print Receipt** to get a printed receipt.
+#### User Actions
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 3.04.46 PM.png>)
+On this page, the following actions can be performed:
+
+* View details of Applications
+
+Clicking on View redirects the user to Application Details
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-11 at 11.11.01 AM.png" alt=""><figcaption></figcaption></figure>
+
+#### User Actions
+
+* View details of applications
+* View current Status of application
+
+On this page, the following actions can be performed:
+
+\
+
+
+
 
 ## Rate Services
 
