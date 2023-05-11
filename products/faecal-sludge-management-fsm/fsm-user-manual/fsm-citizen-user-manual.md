@@ -335,27 +335,83 @@ Clicking on View redirects the user to Application Details
 
 On this page, the following actions can be performed:
 
-\
+## Make Payment
 
+If the application is on the Payment Pending stage, the user will have the option to make a payment from the View Applications page.
 
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-11 at 11.12.33 AM.png" alt=""><figcaption></figcaption></figure>
 
+#### User Actions
+
+On this page, the following actions can be performed:
+
+* Download Acknowledge receipt of application
+* Make a payment by clicking on the Make Payment button.
+
+The user is redirected to the bill details page which displays the total, advance and due amount.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-11 at 11.13.54 AM.png" alt=""><figcaption></figcaption></figure>
+
+#### User Actions
+
+On this page, the following actions can be performed:
+
+* Confirm details and Proceed to pay.
+
+The user is redirected to Select Payment preference.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-11 at 11.14.55 AM.png" alt=""><figcaption></figcaption></figure>
+
+The system intimates the user that clicking on Pay will redirect them to a third party payment gateway.
+
+#### User Actions
+
+On this page, the following actions can be performed:
+
+* Select Payment Method.&#x20;
+* Click on pay to proceed.
+
+The system displays a payment acknowledgement message along with the Payment Receipt No.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-11 at 11.16.40 AM.png" alt=""><figcaption></figcaption></figure>
+
+#### User Actions
+
+On this page, the following actions can be performed:
+
+* Print Payment receipt
 
 ## Rate Services
 
-Applicants can rate the services given and provide detailed feedback on their applications.&#x20;
+If the application is on the Payment Pending stage, the user will have the option to make a payment from the View Applications page.
 
-Go to **My Applications** and click on **View** for the application that has the status of **Pending for Citizen Feedback**.
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-11 at 11.18.22 AM.png" alt=""><figcaption></figcaption></figure>
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 3.10.38 PM.png>)
+#### User Actions
 
-&#x20;Scroll down the application to the **Application Timeline** section. Click on **Rate Us**.&#x20;
+On this page, the following actions can be performed:
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 3.12.17 PM.png>)
+* Provide the rating for service by clicking on Rate us.&#x20;
 
-Enter the ratings by clicking on the number of stars. Answer the questions on the feedback form.&#x20;
+The user will be redirected to the Provide Feedback page.&#x20;
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 3.13.18 PM.png>)
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-11 at 11.19.24 AM.png" alt=""><figcaption></figcaption></figure>
 
-Enter any additional insights in the **Comments** box. Click on **Submit**. The feedback is submitted.
+#### User Actions
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 3.16.42 PM.png>)
+On this page, the following actions can be performed:
+
+* Selection of overall rating between 1-5 stars
+* Confirmation on Safety gears used by the operator
+* Providing additional inputs, if any, using the comments box.&#x20;
+
+Clicking on submit redirects the user to the confirmation page.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-11 at 11.20.41 AM.png" alt=""><figcaption></figcaption></figure>
+
+#### User Actions
+
+On this page, the following actions can be performed:
+
+* Download final payment receipt
+* Go back to the home page.
