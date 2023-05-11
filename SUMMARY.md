@@ -50,6 +50,7 @@
       * [DSO User Manual](products/faecal-sludge-management-fsm/fsm-user-manual/dso-user-manual.md)
       * [Septage Treatment Plant Operator User Manual](products/faecal-sludge-management-fsm/fsm-user-manual/septage-treatment-plant-operator-user-manual.md)
       * [Manage Vendor, Driver and Vehicle Details](products/faecal-sludge-management-fsm/fsm-user-manual/manage-vendor-driver-and-vehicle-details.md)
+    * [Test Cases](products/faecal-sludge-management-fsm/test-cases.md)
     * [FSM UI/UX Audit](products/faecal-sludge-management-fsm/fsm-ui-ux-audit.md)
     * [FSM Functional Specification](products/faecal-sludge-management-fsm/fsm-functional-specification.md)
     * [FSM Technical Specification](products/fsm-technical-specification/README.md)
