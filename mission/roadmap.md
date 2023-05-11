@@ -39,4 +39,4 @@ Sanitation workers are an integral part of the waste management ecosystem. Curre
 
 ## Contribute
 
-We are actively seeking contributions from the community in enhancing the product. Check out how you can contribute here.
+We are actively seeking contributions from the community in enhancing the product. Check out how you can contribute [here](../community/contribute.md).

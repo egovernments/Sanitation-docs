@@ -132,7 +132,3 @@ At the core of all systemic challenges, there are problems that hinder a systemi
 
 * Current systems are not structured to maximise the value from faceal sludge and related services.&#x20;
 * The policy framework may not recognise treated human excreta as compost. Unclear and fragmented demand for treated waste contributes to lax operations upstream.
-
-
-
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/)_All content on this page by_ [_eGov Foundation_](https://egov.org.in/) _is licensed under a_ [_Creative Commons Attribution 4.0 International License_](http://creativecommons.org/licenses/by/4.0/)_._
