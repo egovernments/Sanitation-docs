@@ -60,13 +60,13 @@
       * [Calculator Technical Specification](products/fsm-technical-specification/calculator-technical-specification.md)
     * [FSM Release Notes](products/faecal-sludge-management-fsm/fsm-release-notes.md)
     * [Training](products/faecal-sludge-management-fsm/training.md)
-* [Programme](programme/README.md)
-  * [Functional Customisation](programme/functional-customisation/README.md)
-    * [Product Requirement Document (PRD)](programme/functional-customisation/product-requirement-document-prd.md)
-  * [Program Rollout Plan](programme/program-rollout-plan.md)
-  * [Adoption Metrics](programme/adoption-metrics.md)
-  * [Implementation Plan](programme/implementation-plan.md)
-  * [Implementation Checklist](programme/implementation-checklist.md)
+* [Programme](program/README.md)
+  * [Functional Customisation](program/functional-customisation/README.md)
+    * [Product Requirement Document (PRD)](program/functional-customisation/product-requirement-document-prd.md)
+  * [Program Rollout Plan](program/program-rollout-plan.md)
+  * [Adoption Metrics](program/adoption-metrics.md)
+  * [Implementation Plan](program/implementation-plan.md)
+  * [Implementation Checklist](program/implementation-checklist.md)
 
 ## COMMUNITY
 
