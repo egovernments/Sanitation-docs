@@ -103,3 +103,11 @@ The same set of services can be used here as well, with the addition of a few co
 
 * Dashboards
 * Reports
+
+## Product
+
+[Faecal Sludge Management (FSM)](products/faecal-sludge-management-fsm/)
+
+## Programme
+
+Click [here](program/#sujog-feacal-sludge-and-septage-management-fssm) to know more about our SUJOG-Faecal Sludge & Septage Management (FSSM) programme in Odisha.
