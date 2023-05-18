@@ -66,6 +66,7 @@
   * [Functional Customisation](program/functional-customisation/README.md)
     * [Product Requirement Document (PRD)](program/functional-customisation/product-requirement-document-prd.md)
   * [Technical Customisation](programme/technical-customisation.md)
+  * [Standard Operating Procedure (SOP)](programme/standard-operating-procedure-sop.md)
   * [Program Rollout Plan](program/program-rollout-plan.md)
   * [Adoption Metrics](program/adoption-metrics.md)
   * [Implementation Plan](program/implementation-plan.md)
