@@ -1,167 +1,483 @@
 # FSM Employee User Manual
 
-ULB officials or employees receive the service requests and are responsible for routing these requests to specific DSOs.
+ULB officials or employees receive the service requests and are responsible for managing and routing these requests to specific DSOs.
 
 Employees can:
 
-* Create desludging application
-* Collect Payment
-* ​Update application/Generate demand​
-* ​Assign DSO to an application​
-* ​Re-assign DSO to an application​
-* ​Complete or decline request​
-* ​Multiple request assignment to a single vehicle​
+* Create desludging application​ on behalf of citizens&#x20;
+* Collect payments&#x20;
+* ​Update application/Generate demand​ ​
+* Assign DSO to an application​ ​
+* Re-assign DSO to an application​ ​
+* Complete or decline request​ ​
+* Multiple request assignment to a single vehicle​&#x20;
 * Manage vendor, driver and vehicle details
-*   Provide free services
 
+## Language Selection
 
+After landing on the employee URL, the user is prompted to select the language with which they would like to access the system.
 
-## Create Desludging Application
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 2.29.43 PM.png" alt=""><figcaption></figcaption></figure>
 
-Log in as employee FSM Creator role.&#x20;
+#### User actions
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 4.37.09 PM.png>)
+On this page, the following actions can be performed:
 
-Click on the **Inbox** to view the list of applications created by the signed-in user.‌ Click on **New Desludging Application** option.
+* Selection of language
 
-![](<../../../.gitbook/assets/Screenshot 2022-08-02 at 10.44.02 AM.png>)
+After the user clicks on ‘Continue’, the page navigates to the ‘Login’ page.&#x20;
 
-Select the relevant **Application Channel** to indicate the channel that the employee is using to create a new service request. The applicant may use the telephone to raise requests or the local office counter.
+## Login
 
-‌Enter the **Applicant Name** and **Applicant Mobile No.**
+ULB employees are provided with credentials to login to the system. Role-based access for various steps in the workflow, that is, different individuals can be assigned to create an application, modify applications or manage vendor, driver and vehicle details.&#x20;
 
-Payment Preference is defaulted to **Pay Later.**
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 2.33.08 PM.png" alt=""><figcaption></figcaption></figure>
 
-![](<../../../.gitbook/assets/Screenshot 2022-08-02 at 10.47.03 AM.png>)
+#### User actions
 
-Select the relevant **Property Type** and **Property Sub Type**.
+On this page, the following actions can be performed:
 
-![](<../../../.gitbook/assets/Screenshot 2022-08-02 at 10.51.42 AM.png>)
+* Enter username and password
+* Select city for login
+* Reset password by clicking on the “Forgot Password” link
 
-Enter the **Pincode**, **City**, **Locality/Mohalla**, **Slum Name**, **Street Name**, **Door No.** and **Landmark** details in the **Location** panel.
+On clicking continue, employees are redirected to the FSM home page
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 4.45.25 PM.png>)
+## ​Create Desludging Application
 
-Select the applicable **Onsite Sanitation Type** from the drop-down list. Enter the **Pit Dimension** or dimensions in meters for the selected sanitation type. Select the Vehicle Capacity that will be required to fulfil this request. Enter the required No. of Trips.
+The FSM home page has 3 options:&#x20;
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 1.18.04 PM.png" alt=""><figcaption></figcaption></figure>
+1. To create a new application on behalf of the citizen
+2. View existing pending applications
+3. Search for historical applications
 
-The amount per trip, total amount and the minimum advance required against the service will be displayed. Enter advance collection amount above minimum advance as per the citizen’s preference. Click on the Submit Application button.
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 2.34.50 PM.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 1.19.38 PM.png" alt=""><figcaption></figcaption></figure>
+User Actions
 
-The application is submitted and an **Application No.** is generated. Click on the **Download** button on the screen to generate a PDF copy of the application for future reference.
+On this page, the following actions can be performed:
 
-‌The system will trigger notifications to the applicant mobile number with the application number and the status updates.
+* Navigate to the inbox to view pending actions
+* Create New desludging application
+* Search for old applications
+* Change language&#x20;
+* Edit profile details by clicking on the user icon on top right hand corner
+* Logout by clicking on the user icon on top right hand corner
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 4.53.54 PM.png>)
+Click on "New Desludging Application" to create a new application.
 
-### Update Application
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 2.38.11 PM.png" alt=""><figcaption></figcaption></figure>
 
-Employees can update application details on behalf of the applicant.
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 2.38.21 PM.png" alt=""><figcaption></figcaption></figure>
 
-Search for the application by the application number or any other search filter. Scroll down the application and click on the **Take Action** button. Click on **Update Application**. Make the required changes and resubmit it.
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 2.39.32 PM.png" alt=""><figcaption></figcaption></figure>
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-17 at 5.04.31 PM.png>)
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 2.40.06 PM.png" alt=""><figcaption></figcaption></figure>
 
-### Make Payment
+#### User Actions
 
-Employees can collect the payment for the service requested at the counter. Payments can also be collected for applications raised by citizens online. Navigate to the employee **Inbox**.&#x20;
+On this page, the following actions can be performed:
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-19 at 9.00.57 AM.png>)
+* Enter Application details (Application Channel, Applicant Name, Applicant Mobile Number and Gender)
+* Enter Property details (Property Type and Property Subtype)
+* Enter Location details (Pincode, City, Locality, Whether Slum and slum name, Street Name, Door/House No., Landmark)
+* Enter Pit/Septic Tank Details (Pit Type, Dimensions)
+* Enter Trip details (No. of trips required and vehicle capacity)
 
-Search for the application in the inbox using the search filters provided. Fetch applications that have the status as **Pending for Payment.** Click on the relevant application to open it.
+On filling the above details, the Amount per Trip and Total Amount are calculated automatically. The advance amount, based on ULB settings, is displayed.
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-19 at 9.07.25 AM.png>)
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 2.41.28 PM.png" alt=""><figcaption></figcaption></figure>
 
-Scroll down the application and click on the **Take Action** button. Click on **Collect Payment.**
+#### User Actions
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-19 at 9.08.49 AM.png>)
+The following actions can be performed:
 
-The payment details are available on the screen.
+* Advance amount may be edited (above minimum advance amount and below total advance amount)
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-19 at 9.10.03 AM.png>)
+Click on Submit Application to submit the application, and it redirects to a confirmation page.
 
-Enter the **Payer Details** to proceed with the payment. Select the **Paid By** option as **Other** in case the payment is not made by the applicant. Enter the **Payer Name** and **Payer Mobile No.** details. Else, select **Owner**. The applicant or **Payer Name** and **Payer Mobile No.** are auto-populated from the application.
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 2.42.22 PM.png" alt=""><figcaption></figcaption></figure>
 
-‌Select the relevant **Payment Mode** and proceed with the payment details. Click on **Generate Receipt** once the payment is done.
+#### User Actions
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-19 at 9.11.23 AM.png>)
+The following actions can be performed:
 
-The **Payment Collected** acknowledgement provides the payment **Receipt No.** Click on the **Print Receipt** button to print the receipt.
+* Download application acknowledgement receipt&#x20;
+* Go back to the homepage.&#x20;
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-19 at 9.12.38 AM.png>)
+An SMS will be triggered to the citizen with an acknowledgement and payment link, if payment is due.
 
-The receipt gets printed.
+## Update Application
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 1.32.59 PM.png" alt=""><figcaption></figcaption></figure>
+An application created by a citizen through the online channel has to be updated by an employee before confirmation. This application will show with the status “Application Created”.
 
-### Assign Requests to DSO
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 2.51.35 PM.png" alt=""><figcaption></figcaption></figure>
 
-Employees assign the received service requests to relevant DSOs for action. Search for applicants **Pending for DSO Assignment**. Click on **Application No.** to open it.
+#### User Actions
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-19 at 9.19.10 AM.png>)
+The following actions can be performed:
 
-Scroll down the application and click on the **Take Action** button. Click on **Assign DSO**.&#x20;
+* Search for an active application using “Application No.” and “Mobile No.”&#x20;
+* Clear search by clicking on “Clear Search”
+* View and update applications by clicking on an application number
+* Filter applications by ‘Localilty’ using the Locality dropdown
+* Filter applications by ‘Status’
+* Search for past applications by using “Search Application”
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-19 at 9.20.52 AM.png>)
+On clicking on an application number, application details are displayed.
 
-The selected **Vehicle Type** and **Vehicle Capacity (Ltrs)** are auto-populated from the details entered in the application. Select the relevant DSO Name from the drop-down list. The list of DSOs is populated on the basis of the selected vehicle type.
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 2.53.31 PM.png" alt=""><figcaption></figcaption></figure>
 
-![](<../../../.gitbook/assets/Screenshot 2022-08-02 at 11.10.25 AM.png>)
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 2.53.39 PM.png" alt=""><figcaption></figcaption></figure>
 
-The **Expected date of completion** shows the current date by default. Change this if required. Click on the **Assign** button.
+#### User Actions
 
-![](<../../../.gitbook/assets/Screenshot 2022-08-02 at 11.12.27 AM.png>)
+The following actions can be performed:
 
-The request is assigned to the selected DSO.
+* View application details
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-19 at 9.24.17 AM.png>)
+On clicking on the update application, application details will be viewed. Details such as locality, number of trips and capacity will be displayed.&#x20;
 
-### Re-assign DSO
+Clicking on “Update application” will update the status of the application as “Pending for Payment”.
 
-Employees can reassign to other DSOs in case the request has been rejected or declined by the DSO for some reason. Search for applications **Pending for DSO Approval** status. Click on the relevant **Application No.** to open it.
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 2.56.13 PM.png" alt=""><figcaption></figcaption></figure>
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-19 at 9.30.05 AM.png>)
+## Collect Payment&#x20;
 
-Scroll down the application and click on the **Take Action** button. Click on **Re-assign DSO**.
+Desludging applications pending for payment are accessible in the inbox of the user assigned the collector role. The status of the application is reflected in the status column.
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-19 at 9.36.37 AM.png>)
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 2.58.20 PM.png" alt=""><figcaption></figcaption></figure>
 
-Select the applicable **Reason for Re-assign**. Select the relevant **DSO Name**. Update the **Expected date of completion** if required. Click on the **Reassign** button.
+#### User Actions
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-19 at 9.38.29 AM.png>)
+The following actions can be performed:
 
-The DSO is reassigned successfully.
+* Search for an active application using “Application No.” and “Mobile No.”&#x20;
+* Clear Search by clicking on “Clear Search”
+* View and update applications by clicking on an application number
+* Filter applications by ‘Lolacilty’ using the locality dropdown
+* Filter applications by ‘Status’
+* Search for past applications by using “Search Application”
 
-![](<../../../.gitbook/assets/Screenshot 2022-05-19 at 9.39.45 AM.png>)
+On clicking on an application number, application details are displayed.
 
-### Complete or Decline Request <a href="#complete-or-decline-request" id="complete-or-decline-request"></a>
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 3.00.17 PM.png" alt=""><figcaption></figcaption></figure>
 
-‌Employees can complete or decline service requests on behalf of the DSO. Search for application with the status as DSO InProgress. Click on the **Application No.** to open it.
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 3.00.25 PM.png" alt=""><figcaption></figcaption></figure>
 
-![](<../../../.gitbook/assets/Screenshot 2022-08-02 at 11.17.08 AM.png>)
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 3.01.51 PM.png" alt=""><figcaption></figcaption></figure>
 
-Scroll down the application and click on the **Take Action** button. Click on **Complete Request** or **Decline Request**. Fill in the request details on behalf of the DSO to complete or reject the request.
+#### User Actions
 
-![](<../../../.gitbook/assets/Screenshot 2022-08-02 at 11.21.35 AM.png>)
+The following actions can be performed:
 
-### Multiple Request Assignment to a Single Vehicle <a href="#multiple-request-assignment-to-a-single-vehicle" id="multiple-request-assignment-to-a-single-vehicle"></a>
+* View application details, including Applicant, Property and Trip details
+* View application timeline
+* Proceed to collect by clicking on the “Collect Payment” button
 
-In our previous versions, the FSM application was designed to service requests one after the other i.e., a different application could not be assigned to the vehicle until and unless the vehicle has completed servicing the previous request assigned to it.
+A user is redirected to the following screen on clicking on Collect Payment
 
-We recognised that multiple applications are assigned to the vehicle and the driver optimises the logistics based on other factors that are not captured in the system like distance, type of road etc to service the request and closed them accordingly. So, by moving away from the FIFO model to allowing drivers/DSOs to making use of human intelligence, we now allow multiple service requests to be assigned to the same vehicle and be closed in randomised order.
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 3.02.55 PM.png" alt=""><figcaption></figcaption></figure>
 
-![](<../../../.gitbook/assets/Screenshot 2022-08-02 at 11.22.58 AM.png>)
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 3.03.06 PM.png" alt=""><figcaption></figcaption></figure>
 
-The ULB employee with the Creator role, creates applications as and when the receive from the citizens.
+#### User Actions
 
-The ULB employee with the Editor role, assigns multiple applications to the same DSO and subsequently to the same vehicle.
+The following actions can be performed:
 
-For example: let’s assume 15 requests were created. Of the 15, 10 requests were assigned to DSO 1 and 5 to DSO 2, and of the 10 assigned to DSO 1, 7 are assigned to Vehicle 1 and 3 are assigned to Vehicle 2.
+* View collection amount, including total amount and amount per trip
+* Enter/update payee details
+* Select payment mode
+* Gen/G8 Receipt Details by entering receipt no. and issue date
 
-![](<../../../.gitbook/assets/Screenshot 2022-08-02 at 11.24.42 AM.png>)
+Upon clicking on collect, a user is redirected to a confirmation page.
 
-After completing the service, the DSO/driver can close each request in the order they completed. The applications need not be closed sequentially.
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 3.06.37 PM.png" alt=""><figcaption></figcaption></figure>
 
-![](<../../../.gitbook/assets/Screenshot 2022-08-02 at 11.25.29 AM.png>)
+#### User Actions
+
+The following actions can be performed:
+
+* Print payment receipt
+* Go back to home by clicking on the “Take Action” button
+
+The following is the view of the payment receipt.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 3.07.54 PM.png" alt=""><figcaption></figcaption></figure>
+
+## Assign DSO
+
+Open desludging applications are accessible by navigating to the Inbox via the FSM homepage. Applications where DSO needs to be assigned will be shown as Pending for DSO assignment.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 3.09.42 PM (1).png" alt=""><figcaption></figcaption></figure>
+
+#### User Actions
+
+The following actions can be performed:
+
+* Search for an active application using “Application No.” and “Mobile No.”&#x20;
+* Clear Search by clicking on “Clear Search”
+* View and update applications by clicking on an application number
+* Filter applications by ‘Localilty’ using the locality dropdown
+* Filter applications by ‘Status’
+* Search for past applications by using “Search Application”
+
+On clicking on an application number, application details are displayed.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 3.10.59 PM.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 3.11.08 PM.png" alt=""><figcaption></figcaption></figure>
+
+#### User Actions
+
+The following actions can be performed:
+
+* View application detail
+* Assign DSO
+
+On clicking the Assign DSO button, a pop-up will occur.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 3.13.00 PM.png" alt=""><figcaption></figcaption></figure>
+
+#### User Actions
+
+The following actions can be performed:
+
+* Select DSO name via dropdown
+* Select expected date of completion
+* Close pop-up  by clicking on the Close button
+* Close pop-up by clicking on the cross icon on the top right of the pop-up.
+
+Clicking on Assign will redirect the user to the application details page and display a snack bar as confirmation. The status of the application will be updated to “Pending for DSO Approval”.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 3.14.20 PM.png" alt=""><figcaption></figcaption></figure>
+
+## Re-Assign DSO
+
+Employees can reassign to other DSOs in case the request has been rejected or declined by the DSO for some reason. Search for applications Pending for DSO Approval status.&#x20;
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 3.15.35 PM.png" alt=""><figcaption></figcaption></figure>
+
+#### User Actions
+
+The following actions can be performed:
+
+* Search for an active application using “Application No.” and “Mobile No.”&#x20;
+* Clear search by clicking on “Clear Search”
+* View and update applications by clicking on an application number
+* Filter applications by ‘Localilty’ using the locality dropdown
+* Filter applications by ‘Status’
+* Search for past applications by using “Search Application”
+
+On clicking on an application number, application details are displayed.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 3.17.39 PM.png" alt=""><figcaption></figcaption></figure>
+
+#### User Actions
+
+The following actions can be performed:
+
+* View application details
+* Click on “Take Action” button
+
+The take action button has the following options:
+
+* Assign Vehicle (on behalf of DSO)
+* Decline Request (on behalf of DSO)
+* Re-assign DSO
+
+Clicking on “Re-assign DSO” will display the following pop-up.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 3.19.12 PM.png" alt=""><figcaption></figcaption></figure>
+
+#### User Actions
+
+The following actions can be performed:
+
+* Select “Reason for Re-assign”
+* Select “DSO Name”
+* Update “Expected date of completion”
+* Close pop-up by clicking on the Close button on the pop up.
+* Close pop-up by clicking on the cross icon on the top right of the pop up.
+* Confirm re-assignment by clicking on the ‘Reassign’ button.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 3.21.14 PM.png" alt=""><figcaption></figcaption></figure>
+
+Clicking on Assign will redirect the user to the application details page and display a snack bar as confirmation. The status of the application will remain as “Pending for DSO Approval’.
+
+## Decline Request (On behalf of DSO)
+
+Employees can be assigned the role of the DSO, and can decline a request on behalf of the DSO. Applications can be rejected by an employee when in “Pending for DSO Approval” stage.&#x20;
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 3.23.33 PM.png" alt=""><figcaption></figcaption></figure>
+
+#### User Actions
+
+The following actions can be performed:
+
+* Search for an active application using “Application No.” and “Mobile No.”
+* Clear search by clicking on “Clear Search”
+* View and update applications by clicking on an application number
+* Filter applications by ‘Localilty’ using the locality dropdown
+* Filter applications by ‘Status’
+* Search for past applications by using “Search Application”
+
+On clicking on an application number, application details are displayed.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 3.25.16 PM.png" alt=""><figcaption></figcaption></figure>
+
+#### User Actions
+
+The following actions can be performed:
+
+* View application details
+* Click on the “Take Action” button
+
+The take action button has the following options:
+
+* Assign Vehicle (on behalf of DSO)
+* Decline Request (on behalf of DSO)
+* Re-assign DSO
+
+Clicking on “Decline Request’” will display the following pop-up.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 3.26.38 PM.png" alt=""><figcaption></figcaption></figure>
+
+#### User Actions
+
+The following actions can be performed:
+
+* Reason for Declining
+* Enter Comments
+* Close pop-up by clicking on the Close button on the pop-up.
+* Close pop-up by clicking on the cross icon on the top right of the pop-up
+* Confirm decline request by clicking on the “Decline Request” button
+
+A snack bar will confirm decline and the application timeline will be updated to DSO Rejected.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 3.28.00 PM.png" alt=""><figcaption></figcaption></figure>
+
+## Assign Vehicle (On behalf of DSO)
+
+Employees can be assigned the role of the DSO, and can assign a vehicle on behalf of the DSO. A vehicle can be assigned when the application is in the “Pending for DSO Approval’ stage.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 3.28.57 PM.png" alt=""><figcaption></figcaption></figure>
+
+#### User Actions
+
+The following actions can be performed:
+
+* Search for an active application using “Application No.” and “Mobile No.”&#x20;
+* Clear search by clicking on “Clear Search”
+* View and update applications by clicking on an application number
+* Filter applications by ‘Localilty’ using the locality dropdown
+* Filter applications by ‘Status’
+* Search for past applications by using “Search Application”
+
+On clicking on an application number, application details are displayed.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 3.39.38 PM.png" alt=""><figcaption></figcaption></figure>
+
+#### User Actions
+
+The following actions can be performed:
+
+* View application details
+* Click on the “Take Action” button
+
+The take action button has the following options:
+
+* Assign Vehicle (on behalf of DSO)
+* Decline Request (on behalf of DSO)
+* Re-assign DSO
+
+Clicking on “Assign Vehicle’’ wil display the following pop-up.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 3.47.28 PM.png" alt=""><figcaption></figcaption></figure>
+
+#### User Actions
+
+The following actions can be performed:
+
+* Update Vehicle Registration No.
+* Close pop-up by clicking on the Close button on the pop up.
+* Close pop-up by clicking on the cross icon on the top right of the pop up
+* Confirm Decline Request by clicking on the “Assign Vehicle” button
+
+A snack bar will confirm assignment of vehicle and the application timeline will be updated to DSO in Progress.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 3.51.03 PM.png" alt=""><figcaption></figcaption></figure>
+
+## Update/Schedule Trips
+
+Once DSO is in progress, the number of trips can be updated. This can be done by both the ULB and the DSO.&#x20;
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 3.51.56 PM.png" alt=""><figcaption></figcaption></figure>
+
+#### User Actions
+
+The following actions can be performed:
+
+* Search for an active application using “Application No.” and “Mobile No.”&#x20;
+* Clear search by clicking on “Clear Search”
+* View and update applications by clicking on an application number
+* Filter applications by ‘Localilty’ using the locality dropdown
+* Filter applications by ‘Status’
+* Search for past applications by using “Search Application”
+
+On clicking on an application number, application details are displayed.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 3.53.51 PM.png" alt=""><figcaption></figcaption></figure>
+
+#### User Actions
+
+The following actions can be performed:
+
+* View application details
+* Click on the “Take Action” button
+
+The take action button has the following options:
+
+* Complete Request
+* Update/Schedule Trips
+* Re-assign DSO
+
+On clicking on Update/Schedule trips, the following pop up is displayed:
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 3.55.08 PM.png" alt=""><figcaption></figcaption></figure>
+
+#### User Actions
+
+The following actions can be performed:
+
+* Increase the number of trips by clicking on the + button
+* Decrease number of trips by clicking on the - button
+* Close pop-up by clicking on the Close button on the pop up.
+* Close pop-up by clicking on the cross icon on the top right of the pop up
+* Confirm update/schedule trips by clicking on the “Update/schedule” button
+
+A snack bar will confirm the updated number of trips.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 3.56.24 PM.png" alt=""><figcaption></figcaption></figure>
+
+## Complete Request
+
+Once the service request has been completed and all pending payment has been collected, the same has to be confirmed in the system. This can be done by selecting the “Complete Request” button in the “Take Action” button. On clicking on Complete Request, the following pop up is displayed:
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 3.57.39 PM.png" alt=""><figcaption></figcaption></figure>
+
+#### User Actions
+
+The following actions can be performed:
+
+* Confirm/Update service date
+* Confirm/Update the volume of waste collected
+* Confirm/Update pit details
+* Upload pit photo
+* Close pop-up by clicking on the Close button on the pop up.
+* Close pop-up by clicking on the cross icon on the top right of the pop up
+* Confirm details by clicking on the ‘Completed’’ button
+
+A snack bar will confirm that request has been completed and the status will be updated to “Waiting for Disposal”.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-19 at 3.58.59 PM.png" alt=""><figcaption></figcaption></figure>

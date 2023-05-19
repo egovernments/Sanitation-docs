@@ -22,7 +22,7 @@ When the user opens the application, it asks them to first select the language. 
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2023-04-25 at 11.16.10 AM.png" alt=""><figcaption></figcaption></figure>
 
-### User actions
+#### User actions
 
 On this page, the following actions can be performed:
 
