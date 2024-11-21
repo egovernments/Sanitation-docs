@@ -2,8 +2,8 @@
 
 Here are the articles in this section:
 
-{% content-ref url="release-notes.md" %}
-[release-notes.md](release-notes.md)
+{% content-ref url="release-notes/" %}
+[release-notes](release-notes/)
 {% endcontent-ref %}
 
 {% content-ref url="user-manuals/" %}
